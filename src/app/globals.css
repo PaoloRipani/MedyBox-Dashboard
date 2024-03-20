@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}/*# sourceMappingURL=globals.css.map */
+
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+p.xl {
+  font-weight: 200;
+  margin-bottom: 8px;
+}
+p.l {
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+p.m {
+  font-weight: 300;
+}
+p.s {
+  font-weight: 400;
+}
+
+button {
+  font-weight: 400;
+}
+
+.caption {
+  font-weight: 400;
+}
+
+.progetto h1{
+  font-weight: 400;
+  font-size: 64;
+  line-height: 120%;
+}
+
+.progetto h2{
+  font-weight: 400;
+  font-size: 48;
+  line-height: 120%;
+}
+
+.progetto h3{
+  font-weight: 400;
+  font-size: 32;
+  line-height: 120%;
+}
+
+.progetto h4{
+  font-weight: 400;
+  font-size: 24;
+  line-height: 120%;
+}

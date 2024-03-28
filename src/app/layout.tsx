@@ -1,4 +1,4 @@
-import { Inter, Outfit } from 'next/font/google'
+import { Inter, Outfit, Secular_One } from 'next/font/google'
 import './globals.css'
 import './globals.scss'
 import Head from 'next/head'

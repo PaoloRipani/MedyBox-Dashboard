@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react';
 import { getAllCategories } from '@/lib/api'
 import Image from 'next/image'
-import Logo from '../../public/Header Logo 1.svg'
+import Logo from '../../public/Logo Big.svg'
 import HamburgerIcon from '../../public/Hamburger Menu Icon.svg'
 
 import { useProjects } from '../contexts/ProjectsContext';
@@ -36,18 +36,18 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 flex justify-center items-center px-6 h-20 bg-dark-blue z-50">
+    <header className="fixed top-0 left-0 right-0 flex justify-center items-center px-6 h-20 z-50 bg-white">
       <div className="w-11/12 mx-auto max-w-1106 h-full flex justify-between items-center ">
-        <Link href="/" passHref>
+        <Link href="/" passHref className='w-52'>
           <Image src={Logo} alt="Logo" />
         </Link>
         <nav className="flex items-center justify-end h-full">
           <ul className={`sm:flex-row flex-grow space-x-4 sm:gap-0 gap-4
-            absolute top-20 w-screen bg-dark-blue z-50 h-screen p-0 sm:w-auto
+            absolute top-20 w-screen z-50 h-screen p-0 sm:w-auto
             sm:h-full sm:relative sm:flex flex-col sm:h-auto sm:top-0 sm:p-0 
-            transition-all sm:left-0
+            transition-all sm:left-0 text-gs-black
             ${isMenuOpen ? 'left-0 flex' : 'left-full hidden'}`}>
-            {categories?.length > 0 && ['Home', 'Chi siamo', 'Progetti', 'Contatti'].map((item) => {
+            { /* categories?.length > 0 && ['Home', 'Chi siamo', 'Progetti', 'Contatti'].map((item) => {
               const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`
               const isCurrentPath = pathname === path || pathname === `${path}/`
               return (
@@ -67,7 +67,7 @@ export default function Header() {
                     {item}
                   </Link>
                   {item === 'Progetti' && hoveredItem === 'Progetti' && (
-                    <div className="hidden sm:flex absolute mt-20 p-8 gap-4 flex-col bg-dark-blue">
+                    <div className="hidden sm:flex absolute mt-20 p-8 gap-4 flex-col">
                       <div className="hidden sm:flex text-tag text-light-green">CATEGORIA</div>
                       {categories.map((category: any) => (
                         <Link className="flex flex-row justify-left items-center gap-3" href={`/progetti#${category.slug}`} key={category.id}>
@@ -79,7 +79,25 @@ export default function Header() {
                   )}
                 </li>
               )
-            })}
+            }) */}
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>Home</Link>
+            </li>
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>Chi siamo</Link>
+            </li>
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>Perché sceglierci</Link>
+            </li>
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>A chi ci rivolgiamo</Link>
+            </li>
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>Contattaci</Link>
+            </li>
+            <li className="flex flex-col items-center sm:w-auto w-full ml-4">
+              <Link href='/il-software' className='flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto'>Il Software</Link>
+            </li>
           </ul>
           <ul className="sm:hidden flex space-x-4 h-full">
             <li className="flex items-center h-full">

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/web',
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://www.aloisiprogetti.com/web/' : '',
+  basePath: '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://www.gesiqa.it/' : '',
   images: {
     unoptimized: true,
   },

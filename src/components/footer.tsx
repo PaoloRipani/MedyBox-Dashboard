@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { getPage } from '@/lib/api'
 import { useState, useEffect } from 'react'
-import Logo from '../../public/Footer Logo 1.svg'
+import Logo from '../../public/Logo Big BNW.svg'
 import LinkedIn from '../../public/Linkedin Icon.svg'
 
 export default function Footer() {
@@ -37,50 +37,40 @@ export default function Footer() {
   }, [])
 
     return (
-        <footer className="bg-dark-blue text-off-white py-12 px-10">
+        <footer className="bg-grey-4 text-off-white py-12 px-10">
             <div className="container mx-auto max-w-[1106px] flex flex-col font-light md:flex-row gap-6">
                 {/* First div */}
-                <div className="flex flex-col grid-area-1">
+                <div className="flex flex-col grid-area-1 justify-center">
                     <div>
                         <img src={Logo.src} alt="Aloisi Progetti"/>
-                    </div>
-                    <div className="flex flex-row mt-6">
-                        <div className="flex flex-col pl-4 gap-4 border-l-2 border-light-blue">
-                            <p className='m'>P.IVA: {acf?.footer_p_iva}</p>
-                            <p className='m'>{acf?.footer_indirizzo}</p>
-                            <p className='m'>{acf?.footer_email}</p>
-                        </div>
                     </div>
                 </div>
                 {/* Second div */}
                 <div className='flex flex-row grow justify-between ml-0 md:ml-[120px]'>
                     <div className="flex flex-col justify-end grid-area-2">
-                        <div>
-                            <p className='text-caption text-light-green mb-3'>SITEMAP</p>
-                        </div>
-                        <div className="flex">
-                            <div className="border-l border-r border-light-blue h-full"></div>
-                            <div className="flex flex-col pl-4 gap-4">
-                                <Link className='m' href="/">Home</Link>
-                                <Link className='m' href="/chi-siamo">Chi siamo</Link>
-                                <Link className='m' href="/chi-siamo#lavora-con-noi">Lavora con noi</Link>
-                                <Link className='m' href="/progetti">Progetti</Link>
-                                <Link className='m' href="/contatti">Contatti</Link>
-                            </div>
+                        <div className="flex flex-row mt-6">
+                        <div className="flex flex-col pl-4 gap-4 items-center">
+                            <p className='m'>P.IVA: {acf?.footer_p_iva}</p>
+                            <p className='m'>{acf?.footer_indirizzo}</p>
+                            <p className='m'>{acf?.footer_email}</p>
+                            <Link href={acf?.footer_linkedin ?? ''}>
+                                <div>
+                                    <img src={LinkedIn.src} alt='LinkedIn'/>
+                                </div>
+                            </Link>
                         </div>
                     </div>
+                    </div>
                     {/* Third div */}
-                    <div className="flex flex-col justify-end items-end gap-4 grid-area-3">
-                        <Link href={acf?.footer_linkedin ?? ''}>
-                            <div>
-                                <img src={LinkedIn.src} alt='LinkedIn'/>
-                            </div>
-                        </Link>
+                    <div className="flex flex-col justify-center items-end gap-4 grid-area-3">
                         <div>
                             <a href={acf?.footer_privacy_link ?? ''} className='m' target='_blank'>Privacy Policy</a>
                         </div>
                         <div>
                             <a href={acf?.footer_cookie_link ?? ''} className='m' target='_blank'>Cookie Policy</a>
+                        </div>
+                        <div>
+                            <a href={acf?.footer_cookie_link ?? ''} className='m' target='_blank'>Termini e Condizioni</a>
                         </div>
                     </div>
                 </div>

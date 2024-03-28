@@ -310,300 +310,242 @@ export default function Home() {
       <div>
         <Layout> 
           <div>
-        {/* Hero Section */}
-        <div 
-          className="bg-cover h-[calc(100vh-104px)] sm:h-[612px] p-10 flex items-center justify-center bg-medium-blue"
-          style={{ 
-            backgroundImage: heroImage?.src ? `url(${heroImage?.src})` : 
-            `linear-gradient(rgba(0, 51, 76), rgba(0, 51, 76) )` 
-          }}
-        >
-          <div className="logo-container flex flex-grow h-[212px]"></div>
-          <div className="max-w-[920px] flex flex-col w-full h-full px-4 sm:px-0">
-            <div className="flex flex-grow"></div>   
-            <div className='flex flex-col sm:flex-row sm:space-x-[112px] w-full gap-5'>       
-              <div className="flex-1 flex justify-center sm:justify-start h-[212px]">
-              {(Logo.src && acf?.header_home_text) ? ( <>
-                <img src={Logo.src} alt="Header Logo Image"  data-aos="fade-right" data-aos-delay="50"/>
-              </>) : (<></>)}
-              </div>  
-              <div className="flex flex-1 sm:items-center justify-items-end items-end mt-8 sm:mt-0">
-                <div className="block sm:hidden border-l h-[220px] border-white mr-4"></div>
-                <p className="text-xl space-p-xl xl text-white" data-aos="fade-down" data-aos-delay="50">{acf?.header_home_text}</p>
-              </div>    
-            </div>
-            <div className="sm:flex hidden flex-grow items-start">
-              <div className="w-[208px] h-full vertical-line-logo"></div>
+
+        {/* First Section */}
+        {/* 2 colonne, quella di sinistra con 3 elementi verticali, quella di destra con immagine.
+          quando mobile la colonna di sinistra va sopra quella di destra. */}
+          <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
+            <div className='max-w-[1106px]'>
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div>
+                  <div className="flex flex-col gap-3 text-left z-20">
+                    <h2 className="text-h1 text-gs-black">Designed for builders</h2>
+                    <p className="space-p-l font-light text-gs-black">
+                      Un software all'avanguardia per la gestione integrata di qualità, ambiente e sicurezza nei cantieri. Massimizza l'efficienza con un'interfaccia intuitiva, prestazioni ottimali e convenienza immediata. Facile da adottare, potenzia la produttività e la conformità normativa. 
+                      Un investimento imprescindibile per chi punta alla massima sicurezza e efficienza.
+                    </p>
+                    <Link href="/chi-siamo">
+                      <button className="px-8 py-1.5 bg-yellow-3 
+                      uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
+                        Contattaci
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className='bg-slate-400'>
+                  {/* immagine */}
+                </div>
+              </div>
             </div>
           </div>
-          <div className="flex flex-grow"></div>
+
+        {/* Second Section - chi siamo */}
+        {/*  unico contenitore, elemento grafico allineato a sinistra, 2 elementi verticali */}
+        
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-grey-1'>
+          <div className='max-w-[1106px]'>
+            {/* decorazione a sinistra */}
+            <div className='flex flex-col max-w-[730px]'>
+              <h2 className="text-h2 text-gs-black">chi siamo</h2>
+              <p className=' text-gs-black'>Siamo Gesiqa Technology e offriamo soluzioni informatiche innovative per organizzare le attività 
+                e gestire la sicurezza sul lavoro, la qualità e l’ambiente nel settore edile.
+                Abbiamo sviluppato il software Gesiqa: un prodotto all’avanguardia, intuitivo e facilmente 
+                fruibile on-line, realizzato su misura per gestire e tenere sotto controllo ogni processo 
+                interno alle imprese di costruzione.
+              </p>
+            </div>
+          </div>
         </div>
 
+        {/* Third Section - perché sceglierci */}
+        {/* contenitore con griglia su 3 colonne in desktop e 1 colonna in mobile.
+        ogni elemento della graiglia ha 3 elementi in verticale */}
 
-      {/* Chi Siamo Section */}
-      <section className="relative md:flex md:items-center justify-center bg-off-white pt-[140px] md:py-28 md:pl-0 min-h-[678px]">
-        <div className='lg:flex hidden justify-end absolute w-full max-w-[1106px] h-full z-0'>
-          <div className='h-full w-[2px] bg-[#BDC9D3] z-10'></div> 
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
+          <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
+            <h2 className='text-h1 text-gs-black'>perché sceglierci</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+                <div className='h-20 w-20 bg-slate-600'></div>
+                <h4>titolo 1</h4>
+                <p>testo 1</p>
+              </div>
+              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+                <div className='h-20 w-20 bg-slate-600'></div>
+                <h4>titolo 2</h4>
+                <p>testo 2</p>
+              </div> 
+              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+                <div className='h-20 w-20 bg-slate-600'></div>
+                <h4>titolo 3</h4>
+                <p>testo 3</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className='absolute left-0 top-0'>
-          <img src={DecorativeHome1.src} alt="decorative"/>
-        </div>
-        <div className='absolute bottom-0 md:right-auto right-0 md:-ml-6 z-10 -mb-[62px]'>
-          <img src={DecorativeHome2.src} alt="decorative"/>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:justify-items-end md:pl-6">
-          {/* Left div */}
-          <div className="md:pl-0 px-6 md:mt-0 md:flex md:flex-col md:mr-28 justify-center max-w-[447px] text-dark-blue"
-           data-aos="fade-right" 
-          >
-            <div className="flex flex-col gap-3 text-left z-20">
-              <h2 className="text-h2 leading-[58px]">{acf?.chi_siamo_home_text ? "Chi Siamo": ""}</h2>
-              <p className="space-p-l font-light">{acf?.chi_siamo_home_text}</p>
-              <Link href="/chi-siamo">
-                {acf?.chi_siamo_home_text ? (<button className="px-8 py-1.5 border-2 border-medium-blue text-medium-blue 
+
+        {/* Fourth Section - scopri il software */}
+        {/*  unico contenitore, 3 elementi verticali */}
+        <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
+          <div className='w-full max-w-[1106px]'>
+            <div className='flex flex-col items-start w-1/2'>
+              <h2 className='text-h2'>Scopri il software Gesiqa</h2>
+              <p>Gesiqa è un prodotto integrato, un’applicazione software per la gestione documentale, 
+                operativa e di controllo della Sicurezza, della Qualità e dell’ Ambiente in 
+                tutti i settori produttivi, con particolare predisposizione per il settore delle 
+                Costruzioni
+              </p>
+              <Link href=''>
+                <button className="px-8 py-1.5 bg-yellow-3 
                 uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
-                  {acf?.chi_siamo_home_button_text}
-                </button>) : (<></>)}
+                  Approfondisci
+                </button>
               </Link>
             </div>
           </div>
-
-          {/* Right div */}
-          <div className="block ml-0 md:ml-3 mt-9 md:mt-0"
-           data-aos="fade-up" 
-          >
-            <img src={images.chi_siamo_home_image?.src} />
-          </div>
         </div>
-      </section>
 
-      {/* Servizi Section */}
-      <section className="relative md:flex flex-col md:items-center justify-center bg-light-gray text-dark-blue overflow-hidden sm:mx-4">
-        {/*Primo DIV orizzontale da dividere in 3 elementi verticali*/}
-        <div className='flex h-28 w-full justify-center'>
-          <div className='h-full'></div>
-          <div className='flex-grow h-full max-w-[1106px] border-r-light-blue md:border-r-2 border-r-0'></div>
-          <div className='h-full horizontal-line-home-1 flex align-bottom items-end'></div>
-        </div>
-        <div className='flex items-center justify-center'>
-        {/*Secondo DIV orizzontale da dividere in 3 elementi verticali e in cui quello di 
-        mezzo deve contenere il resto del contenuto*/}
-          <div className="md:pl-0 pl-6"></div>
-          <div className="container grid mx-auto md:grid-cols-2 md:gap-x-30 max-w-[1106px] md:order-first">
-            {/* Left cell */}
-            <div className="grid gap-y-10 md:mr-4 order-2 md:order-1">
-              {/* First div */}
-              <div className="flex items-center justify-center" data-aos="fade-right" data-aos-offset="200">
-                <div className='flex p-6 bg-off-white items-start gap-4'>
-                  <div className='min-w-[72px] min-h-[72px] p-4 bg-medium-blue'>
-                  {images.servizi_elemento_1_image && (
-                    <img className=''
-                      src={images?.servizi_elemento_1_image.src} alt="Progettazione" />
-                  )}
-                  </div>
-                  <div className='flex flex-col gap-1'>
-                    <a className='text-S1'>Progettazione</a>
-                    <div className='text-m font-light wordpress-content li-list-inside' dangerouslySetInnerHTML={{ __html: acf?.servizi_elemento_1_text || '' }} />
-                  </div>
+        {/* Fifth Section - i vantaggi */}
+        {/* 2 colonne che in mobile si dispongono al contrario con la destra che va sopra e la sinistra che va sotto
+            nella colonna di sinistra una griglia sfasata che in mobile rimane su 2 colonne.
+            sulla destra 2 elementi in verticale. */}
+        <div className='flex w-full items-center justify-center min-h-[400px] py-20 bg-gs-white'>
+          <div className='max-w-[1106px]'>
+            <div className='grid grid-cols-2'>
+              <div className='grid grid-cols-2 gap-6'>
+                <div className='flex flex-col gap-4 p-8 bg-white'>
+                  <div className='h-24 w-24 bg-slate-600'></div>
+                  <h4 className=' text-gs-black'>titolo 1</h4>
+                  <p className=' text-gs-black'>testo 1</p>
+                </div>
+                <div className='flex flex-col gap-4 p-8 bg-white'>
+                  <div className='h-24 w-24 bg-slate-600'></div>
+                  <h4 className=' text-gs-black'>titolo 2</h4>
+                  <p className=' text-gs-black'>testo 2</p>
+                </div>
+                <div className='flex flex-col gap-4 p-8 bg-white'>
+                  <div className='h-24 w-24 bg-slate-600'></div>
+                  <h4 className=' text-gs-black'>titolo 3</h4>
+                  <p className=' text-gs-black'>testo 3</p>
+                </div>
+                <div className='flex flex-col gap-4 p-8 bg-white'>
+                  <div className='h-24 w-24 bg-slate-600'></div>
+                  <h4 className=' text-gs-black'>titolo 4</h4>
+                  <p className=' text-gs-black'>testo 4</p>
                 </div>
               </div>
-
-              {/* Second div */}
-              <div className="flex items-center justify-center" data-aos="fade-right" data-aos-offset="200">
-                <div className='flex p-6 bg-off-white items-start gap-4'>
-                  <div className='min-w-[72px] min-h-[72px] p-4 bg-medium-blue'>
-                  {images.servizi_elemento_2_image && (
-                    <img className=''
-                      src={images?.servizi_elemento_2_image.src} alt="Direzione lavori e cantiere" />
-                  )}
-                  </div>
-                  <div className='flex flex-col gap-1'>
-                    <a className='text-S1'>Direzione lavori e cantiere</a>
-                    <div className='text-m font-light wordpress-content li-list-inside' dangerouslySetInnerHTML={{ __html: acf?.servizi_elemento_2_text || '' }} />
-                  </div>
-                </div>
-              </div>
-
-              {/* Third div */}
-              <div className="flex items-center justify-center" data-aos="fade-right" data-aos-offset="200" >
-              <div className='flex p-6 bg-off-white items-start gap-4 w-full'>
-                  <div className='min-w-[72px] min-h-[72px] p-4 bg-medium-blue'>
-                  {images.servizi_elemento_3_image && (
-                    <img className=''
-                      src={images?.servizi_elemento_3_image.src} alt="Project Management" />
-                  )}
-                  </div>
-                  <div className='flex flex-col gap-1'>
-                    <a className='text-S1'>Project Management</a>
-                    <div className='text-m font-light wordpress-content li-list-inside' dangerouslySetInnerHTML={{ __html: acf?.servizi_elemento_3_text || '' }} />
-                  </div>
+              <div className='flex flex-col items-start justify-center'>
+                <div className='flex flex-col pl-28'>
+                  <h1 className='text-h1 text-gs-black'>i vantaggi</h1>
+                  <p className='text-gs-black'>Gesiqa gestisce tutto ciò di cui hai bisogno per gestire la Sicurezza, la Qualità e l'Ambiente 
+                    nei cantieri.
+                    Potrai ottimizzare e semplificare le attività di routine, risparmiare risorse, ridurre i tempi e 
+                    gli errori. Inoltre, avrai la completa digitalizzazione dei processi che girano attorno all’attività 
+                    di cantiere e l'immediata disponibilità in caso di ispezioni.
+                  </p>
                 </div>
               </div>
             </div>
-
-            {/* Right cell */}
-            <div className="mb-16 flex flex-col justify-center text-dark-blue order-1 md:order-2">
-              <div className="md:ml-16 lg:ml-32 flex flex-col gap-3 text-left items-start justify-start" data-aos="fade-up" data-aos-offset="200" >
-                <h2 className="text-h2 leading-[58px]">Servizi</h2>
-                <p className="space-p-l text-l font-light">{acf?.servizi_home_text}</p>
-                <Link href="/contatti"><button className="px-8 py-1.5 border-2 border-medium-blue text-medium-blue 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 mt-3">
-                  {acf?.servizi_home_button_text}
-                </button></Link>
-              </div>
-            </div>
           </div>
-        <div className="pr-6"></div>
         </div>
-        <div className='flex sm:h-28 h-10 w-full justify-center'>
-          <div className='h-full'></div>
-          <div className='flex-grow h-full max-w-[1106px] border-r-light-blue md:border-r-2 border-r-0'></div>
-          <div className='h-full horizontal-line-home-2 flex align-top items-start'></div>
-        </div>
+
+        {/* Sixth Section - vuoi saperne di più */}
+        {/* unico contenitore con 2 elementi in verticale */}
         
-        {/*Terzo DIV orizzontale da dividere in 3 elementi verticali*/}
-      </section>
-
-      {/* Progetti Section */}
-      <div className="bg-off-white">
-{ progettiImagesLoaded ?  
-  <section className="relative flex flex-col md:items-center bg-off-white min-h-[677px] pb-[68px] px-6 text-dark-blue">
-  {/*Primo DIV orizzontale da dividere in 3 elementi verticali*/}
-  <div className='flex h-24 w-full justify-center'>
-    <div className='h-full'></div>
-    <div className='flex-grow h-full max-w-[1106px] border-l-light-blue border-l-2'></div>
-    <div className='h-full'></div>
-  </div>
-    <div className="flex flex-col container mx-auto max-w-[1106px] pt-4">
-      <h2 className="text-h2 mb-14" data-aos="fade-right" data-aos-offset="200">
-        {acf?.progetti_in_evidenza_home_title}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:mb-6 mb-10">
-        {progettiImagesLoaded && progetti.map((progetto, index) => {
-          // Find the category with the matching ID
-          const categorie = progetto?.acf.progetto_categoria
-          ? progetto.acf.progetto_categoria.map(categoryId => categories.find(cat => cat.id === categoryId))
-          : [];
-          return(
-            <a href={`/web/progetto#${progetto?.slug}`}  key={index}  data-aos="fade-up" data-aos-offset={`${200 + 100 * index}`} 
-            className="relative flex h-80 bg-cover bg-center cursor-pointer"  
-            style={{
-              backgroundImage: progettiImages[index]?.src ? `linear-gradient(rgba(0,51,76,0.40),rgba(0,51,76,0.40)), url(${progettiImages[index]?.src})` : undefined 
-            }}>
-            <div className="hover:bg-light-blue/[.24] flex-grow">
-              <div className="absolute bottom-0 p-6 w-full">
-                <div className="flex flex-wrap md:flex-row flex-col md:items-center items-start gap-2 justify-start pb-2">
-                  <div className="flex justify-center items-center min-w-14 h-5 px-3 uppercase bg-gray-200 text-center rounded-2xl text-tag-small">{progetto?.acf.progetto_anno_text}</div>
-                  {categorie.map((category, index) => (
-                  <div key={index} className="flex min-w-14 h-5 px-3 uppercase text-center items-center rounded-2xl text-caption bg-light-green overflow-hidden overflow-ellipsis whitespace-nowrap">
-                    <div className="w-full overflow-hidden overflow-ellipsis">
-                      {category ? category.name : 'No category'}
-                    </div>
-                  </div>
-                  ))}
-                </div>
-                <p className='m text-off-white'>{progetto?.acf?.progetto_title}</p>
-              </div> 
+        <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
+          <div className='w-full max-w-[1106px]'>
+            <div className='flex flex-col items-start w-1/2'>
+              <h2 className='text-h2'>Vuoi saperne di più su tutte le funzioni di Gesiqa?</h2>
+              <Link href=''>
+                <button className="px-8 py-1.5 bg-yellow-3 
+                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
+                  scarica la brochure
+                </button>
+              </Link>
             </div>
-            </a>
-          )
-        })}
-      </div>
-      <div className="flex justify-center">
-        <Link href="progetti">
-          <button className="px-8 py-1.5 border-2 border-medium-blue text-medium-blue 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40"
-                data-aos="fade-in">
-            {acf?.progetti_in_evidenza_home_button_text}
-          </button>
-        </Link>
-      </div>
-    </div>
-  </section>
-  : <>
-  <section className="relative md:flex md:items-center bg-off-white pt-[108px] pb-[68px] px-6 text-dark-blue">
-  <div className="flex flex-col container mx-auto max-w-[1106px]">
-    <h2 className="text-h2 mb-14">{acf?.progetti_in_evidenza_home_title}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:mb-6 mb-10">
-      {[...Array(4)].map((_, i) => (
-        <div key={i} className="relative flex h-80 bg-light-gray">
-          <div className="hover:bg-light-blue/[.24] flex-grow">
-            <div className="absolute bottom-0 p-6">
-              <div className="flex flex-wrap gap-2 justify-start pb-2">
+          </div>
+        </div>
 
+        {/* Seventh Section - il nostro target */}
+        {/* due colonne che in mobile si allineano una sopra l'altra.
+        a sinistra 3 elementi in verticale e a destra 3 elementi in verticale da 2 elementi orizzontali ciascuno */}
+        
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
+          <div className='max-w-[1106px]'>
+            <div className='grid grid-cols-2 items-center'>
+              <div className='flex flex-col pr-28'>
+                <h1 className='text-h1 text-gs-black'>il nostro target</h1>
+                <p className='text-grey-4'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
+                  pubblici e privati e che vogliono semplificare la gestione della sicurezza, 
+                  della qualità e dell’ambiente nei cantieri.
+                  Offriamo una soluzione personalizzata anche per i liberi professionisti 
+                  operanti nel settore delle costruzioni (Società di consulenza, Direttori 
+                  dei lavori e Coordinatori per la sicurezza)
+                </p>
+                <Link href=''>
+                <button className="px-8 py-1.5 bg-yellow-3 
+                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
+                  contattaci
+                </button>
+                </Link>
+              </div>
+              <div className='flex flex-col gap-16 pl-28'>
+                <div className='flex gap-6 bg-white justify-center items-center'>
+                  <div className='h-28 w-28 bg-yellow-1'></div>
+                  <h2 className='text-h2 text-gs-black flex-grow'>imprese di costruzione</h2>
+                </div>
+                <div className='flex gap-6 bg-white justify-center items-center'>
+                  <div className='h-28 w-28 bg-yellow-2'></div>
+                  <h2 className='text-h2 text-gs-black flex-grow'>Professionisti</h2>
+                </div>
+                <div className='flex gap-6 bg-white justify-center items-center'>
+                  <div className='h-28 w-28 bg-yellow-3'></div>
+                  <h2 className='text-h2 text-gs-black flex-grow'>Aziende di consulenza</h2>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      ))}
-    </div>
-    <div className="flex justify-center">
-      <Link href="progetti">
-        <button className="px-8 py-1.5 border-2 border-medium-blue text-medium-blue 
-              uppercase text-regular text-base hover:bg-light-blue cursor-pointer">
-          {acf?.progetti_in_evidenza_home_button_text}
-        </button>
-      </Link>
-    </div>
-  </div>
-</section>
-  </>}
-      </div>
 
-      {/* Ci Hanno Scelto Section */}
-      
-      <section className="flex flex-col items-center justify-center bg-dark-blue">
-        <div className="max-w-[1106px] text-center mb-16">
-          <div className="mt-16 md:mt-14 mb-8">
-            <a className="text-caption text-light-green">
-              CI HANNO SCELTO
-              </a>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-14 gap-y-5 md:gap-y-8 ml-6 mr-6 sm:mb-2 mb-0 max-w-[1106px] mx-auto">
-            {logosLoaded && imageSrcs.map((src, index) => (
-              <div key={index} className="opacity-60 mix-blend-screen	">
-                <img src={src} alt="Logo" />
-              </div>
-            ))}
-          </div>
-        </div> 
-      </section>
-      
-      {/* News Section */}
-      {news && news.length > 0 && (
-        <div className="bg-light-gray">
-        <section className="relative md:flex md:items-center pt-12 pb-24 px-6 text-dark-blue">
-          <div className="flex flex-col container mx-auto gap-10 max-w-[1106px]">
-            <h3 className="text-h3">News</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              {/* Grid items */}
-              {newsLoaded && news.map((item, index) => (
-                <div key={index} className="flex sm:flex-row flex-col bg-off-white max-w-[640px]" 
-                data-aos="fade-in" data-aos-offset={`${200 + 100 * index}`} 
-                >
-                  <img className="object-cover min-h-[152px] sm:max-h-full max-h-[152px] sm:max-w-[152px] max-w-full" src={item.image.src} alt={item.image.alt} />
-                  <div className="flex flex-grow flex-col justify-center sm:px-6 sm:py-3 p-4 sm:min-h-[152px] min-h-auto overflow-hidden">
-                    <div className="flex space-x-2 mb-2">
-                      <div className="w-14 h-5 bg-light-gray text-center rounded-2xl text-tag">{item.year}</div>
-                      {index === 0 && <div className="w-14 h-5 text-center rounded-2xl text-tag bg-light-green">NEW</div>}
-                    </div>
-                    <h2 className="l mb-1 text-l overflow-ellipsis">{item.title}</h2>
-                    <p className="m text-m text-light-blue overflow-ellipsis ellipsis-2-lines">{item.text}</p>
-                    {item.url_link && (
-                        <Link href={item.url_link} className='flex flex-row gap-1 items-center'>
-                            <div className='text-s text-medium-blue uppercase font-bold	leading-5'>{item.text_link}</div>
-                            <img src={LinkShare.src} alt="Link icon" className='p-[2px]'/>
-                        </Link>
-                    )}
+        {/* Eight Section - contatti */}
+        {/* 2 elementi in orizzontale. a sinistra ci sono 6 elementi in verticale.
+        a destra ci sono 2 elementi di cui uno è contact form. 
+        in mobile si dispongono al contrario. */}
+        <div className='flex w-full items-center justify-center min-h-[640px]'>
+          <div className='w-full max-w-[1106px]'>
+            <div className='grid grid-cols-2'>
+              <div className='flex flex-col justify-center items-center gap-8 p-8 bg-yellow-3 max-w-96'>
+                <h2 className='text-h2'>contatti</h2>
+                <div className='flex flex-col gap-5 items-center justify-center'>
+                  <div className='flex flex-col items-center'>
+                    <div className='h-6 w-6 bg-white'></div>
+                    <p>Gesiqa Technology Srl</p>
+                  </div>
+                  <div className='flex flex-col items-center'>
+                    <div className='h-6 w-6 bg-white'></div>
+                    <p>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
+                  </div>
+                  <div className='flex flex-col items-center'>
+                    <div className='h-6 w-6 bg-white'></div>
+                    <p>+39 06 79811702</p>
+                  </div>
+                  <div className='flex flex-col items-center'>
+                    <div className='h-6 w-6 bg-white'></div>
+                    <p>info@gesiqa.it</p>
+                  </div>
+                  {/* Linkedin */}
+                  <div className='flex flex-col items-center'>
+                    <div className='h-6 w-6 bg-white'></div>
                   </div>
                 </div>
-              ))}
+              </div>
+              <div className='flex flex-col flex-grow gap-4 p-6 bg-gs-white'>
+                <h2 className='text-h2 text-gs-black'>hai qualcosa da chiederci? scrivici!</h2>
+                <div className='flex flex-grow bg-orange-200'></div>
+              </div>
             </div>
           </div>
-        </section>
-      </div>
-      )}
-      
+        </div>
       </div>
     </Layout>
     </div>

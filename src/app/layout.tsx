@@ -1,4 +1,4 @@
-import { Inter, Outfit, Secular_One } from 'next/font/google'
+import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
 import './globals.scss'
 import Head from 'next/head'
@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Head>
           <Header/>
           <div className="h-20"></div> {/* This is the spacing div */}
-          <main className={`${outfit.className} flex-grow bg-light-gray`}>
+          <main className={`secular flex-grow bg-light-gray`}>
             {children}
           </main>
           <Footer />

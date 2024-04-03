@@ -6,17 +6,18 @@ import '../app/globals.scss'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import Image from 'next/image'
 import Layout from '../app/layout'
 import { useEffect, useState, createContext } from 'react'
 
-import Logo from '../../public/Logo Hero.svg'
-import LinkShare from '../../public/link-share-svg.svg'
-import DecorativeHome1 from '../../public/decorative element home 1.svg'
-import DecorativeHome2 from '../../public/Home Chi Siamo new 1.svg'
-
 import { useProjects } from '../contexts/ProjectsContext';
 import { useCategories } from '../contexts/CategoriesContext';
+
+import ImageTest from '../../public/Home Heading Image 1.png'
 
 export default function Home() {
 
@@ -314,13 +315,13 @@ export default function Home() {
         {/* First Section */}
         {/* 2 colonne, quella di sinistra con 3 elementi verticali, quella di destra con immagine.
           quando mobile la colonna di sinistra va sopra quella di destra. */}
-          <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
-            <div className='max-w-[1106px]'>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div>
-                  <div className="flex flex-col gap-3 text-left z-20">
+          <div className='flex w-full min-h-[640px] bg-gs-white'>
+            <div className='w-full h-full'>
+              <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 items-stretch h-full">
+                <div className='flex justify-end items-end flex-grow row-span-1 row-start-2'>
+                  <div className="flex flex-col gap-3 text-left z-20 max-w-[553px] ">
                     <h2 className="text-h1 text-gs-black">Designed for builders</h2>
-                    <p className="space-p-l font-light text-gs-black">
+                    <p className="nunito space-p-l font-light pr-16 text-gs-black">
                       Un software all'avanguardia per la gestione integrata di qualità, ambiente e sicurezza nei cantieri. Massimizza l'efficienza con un'interfaccia intuitiva, prestazioni ottimali e convenienza immediata. Facile da adottare, potenzia la produttività e la conformità normativa. 
                       Un investimento imprescindibile per chi punta alla massima sicurezza e efficienza.
                     </p>
@@ -332,8 +333,30 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-                <div className='bg-slate-400'>
+                <div className='bg-slate-400 flex-grow row-span-full relative'>
                   {/* immagine */}
+                  <Slider
+                    dots={true}
+                    dotsClass='absolute inset-x-0 bottom-0'
+                    infinite={true}
+                    speed={500}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    autoplay={true}
+                    autoplaySpeed={2000}
+                    arrows={false}
+                    className='h-full object-cover relative'
+                  >
+                    <div className='h-full'>
+                      <img src={ImageTest.src} alt="Image 1" className='object-cover h-full'/>
+                    </div>
+                    <div className='h-full'>
+                      <img src={ImageTest.src} alt="Image 2"  className='object-cover h-full'/>
+                    </div>
+                    <div className='h-full'>
+                      <img src={ImageTest.src} alt="Image 3"  className='object-cover h-full'/>
+                    </div>
+                  </Slider>
                 </div>
               </div>
             </div>
@@ -346,8 +369,8 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             {/* decorazione a sinistra */}
             <div className='flex flex-col max-w-[730px]'>
-              <h2 className="text-h2 text-gs-black">chi siamo</h2>
-              <p className=' text-gs-black'>Siamo Gesiqa Technology e offriamo soluzioni informatiche innovative per organizzare le attività 
+              <h1 className="text-h1 text-gs-black">chi siamo</h1>
+              <p className='nunito  text-gs-black'>Siamo Gesiqa Technology e offriamo soluzioni informatiche innovative per organizzare le attività 
                 e gestire la sicurezza sul lavoro, la qualità e l’ambiente nel settore edile.
                 Abbiamo sviluppato il software Gesiqa: un prodotto all’avanguardia, intuitivo e facilmente 
                 fruibile on-line, realizzato su misura per gestire e tenere sotto controllo ogni processo 
@@ -365,20 +388,20 @@ export default function Home() {
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
             <h2 className='text-h1 text-gs-black'>perché sceglierci</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 1</h4>
-                <p>testo 1</p>
+                <p className='nunito '>testo 1</p>
               </div>
-              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 2</h4>
-                <p>testo 2</p>
+                <p className='nunito '>testo 2</p>
               </div> 
-              <div className='flex flex-col p-8 bg-gs-white text-gs-black'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 3</h4>
-                <p>testo 3</p>
+                <p className='nunito '>testo 3</p>
               </div>
             </div>
           </div>
@@ -390,7 +413,7 @@ export default function Home() {
           <div className='w-full max-w-[1106px]'>
             <div className='flex flex-col items-start w-1/2'>
               <h2 className='text-h2'>Scopri il software Gesiqa</h2>
-              <p>Gesiqa è un prodotto integrato, un’applicazione software per la gestione documentale, 
+              <p className='nunito'>Gesiqa è un prodotto integrato, un’applicazione software per la gestione documentale, 
                 operativa e di controllo della Sicurezza, della Qualità e dell’ Ambiente in 
                 tutti i settori produttivi, con particolare predisposizione per il settore delle 
                 Costruzioni
@@ -416,28 +439,32 @@ export default function Home() {
                 <div className='flex flex-col gap-4 p-8 bg-white'>
                   <div className='h-24 w-24 bg-slate-600'></div>
                   <h4 className=' text-gs-black'>titolo 1</h4>
-                  <p className=' text-gs-black'>testo 1</p>
+                  <p className='nunito text-gs-black'>testo 1</p>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white'>
-                  <div className='h-24 w-24 bg-slate-600'></div>
-                  <h4 className=' text-gs-black'>titolo 2</h4>
-                  <p className=' text-gs-black'>testo 2</p>
+                <div className='flex flex-col gap-4'>
+                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white'>  
+                    <div className='h-24 w-24 bg-slate-600'></div>
+                    <h4 className=' text-gs-black'>titolo 2</h4>
+                    <p className='nunito text-gs-black'>testo 2</p>
+                  </div>
                 </div>
                 <div className='flex flex-col gap-4 p-8 bg-white'>
                   <div className='h-24 w-24 bg-slate-600'></div>
                   <h4 className=' text-gs-black'>titolo 3</h4>
-                  <p className=' text-gs-black'>testo 3</p>
+                  <p className='nunito text-gs-black'>testo 3</p>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white'>
-                  <div className='h-24 w-24 bg-slate-600'></div>
-                  <h4 className=' text-gs-black'>titolo 4</h4>
-                  <p className=' text-gs-black'>testo 4</p>
+                <div className='flex flex-col gap-4'>
+                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white'>  
+                    <div className='h-24 w-24 bg-slate-600'></div>
+                    <h4 className=' text-gs-black'>titolo 4</h4>
+                    <p className='nunito text-gs-black'>testo 4</p>
+                    </div>
                 </div>
               </div>
               <div className='flex flex-col items-start justify-center'>
                 <div className='flex flex-col pl-28'>
                   <h1 className='text-h1 text-gs-black'>i vantaggi</h1>
-                  <p className='text-gs-black'>Gesiqa gestisce tutto ciò di cui hai bisogno per gestire la Sicurezza, la Qualità e l'Ambiente 
+                  <p className='nunito text-gs-black'>Gesiqa gestisce tutto ciò di cui hai bisogno per gestire la Sicurezza, la Qualità e l'Ambiente 
                     nei cantieri.
                     Potrai ottimizzare e semplificare le attività di routine, risparmiare risorse, ridurre i tempi e 
                     gli errori. Inoltre, avrai la completa digitalizzazione dei processi che girano attorno all’attività 
@@ -475,7 +502,7 @@ export default function Home() {
             <div className='grid grid-cols-2 items-center'>
               <div className='flex flex-col pr-28'>
                 <h1 className='text-h1 text-gs-black'>il nostro target</h1>
-                <p className='text-grey-4'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
+                <p className='nunito text-grey-4'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
                   pubblici e privati e che vogliono semplificare la gestione della sicurezza, 
                   della qualità e dell’ambiente nei cantieri.
                   Offriamo una soluzione personalizzata anche per i liberi professionisti 
@@ -492,15 +519,15 @@ export default function Home() {
               <div className='flex flex-col gap-16 pl-28'>
                 <div className='flex gap-6 bg-white justify-center items-center'>
                   <div className='h-28 w-28 bg-yellow-1'></div>
-                  <h2 className='text-h2 text-gs-black flex-grow'>imprese di costruzione</h2>
+                  <h3 className='text-h3 text-gs-black flex-grow'>imprese di costruzione</h3>
                 </div>
                 <div className='flex gap-6 bg-white justify-center items-center'>
                   <div className='h-28 w-28 bg-yellow-2'></div>
-                  <h2 className='text-h2 text-gs-black flex-grow'>Professionisti</h2>
+                  <h3 className='text-h3 text-gs-black flex-grow'>Professionisti</h3>
                 </div>
                 <div className='flex gap-6 bg-white justify-center items-center'>
                   <div className='h-28 w-28 bg-yellow-3'></div>
-                  <h2 className='text-h2 text-gs-black flex-grow'>Aziende di consulenza</h2>
+                  <h3 className='text-h3 text-gs-black flex-grow'>Aziende di consulenza</h3>
                 </div>
               </div>
             </div>
@@ -519,19 +546,19 @@ export default function Home() {
                 <div className='flex flex-col gap-5 items-center justify-center'>
                   <div className='flex flex-col items-center'>
                     <div className='h-6 w-6 bg-white'></div>
-                    <p>Gesiqa Technology Srl</p>
+                    <p className='nunito'>Gesiqa Technology Srl</p>
                   </div>
                   <div className='flex flex-col items-center'>
                     <div className='h-6 w-6 bg-white'></div>
-                    <p>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
+                    <p className='nunito'>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
                   </div>
                   <div className='flex flex-col items-center'>
                     <div className='h-6 w-6 bg-white'></div>
-                    <p>+39 06 79811702</p>
+                    <p className='nunito'>+39 06 79811702</p>
                   </div>
                   <div className='flex flex-col items-center'>
                     <div className='h-6 w-6 bg-white'></div>
-                    <p>info@gesiqa.it</p>
+                    <p className='nunito'>info@gesiqa.it</p>
                   </div>
                   {/* Linkedin */}
                   <div className='flex flex-col items-center'>

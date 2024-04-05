@@ -67,24 +67,27 @@ export default function ContactForm() {
   }
 
     return (
-        <form onSubmit={handleSubmit} className='flex flex-col flex-grow items-start gap-4'>
-            <input className="text-m text-light-blue placeholder:text-light-blue p-4 w-full bg-off-white outline-none border-none" type="text" name="your-name" placeholder="Nome e cognome" onChange={handleNameChange} />
-            <input className="text-m text-light-blue placeholder:text-light-blue p-4 w-full bg-off-white outline-none border-none" type="email" name="your-email" placeholder="Email" onChange={handleEmailChange}/>
-            <textarea className="items-start text-m p-3 flex-grow w-full text-light-blue placeholder:text-light-blue bg-off-white outline-none border-none" 
+        <form onSubmit={handleSubmit} className='flex-grow grid md:grid-cols-2 grid-cols-1 items-start gap-6'>
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="text" name="your-name" placeholder="Nome*" onChange={handleNameChange} />
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="text" name="your-surname" placeholder="Cognome*" onChange={handleNameChange} />
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="text" name="azienda*" placeholder="Azienda*" onChange={handleNameChange} />
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="text" name="ruolo" placeholder="Ruolo" onChange={handleNameChange} />
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="email" name="your-email" placeholder="Email*" onChange={handleEmailChange}/>
+            <input className="text-S2 nunito px-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border rounded border-grey-1 h-12" type="text" name="phone" placeholder="Telefono" onChange={handleNameChange} />
+            <textarea rows={4} className="col-span-2 items-start text-S2 nunito p-3 w-full text-grey-3 placeholder:text-grey-3 outline-none border border-grey-1" 
             name="message" placeholder="Messaggio..." onChange={handleMessageChange}/>
-            <label className='flex flex-row gap-2 items-center'>
-                <div className="w-5 h-5 border-2 border-medium-blue flex items-center justify-center">
-                {isChecked && <div className="w-3 h-3 border-2 bg-medium-blue border-medium-blue"></div>}
-                </div>
-                <input className="opacity-0 absolute accent-dark-blue outline-2 w-5 h-5 border-2 text-dark-blue border-medium-blue rounded-none checked:bg-dark-blue"
-                 type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
-                <a>Ho letto e accetto le </a>
-                <Link href={privacyPolicyLink ? (privacyPolicyLink) : ("/")} target='_blank' >
-                  <span className='text-medium-blue'>Privacy Policy</span>
-                </Link>
+            <label className='flex flex-row gap-2 items-center text-S2 nunito text-grey-3'>
+                <a>*campi obbligatori</a>
             </label>
-            <button type="submit" className=" px-8 py-1.5 border-2 border-medium-blue text-medium-blue 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40">Invia</button>
+            <div className="border-0 text-white flex justify-end
+                h-10 relative">
+              <button type="submit"  className='w-36 pr-2 flex items-center justify-center cursor-pointer '>
+                  <svg width="144" height="40" className='absolute z-0 right-0'>
+                    <path d="M0,0 h128 l16,20 l-16,20 h-128z" fill="#ef7923" />
+                  </svg>
+                  <span className='z-20 leading-button secular'>Invia</span>
+              </button>
+            </div>
             {statusMessage && <p>{statusMessage}</p>}
         </form>
     )

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link'
 import Layout from '../app/layout'
 import '../app/globals.css'
@@ -6,6 +7,16 @@ import '../app/globals.scss'
 
 export default function IlSoftware() {
 
+const [selectedModule, setSelectedModule] = useState(null);
+
+const modules = [
+    // Add your modules here
+    // Each module should be an object with the properties: isImage, icon, image, video, title, text
+];
+
+const handleModuleClick = (module) => {
+    setSelectedModule(module);
+    }
 
 return (
     <>
@@ -34,7 +45,7 @@ return (
             {/* Second Section - i vantaggi di Gesiqa */}
             {/* 3 Elementi in verticale. L'ultimo ha una griglia a 4 colonne che diventa 
             a 2 colonne in mobile*/}
-            <div className='flex w-full items-center justify-center min-h-[400px] py-20 bg-gs-white'>
+            <div className='flex w-full items-center justify-center min-h-[400px] py-20 bg-grey-1'>
                 <div className='max-w-[1106px]'>
                     <div className='grid grid-cols-1 gap-6'>
                     <div className='flex flex-col items-start justify-center gap-2'>
@@ -305,5 +316,15 @@ return (
             </div>
         </>
     </Layout>
+    {selectedModule && (
+        <div className='modal'>
+          {/* Display the selected module's data here 
+          {selectedModule.isImage && <img src={selectedModule.image} alt={selectedModule.title} />}
+          {!selectedModule.isImage && <video src={selectedModule.video} />}
+          <h4>{selectedModule.title}</h4>
+          <p>{selectedModule.text}</p>
+          */}
+        </div>
+      )}
     </>
 )}

@@ -49,7 +49,7 @@ export default function Footer() {
                 <div className='flex flex-row grow justify-between ml-0 md:ml-[120px]'>
                     <div className="flex flex-col justify-end grid-area-2">
                         <div className="flex flex-row mt-6">
-                        <div className="flex flex-col pl-4 gap-4 items-center">
+                        <div className="flex flex-col pl-4 gap-4 items-center nunito">
                             <p className='m'>P.IVA: {acf?.footer_p_iva}</p>
                             <p className='m'>{acf?.footer_indirizzo}</p>
                             <p className='m'>{acf?.footer_email}</p>
@@ -63,13 +63,13 @@ export default function Footer() {
                     </div>
                     {/* Third div */}
                     <div className="flex flex-col justify-center items-end gap-4 grid-area-3">
-                        <div>
+                        <div className='nunito'>
                             <a href={acf?.footer_privacy_link ?? ''} className='m' target='_blank'>Privacy Policy</a>
                         </div>
-                        <div>
+                        <div className='nunito'>
                             <a href={acf?.footer_cookie_link ?? ''} className='m' target='_blank'>Cookie Policy</a>
                         </div>
-                        <div>
+                        <div className='nunito'>
                             <a href={acf?.footer_cookie_link ?? ''} className='m' target='_blank'>Termini e Condizioni</a>
                         </div>
                     </div>

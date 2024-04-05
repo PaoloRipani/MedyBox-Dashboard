@@ -18,6 +18,7 @@ import { useProjects } from '../contexts/ProjectsContext';
 import { useCategories } from '../contexts/CategoriesContext';
 
 import ImageTest from '../../public/Home Heading Image 1.png'
+import ContactForm from '@/components/contactus'
 
 export default function Home() {
 
@@ -315,7 +316,8 @@ export default function Home() {
         {/* First Section */}
         {/* 2 colonne, quella di sinistra con 3 elementi verticali, quella di destra con immagine.
           quando mobile la colonna di sinistra va sopra quella di destra. */}
-          <div className='flex w-full min-h-[640px] bg-gs-white'>
+          <div className='flex w-full h-[640px] bg-gs-white section'>
+          <div className='anchor' id="home"></div>
             <div className='w-full h-full'>
               <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 items-stretch h-full">
                 <div className='flex justify-end items-end flex-grow row-span-1 row-start-2'>
@@ -325,11 +327,16 @@ export default function Home() {
                       Un software all'avanguardia per la gestione integrata di qualità, ambiente e sicurezza nei cantieri. Massimizza l'efficienza con un'interfaccia intuitiva, prestazioni ottimali e convenienza immediata. Facile da adottare, potenzia la produttività e la conformità normativa. 
                       Un investimento imprescindibile per chi punta alla massima sicurezza e efficienza.
                     </p>
-                    <Link href="/chi-siamo">
-                      <button className="px-8 py-1.5 bg-yellow-3 
-                      uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
-                        Contattaci
+                    <Link href='/#contattaci'>
+                    <div className="border-0 text-white flex justify-start
+                    h-10 relative mt-6">
+                      <button type="submit" className='w-40 pr-2 flex items-center justify-center cursor-pointer '>
+                          <svg width="164" height="40" className='absolute z-0 left-0'>
+                            <path d="M0,0 h148 l16,20 l-16,20 h-148z" fill="#ef7923" />
+                          </svg>
+                          <span className='z-20 leading-button secular'>contattaci</span>
                       </button>
+                    </div>
                     </Link>
                   </div>
                 </div>
@@ -365,7 +372,8 @@ export default function Home() {
         {/* Second Section - chi siamo */}
         {/*  unico contenitore, elemento grafico allineato a sinistra, 2 elementi verticali */}
         
-        <div className='flex w-full items-center justify-center min-h-[640px] bg-grey-1'>
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-grey-1 section'>
+        <div className='anchor' id='chi-siamo'></div>
           <div className='max-w-[1106px]'>
             {/* decorazione a sinistra */}
             <div className='flex flex-col max-w-[730px]'>
@@ -384,21 +392,22 @@ export default function Home() {
         {/* contenitore con griglia su 3 colonne in desktop e 1 colonna in mobile.
         ogni elemento della graiglia ha 3 elementi in verticale */}
 
-        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section'>
+        <div className='anchor' id='perche-sceglierci'></div>
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
             <h2 className='text-h1 text-gs-black'>perché sceglierci</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 1</h4>
                 <p className='nunito '>testo 1</p>
               </div>
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 2</h4>
                 <p className='nunito '>testo 2</p>
               </div> 
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg'>
+              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
                 <div className='h-20 w-20 bg-slate-600'></div>
                 <h4>titolo 3</h4>
                 <p className='nunito '>testo 3</p>
@@ -418,11 +427,16 @@ export default function Home() {
                 tutti i settori produttivi, con particolare predisposizione per il settore delle 
                 Costruzioni
               </p>
-              <Link href=''>
-                <button className="px-8 py-1.5 bg-yellow-3 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
-                  Approfondisci
-                </button>
+              <Link href='/il-software'>
+                <div className="border-0 text-white flex justify-start
+                h-10 relative mt-6">
+                  <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
+                      <svg width="184" height="40" className='absolute z-0 left-0'>
+                        <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
+                      </svg>
+                      <span className='z-20 leading-button secular'>approfondisci</span>
+                  </button>
+                </div>
               </Link>
             </div>
           </div>
@@ -436,25 +450,25 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             <div className='grid grid-cols-2'>
               <div className='grid grid-cols-2 gap-6'>
-                <div className='flex flex-col gap-4 p-8 bg-white'>
+                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
                   <div className='h-24 w-24 bg-slate-600'></div>
                   <h4 className=' text-gs-black'>titolo 1</h4>
                   <p className='nunito text-gs-black'>testo 1</p>
                 </div>
                 <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white'>  
+                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white shadow-lg rounded'>  
                     <div className='h-24 w-24 bg-slate-600'></div>
                     <h4 className=' text-gs-black'>titolo 2</h4>
                     <p className='nunito text-gs-black'>testo 2</p>
                   </div>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white'>
+                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
                   <div className='h-24 w-24 bg-slate-600'></div>
                   <h4 className=' text-gs-black'>titolo 3</h4>
                   <p className='nunito text-gs-black'>testo 3</p>
                 </div>
                 <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white'>  
+                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white shadow-lg rounded'>  
                     <div className='h-24 w-24 bg-slate-600'></div>
                     <h4 className=' text-gs-black'>titolo 4</h4>
                     <p className='nunito text-gs-black'>testo 4</p>
@@ -483,11 +497,16 @@ export default function Home() {
           <div className='w-full max-w-[1106px]'>
             <div className='flex flex-col items-start w-1/2'>
               <h2 className='text-h2'>Vuoi saperne di più su tutte le funzioni di Gesiqa?</h2>
-              <Link href=''>
-                <button className="px-8 py-1.5 bg-yellow-3 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
-                  scarica la brochure
-                </button>
+              <Link href='/#contattaci'>
+                <div className="border-0 text-white flex justify-start
+                h-10 relative mt-6">
+                  <button type="submit" className='w-64 pr-2 flex items-center justify-center cursor-pointer '>
+                      <svg width="256" height="40" className='absolute z-0 left-0'>
+                        <path d="M0,0 h240 l16,20 l-16,20 h-240z" fill="#ef7923" />
+                      </svg>
+                      <span className='z-20 leading-button secular'>scarica la brochure</span>
+                  </button>
+                </div>
               </Link>
             </div>
           </div>
@@ -497,37 +516,43 @@ export default function Home() {
         {/* due colonne che in mobile si allineano una sopra l'altra.
         a sinistra 3 elementi in verticale e a destra 3 elementi in verticale da 2 elementi orizzontali ciascuno */}
         
-        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white'>
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section'>
+        <div className='anchor' id='target'></div>
           <div className='max-w-[1106px]'>
             <div className='grid grid-cols-2 items-center'>
               <div className='flex flex-col pr-28'>
-                <h1 className='text-h1 text-gs-black'>il nostro target</h1>
-                <p className='nunito text-grey-4'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
+                <h1 className='text-h1 text-gs-black mb-2'>il nostro target</h1>
+                <p className='nunito text-grey-4 text-l'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
                   pubblici e privati e che vogliono semplificare la gestione della sicurezza, 
                   della qualità e dell’ambiente nei cantieri.
                   Offriamo una soluzione personalizzata anche per i liberi professionisti 
                   operanti nel settore delle costruzioni (Società di consulenza, Direttori 
                   dei lavori e Coordinatori per la sicurezza)
                 </p>
-                <Link href=''>
-                <button className="px-8 py-1.5 bg-yellow-3 
-                uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3">
-                  contattaci
-                </button>
+                <Link href='/#contattaci'>
+                <div className="border-0 text-white flex justify-start
+                h-10 relative mt-6">
+                  <button type="submit" className='w-36 pr-2 flex items-center justify-center cursor-pointer '>
+                      <svg width="144" height="40" className='absolute z-0 left-0'>
+                        <path d="M0,0 h128 l16,20 l-16,20 h-128z" fill="#ef7923" />
+                      </svg>
+                      <span className='z-20 leading-button secular'>contattaci</span>
+                  </button>
+                </div>
                 </Link>
               </div>
-              <div className='flex flex-col gap-16 pl-28'>
-                <div className='flex gap-6 bg-white justify-center items-center'>
-                  <div className='h-28 w-28 bg-yellow-1'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow'>imprese di costruzione</h3>
+              <div className='flex flex-col gap-16 pl-24'>
+                <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden shadow-lg rounded'>
+                  <div className='min-h-28 min-w-28 bg-yellow-1'></div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>imprese di costruzione</h3>
                 </div>
-                <div className='flex gap-6 bg-white justify-center items-center'>
-                  <div className='h-28 w-28 bg-yellow-2'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow'>Professionisti</h3>
+                <div className='flex gap-6 bg-white justify-center items-center ml-28 overflow-hidden	shadow-lg rounded'>
+                  <div className='min-h-28 min-w-28 bg-yellow-2'></div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>Professionisti</h3>
                 </div>
-                <div className='flex gap-6 bg-white justify-center items-center'>
-                  <div className='h-28 w-28 bg-yellow-3'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow'>Aziende di consulenza</h3>
+                <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden	shadow-lg rounded'>
+                  <div className='min-h-28 min-w-28 bg-yellow-3'></div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>Aziende di consulenza</h3>
                 </div>
               </div>
             </div>
@@ -538,37 +563,40 @@ export default function Home() {
         {/* 2 elementi in orizzontale. a sinistra ci sono 6 elementi in verticale.
         a destra ci sono 2 elementi di cui uno è contact form. 
         in mobile si dispongono al contrario. */}
-        <div className='flex w-full items-center justify-center min-h-[640px]'>
-          <div className='w-full max-w-[1106px]'>
-            <div className='grid grid-cols-2'>
-              <div className='flex flex-col justify-center items-center gap-8 p-8 bg-yellow-3 max-w-96'>
-                <h2 className='text-h2'>contatti</h2>
-                <div className='flex flex-col gap-5 items-center justify-center'>
-                  <div className='flex flex-col items-center'>
-                    <div className='h-6 w-6 bg-white'></div>
-                    <p className='nunito'>Gesiqa Technology Srl</p>
-                  </div>
-                  <div className='flex flex-col items-center'>
-                    <div className='h-6 w-6 bg-white'></div>
-                    <p className='nunito'>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
-                  </div>
-                  <div className='flex flex-col items-center'>
-                    <div className='h-6 w-6 bg-white'></div>
-                    <p className='nunito'>+39 06 79811702</p>
-                  </div>
-                  <div className='flex flex-col items-center'>
-                    <div className='h-6 w-6 bg-white'></div>
-                    <p className='nunito'>info@gesiqa.it</p>
-                  </div>
-                  {/* Linkedin */}
-                  <div className='flex flex-col items-center'>
-                    <div className='h-6 w-6 bg-white'></div>
-                  </div>
+        <div className='flex w-full items-stretch justify-center min-h-[640px] py-16 bg-gs-white section'>
+        <div className='anchor' id='contattaci'></div>
+          <div className='w-full max-w-[1106px] relative'>
+            <div className='absolute z-10 top-0 left-0 w-2/6 flex flex-col justify-center items-center gap-8 p-8 my-8 bg-yellow-3 max-w-96 shadow-lg rounded h-[calc(100%-64px)]'>
+              <h3 className='text-contact-title text-center border-b-2 border-yellow-2 h-12 w-full'>contatti</h3>
+              <div className='flex flex-col gap-5 items-center justify-center'>
+                <div className='flex flex-col items-center'>
+                  <div className='h-6 w-6 bg-white'></div>
+                  <p className='nunito text-contact'>Gesiqa Technology Srl</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <div className='h-6 w-6 bg-white'></div>
+                  <p className='nunito text-contact'>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <div className='h-6 w-6 bg-white'></div>
+                  <p className='nunito text-contact'>+39 06 79811702</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <div className='h-6 w-6 bg-white'></div>
+                  <p className='nunito text-contact'>info@gesiqa.it</p>
+                </div>
+                {/* Linkedin */}
+                <div className='flex flex-col items-center'>
+                  <div className='h-6 w-6 bg-white'></div>
                 </div>
               </div>
-              <div className='flex flex-col flex-grow gap-4 p-6 bg-gs-white'>
-                <h2 className='text-h2 text-gs-black'>hai qualcosa da chiederci? scrivici!</h2>
-                <div className='flex flex-grow bg-orange-200'></div>
+            </div>
+            <div className='ml-[16.66%] pl-[16.66%] w-5/6 z-1 h-full flex flex-col flex-grow gap-4 p-6 bg-white shadow-lg rounded'>
+              <div className='px-16'>
+                <h2 className='text-h2 text-gs-black mt-8'>hai qualcosa da chiederci? scrivici!</h2>
+                <div className='flex flex-grow mt-6'>
+                  <ContactForm></ContactForm>
+                </div>
               </div>
             </div>
           </div>

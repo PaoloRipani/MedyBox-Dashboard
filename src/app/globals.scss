@@ -18,6 +18,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -36,6 +39,16 @@ body {
 
 .nunito{
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.section{
+  position: relative;
+}
+
+.anchor{
+  left:0;
+  top: -80px;
+  position: absolute;
 }
 
 h1 {

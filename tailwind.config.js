@@ -40,6 +40,8 @@ module.exports = {
         'tag': ['14px', '150%'],
         'tag-small': ['12px', '150%'],
         'category': ['16px', '150%'],
+        'contact': ['18px', '120%'],
+        'contact-title': ['28px', '120%'],
       },
       lineHeight: {
         'button': '150%',

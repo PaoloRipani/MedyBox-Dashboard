@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { getAllCategories } from '@/lib/api'
+import { getAllCategories, fetchFooterACF, fetchIlSoftwareACF, fetchModuliACF, fetchFunzionalitaPrincipaliACF } from '@/lib/api'
 import Image from 'next/image'
 import Logo from '../../public/Logo Big.svg'
 import HamburgerIcon from '../../public/Hamburger Menu Icon.svg'
@@ -17,6 +17,10 @@ export default function Header() {
   const router = useRouter();
 
   useEffect(() => {
+    //fetchFooterACF();
+    //fetchIlSoftwareACF();
+    //fetchModuliACF();
+    //fetchFunzionalitaPrincipaliACF();
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash) {
@@ -44,6 +48,8 @@ export default function Header() {
     return () => {
       window.removeEventListener('hashchange', handleHashChange, false);
     };
+    
+
   }, []);
 
   const projects2 = useProjects();
@@ -53,16 +59,6 @@ export default function Header() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [categories, setCategories] = useState<any[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    console.log("header contexts :", projects2, categories2)
-    const fetchCategories = async () => {
-      const allCategories = await getAllCategories();
-      setCategories(allCategories);
-    };
-
-    fetchCategories();
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)

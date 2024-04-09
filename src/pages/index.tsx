@@ -1,10 +1,12 @@
 import Link from 'next/link'
-import { getAllProjectSlugs, getProject, getPage, fetchCiHannoSceltoLogos, fetchImage, fetchLatest4News, getAllCategories } from '../lib/api'
+import { fetchHomepageACF } from '../lib/api'
 import '../app/globals.css'
 import '../app/globals.scss'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import { parse } from 'node-html-parser';
+
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -81,28 +83,7 @@ export default function Home() {
 };
 
   type AcfData = {
-    progetti_in_evidenza_progetto_1?: string;
-    progetti_in_evidenza_progetto_2?: string;
-    progetti_in_evidenza_progetto_3?: string;
-    progetti_in_evidenza_progetto_4?: string;
-    progetti_in_evidenza_home_title?: string;
-    progetti_in_evidenza_home_button_text?: string;
-    header_background_image?: string;
-    header_logo_image?: string;
-    header_home_text?: string;
-    servizi_elemento_1_image?: string;
-    servizi_elemento_1_text?: string;
-    servizi_elemento_2_image?: string;
-    servizi_elemento_2_text?: string;
-    servizi_elemento_3_image?: string;
-    servizi_elemento_3_text?: string;
-    ci_hanno_scelto_home_image_logos?: string;
-    chi_siamo_home_image?: string;
-    chi_siamo_home_text?: string;
-    chi_siamo_home_button_text?: string;
-    servizi_home_text?: string;
-    servizi_home_button_text?: string;
-    // Add other acf properties as needed
+    [key: string]: any;
   };
   
   const [imageSrcs, setImageSrcs] = useState([])
@@ -113,7 +94,10 @@ export default function Home() {
   const [news, setNews] = useState<NewsData[]>([]);
   const [projects, setProjects] = useState<ProjectData[]>([]);
   const [progetti, setProgetti] =  useState<(ProjectData | undefined)[]>([]);
+
   const [acf, setAcf] = useState<AcfData>({});
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+
   const [pageLoaded, setPageLoaded] = useState(false)
   const [pageImagesLoaded, setPageImagesLoaded] = useState(false)
   const [projectsLoaded, setProjectsLoaded] = useState(false)
@@ -128,12 +112,41 @@ export default function Home() {
 
   const categories2 = useCategories();
 
+  function applyColorToApostrophes(text: string) {
+    return text.replace(/'([^']*)'/g, "<span style='color: #F59D21;'>$1</span>");
+  }
+
   useEffect(() => {
     console.log("Projects contexts while loading: ", projects2);
     if (!loading2) {
       console.log("Projects contexts: ", projects2);
     }
   }, [projects2, loading2]);
+
+  function extractHighResUrls(htmlString : any) {
+    const regex = /srcset="([^"]*)"/g;
+    let match;
+    const highResUrls = [];
+
+    while ((match = regex.exec(htmlString)) !== null) {
+        const srcset = match[1];
+        const urls = srcset.split(', ');
+        const highResUrl = urls[urls.length - 1].split(' ')[0];
+        highResUrls.push(highResUrl);
+    }
+
+    return highResUrls;
+}
+
+  useEffect(() => {
+    if(!acf.heroImageSlider) return;
+    const root = parse(acf.heroImageSlider);
+    const imgTags = root.querySelectorAll('img');
+    const urls = imgTags.map(img => img.getAttribute('src'));
+
+    console.log(extractHighResUrls(acf.heroImageSlider));
+    setImageUrls(extractHighResUrls(acf.heroImageSlider));
+  }, [acf.heroImageSlider]);
 
   useEffect(() => {
     //console.log("A: home contexts projects2 :", projects2)
@@ -142,17 +155,17 @@ export default function Home() {
       //console.log("B: home contexts projects2 :", projects2)
       //console.log("B: home contexts categories2 :", categories2)
       try {
-        const homePage = await getPage('home')
-        setAcf(homePage.acf)
-        const slugs: string[] = await getAllProjectSlugs()
-        const projects: any[] = await Promise.all(slugs.map((slug: string) => getProject(slug)))
+        const resFetchHomepageACF = await fetchHomepageACF()
+        resFetchHomepageACF.heroTitle = applyColorToApostrophes(resFetchHomepageACF.heroTitle);
+        resFetchHomepageACF.chiSiamoTitle = applyColorToApostrophes(resFetchHomepageACF.chiSiamoTitle);
+        resFetchHomepageACF.percheSceglierciTitle = applyColorToApostrophes(resFetchHomepageACF.percheSceglierciTitle);
+        resFetchHomepageACF.ilNostroTargetTitle = applyColorToApostrophes(resFetchHomepageACF.ilNostroTargetTitle);
+        resFetchHomepageACF.scopriIlSoftwareTitle = applyColorToApostrophes(resFetchHomepageACF.scopriIlSoftwareTitle);
+        resFetchHomepageACF.vantaggiTitle = applyColorToApostrophes(resFetchHomepageACF.vantaggiTitle);
+        resFetchHomepageACF.vuoiSaperneDiPiuTitle = applyColorToApostrophes(resFetchHomepageACF.vuoiSaperneDiPiuTitle);
+        resFetchHomepageACF.contattiTitle = applyColorToApostrophes(resFetchHomepageACF.contattiTitle);
+        setAcf(resFetchHomepageACF);
 
-        setProjects(projects)
-        fetchNews()
-
-        const categoriestemp = await getAllCategories()
-
-        setCategories(categoriestemp)
       } catch (err) {
         setIsLoading(true)
       }
@@ -162,151 +175,17 @@ export default function Home() {
       setProjectsLoaded(true)
       setPageLoaded(true)
       setCategoriesLoaded(true)
-      //console.log("2 projects: ",projects)
-      //console.log("2 homePage.acf: ",acf)
-      //console.log("2 news: ",news)
-      //console.log("2 categories: ",categories)
+      
     })
   }, [])
 
-  //console.log("homepage acf:" , acf)
-  //console.log("projects:" , projects)
-
-  useEffect(() => {
-    if (!progetti) return
-
-    //console.log("2B progetti: ",progetti)
-    //console.log("progetti images: ",progettiImages)
-    
-  }, [progetti])
-
-  useEffect(() => {
-    if (!pageLoaded) return 
-
-    
-    const fetchHeroImage = async () => {
-      if (!(acf as any)) {
-        return
-      }
-      const imageData = await fetchImage((acf as any).header_background_image)
-      setHeroImage(imageData)
-      setHeroImageLoaded(true)
-    }
-    
-    const fetchImages = async () => {
-      if (!(acf as any)) {
-          return
-      }
-
-      const imageNames: Record<string, any> = {
-          'chi_siamo_home_image': (acf as any).chi_siamo_home_image,
-          //'header_background_image': (acf as any).header_background_image,
-          'header_logo_image': (acf as any).header_logo_image,
-          'servizi_elemento_1_image': (acf as any).servizi_elemento_1_image,
-          'servizi_elemento_2_image': (acf as any).servizi_elemento_2_image,
-          'servizi_elemento_3_image': (acf as any).servizi_elemento_3_image,
-      };
-      const fetchedImages: Record<string, { src: string; width: number; height: number }> = {};
-
-      for (const [name, id] of Object.entries(imageNames)) {
-        const imageData = await fetchImage(id)
-        fetchedImages[name] = {
-          src: imageData.src,
-          width: imageData.width,
-          height: imageData.height
-        }
-      }
-      setImages(fetchedImages);
-    }
-
-    fetchHeroImage();
-
-    fetchImages().then(() => {
-      setPageImagesLoaded(true),
-      console.log('fetched images: ', images)
-      //,console.log('fetched progetti images: ', progettiImages)
-      }) 
-    // Set pageImagesLoaded to true after fetching images
-  }, [pageLoaded])
-
-  useEffect(() => {
-    if (!pageLoaded) return // Don't fetch images until page data is loaded
-
-    // Extract the project IDs from homePage.acf
-    const projectIds = [
-        acf.progetti_in_evidenza_progetto_1,
-        acf.progetti_in_evidenza_progetto_2,
-        acf.progetti_in_evidenza_progetto_3,
-        acf.progetti_in_evidenza_progetto_4,
-    ]
-
-    // Find the corresponding projects in `projects`
-    const progetti = projectIds.map(id => projects.find(project => project.id === id))
-
-    // Fetch the images for each project
-    const fetchProgettiImages = async () => {
-        const images = await Promise.all(
-            progetti.map(progetto => fetchImage(progetto?.acf.progetto_header_background_image))
-        )
-
-        const projectsWithDetails = await Promise.all(progetti.map(async (proj) => {
-            const categoryNames = proj?.acf.progetto_categoria.map(categoryId => {
-                const category = categories.find(cat => cat.id === categoryId);
-                return category ? category.name : 'No category';
-            });
-
-            return {
-                ...proj,
-                categoryName: categoryNames
-            }
-        }))
-
-        const validProjectsWithDetails = projectsWithDetails.filter(proj => proj !== undefined) as SimilarProjectData[];
-        setProgetti(validProjectsWithDetails)
-        setProgettiImages(images) // Store the images in state
-    }
-
-    fetchProgettiImages().then(() => setProgettiImagesLoaded(true))
-}, [pageLoaded, projects, categories])
-
-  const fetchProgettoCategoria = async (id : any) => { 
-    const response = await fetch(`https://www.aloisiprogetti.com/wp-json/wp/v2/progetto_category/${id}`)
-    const data = await response.json()
-    //console.log("data fetchProgettoCategoria" , data)
-    return {name : data.name}
-  }
-
-  const fetchProgettoImage = async (id : any) => {
-    const response = await fetch(`https://www.aloisiprogetti.com/wp-json/wp/v2/media/${id}`)
-    const data = await response.json()
-    
-    return {
-      src: data.guid.rendered,
-      width: data.media_details.width,
-      height: data.media_details.height
-    }
-  }
-
-  const fetchNews = async () => {
-    const res = await fetchLatest4News();
-    setNews(res);
-    setNewsLoaded(true);
-  }
-  
-  const  fetchCiHannoScelto = async (element : any) =>{
-    const srcs = await fetchCiHannoSceltoLogos(element)
-    setImageSrcs(srcs as any)
-    setLogosLoaded(true)
-  }
-
-  useEffect(() => {
-    fetchCiHannoScelto(acf.ci_hanno_scelto_home_image_logos)
-  }, [acf])
 
   useEffect(() => {
     //console.log("2 fetched images: " , images)
     //console.log("2 fetched progetti images: " , progettiImages)
-  }, [pageImagesLoaded])
+    if(!acf) return
+    console.log("acf: ",acf)
+  }, [acf])
 
   return (
       <div>
@@ -321,8 +200,8 @@ export default function Home() {
             <div className='w-full h-full'>
               <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-3 items-stretch h-full">
                 <div className='flex justify-end items-end flex-grow row-span-1 row-start-2'>
-                  <div className="flex flex-col gap-3 text-left z-20 max-w-[553px] ">
-                    <h2 className="text-h1 text-gs-black">Designed for builders</h2>
+                  <div className="flex flex-col items-start gap-3 text-left z-20 max-w-[553px] ">
+                    <h2 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
                     <p className="nunito space-p-l font-light pr-16 text-gs-black">
                       Un software all'avanguardia per la gestione integrata di qualità, ambiente e sicurezza nei cantieri. Massimizza l'efficienza con un'interfaccia intuitiva, prestazioni ottimali e convenienza immediata. Facile da adottare, potenzia la produttività e la conformità normativa. 
                       Un investimento imprescindibile per chi punta alla massima sicurezza e efficienza.
@@ -354,15 +233,11 @@ export default function Home() {
                     arrows={false}
                     className='h-full object-cover relative'
                   >
-                    <div className='h-full'>
-                      <img src={ImageTest.src} alt="Image 1" className='object-cover h-full'/>
-                    </div>
-                    <div className='h-full'>
-                      <img src={ImageTest.src} alt="Image 2"  className='object-cover h-full'/>
-                    </div>
-                    <div className='h-full'>
-                      <img src={ImageTest.src} alt="Image 3"  className='object-cover h-full'/>
-                    </div>
+                    {imageUrls.map((url, index) => (
+                      <div key={index} className='h-full'>
+                        <img src={url} alt={`Image ${index + 1}`} className='object-cover h-full'/>
+                      </div>
+                    ))}
                   </Slider>
                 </div>
               </div>
@@ -377,12 +252,8 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             {/* decorazione a sinistra */}
             <div className='flex flex-col max-w-[730px]'>
-              <h1 className="text-h1 text-gs-black">chi siamo</h1>
-              <p className='nunito  text-gs-black'>Siamo Gesiqa Technology e offriamo soluzioni informatiche innovative per organizzare le attività 
-                e gestire la sicurezza sul lavoro, la qualità e l’ambiente nel settore edile.
-                Abbiamo sviluppato il software Gesiqa: un prodotto all’avanguardia, intuitivo e facilmente 
-                fruibile on-line, realizzato su misura per gestire e tenere sotto controllo ogni processo 
-                interno alle imprese di costruzione.
+              <h1 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.chiSiamoTitle }}></h1>
+              <p className='nunito  text-gs-black' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
               </p>
             </div>
           </div>
@@ -395,7 +266,7 @@ export default function Home() {
         <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section'>
         <div className='anchor' id='perche-sceglierci'></div>
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
-            <h2 className='text-h1 text-gs-black'>perché sceglierci</h2>
+            <h2 className='text-h1 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierciTitle }}></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
                 <div className='h-20 w-20 bg-slate-600'></div>
@@ -421,7 +292,7 @@ export default function Home() {
         <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
           <div className='w-full max-w-[1106px]'>
             <div className='flex flex-col items-start w-1/2'>
-              <h2 className='text-h2'>Scopri il software Gesiqa</h2>
+              <h2 className='text-h2' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareTitle }}></h2>
               <p className='nunito'>Gesiqa è un prodotto integrato, un’applicazione software per la gestione documentale, 
                 operativa e di controllo della Sicurezza, della Qualità e dell’ Ambiente in 
                 tutti i settori produttivi, con particolare predisposizione per il settore delle 
@@ -477,7 +348,7 @@ export default function Home() {
               </div>
               <div className='flex flex-col items-start justify-center'>
                 <div className='flex flex-col pl-28'>
-                  <h1 className='text-h1 text-gs-black'>i vantaggi</h1>
+                  <h1 className='text-h1 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.vantaggiTitle }}></h1>
                   <p className='nunito text-gs-black'>Gesiqa gestisce tutto ciò di cui hai bisogno per gestire la Sicurezza, la Qualità e l'Ambiente 
                     nei cantieri.
                     Potrai ottimizzare e semplificare le attività di routine, risparmiare risorse, ridurre i tempi e 
@@ -496,7 +367,7 @@ export default function Home() {
         <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
           <div className='w-full max-w-[1106px]'>
             <div className='flex flex-col items-start w-1/2'>
-              <h2 className='text-h2'>Vuoi saperne di più su tutte le funzioni di Gesiqa?</h2>
+              <h2 className='text-h2' dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuTitle }}></h2>
               <Link href='/#contattaci'>
                 <div className="border-0 text-white flex justify-start
                 h-10 relative mt-6">
@@ -520,8 +391,8 @@ export default function Home() {
         <div className='anchor' id='target'></div>
           <div className='max-w-[1106px]'>
             <div className='grid grid-cols-2 items-center'>
-              <div className='flex flex-col pr-28'>
-                <h1 className='text-h1 text-gs-black mb-2'>il nostro target</h1>
+              <div className='flex flex-col items-start pr-28'>
+                <h1 className='text-h1 text-gs-black mb-2' dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetTitle }}></h1>
                 <p className='nunito text-grey-4 text-l'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
                   pubblici e privati e che vogliono semplificare la gestione della sicurezza, 
                   della qualità e dell’ambiente nei cantieri.
@@ -593,7 +464,7 @@ export default function Home() {
             </div>
             <div className='ml-[16.66%] pl-[16.66%] w-5/6 z-1 h-full flex flex-col flex-grow gap-4 p-6 bg-white shadow-lg rounded'>
               <div className='px-16'>
-                <h2 className='text-h2 text-gs-black mt-8'>hai qualcosa da chiederci? scrivici!</h2>
+                <h2 className='text-h2 text-gs-black mt-8' dangerouslySetInnerHTML={{ __html: acf.contattiTitle }}></h2>
                 <div className='flex flex-grow mt-6'>
                   <ContactForm></ContactForm>
                 </div>

@@ -4,14 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import { getAllCategories, fetchFooterACF, fetchIlSoftwareACF, fetchModuliACF, fetchFunzionalitaPrincipaliACF } from '@/lib/api'
+import { fetchFooterACF, fetchIlSoftwareACF, fetchModuliACF, fetchFunzionalitaPrincipaliACF } from '@/lib/api'
 import Image from 'next/image'
 import Logo from '../../public/Logo Big.svg'
 import HamburgerIcon from '../../public/Hamburger Menu Icon.svg'
 import MenuPointer from '../../public/Menu Pointer.svg'
-
-import { useProjects } from '../contexts/ProjectsContext';
-import { useCategories } from '../contexts/CategoriesContext';
 
 export default function Header() {
   const router = useRouter();
@@ -51,9 +48,6 @@ export default function Header() {
     
 
   }, []);
-
-  const projects2 = useProjects();
-  const categories2 = useCategories();
 
   const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)

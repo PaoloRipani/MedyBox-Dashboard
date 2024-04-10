@@ -16,10 +16,11 @@ import Image from 'next/image'
 import Layout from '../app/layout'
 import { useEffect, useState, createContext } from 'react'
 
-import { useProjects } from '../contexts/ProjectsContext';
-import { useCategories } from '../contexts/CategoriesContext';
-
-import ImageTest from '../../public/Home Heading Image 1.png'
+import linkedinIcon from '../../public/ri_linkedin-fill.svg'
+import locationIcon from '../../public/material-symbols_location-on-outline.svg'
+import emailIcon from '../../public/material-symbols_alternate-email.svg'
+import nameIcon from '../../public/material-symbols_domain.svg'
+import phoneIcon from '../../public/material-symbols_phone-in-talk-outline.svg'
 import ContactForm from '@/components/contactus'
 
 export default function Home() {
@@ -29,99 +30,17 @@ export default function Home() {
       delay: 100,
     });
   }, []);
-  
-  type ImageData = {
-    src: string;
-    width: number;
-    height: number;
-  };
-
-  type ImagesData = {
-    header_background_image?: ImageData;
-    chi_siamo_home_image?: ImageData;
-    servizi_elemento_1_image?: ImageData;
-    servizi_elemento_2_image?: ImageData;
-    servizi_elemento_3_image?: ImageData;
-    // Add other image properties as needed
-  };
-  
-  type CategoryData = {
-    id: string;
-    name: string;
-    // Add other category properties as needed
-  };
-    
-  type NewsData = {
-    image: {
-      src: string;
-      alt: string;
-    };
-    year: string;
-    title: string;
-    text: string;
-    text_link?: string;
-    url_link?: string;
-    // Add other news properties as needed
-  };
-
-  type ProjectData = {
-    id: string;
-    slug: string;
-    acf: {
-      progetto_header_background_image: string;
-      progetto_anno_text: string;
-      progetto_categoria: string[];
-      progetto_title: string;
-      // Add other acf properties as needed
-    };
-    // Add other project properties as needed
-  };
-
-  type SimilarProjectData = ProjectData & {
-    imageSrc: string;
-    categoryName: string[];
-};
 
   type AcfData = {
     [key: string]: any;
   };
-  
-  const [imageSrcs, setImageSrcs] = useState([])
-  const [images, setImages] = useState<ImagesData>({});
-  const [progettiImages, setProgettiImages] = useState<ImageData[]>([]);
-  const [isLoading, setIsLoading] = useState(true)
-  const [categories, setCategories] = useState<CategoryData[]>([]);
-  const [news, setNews] = useState<NewsData[]>([]);
-  const [projects, setProjects] = useState<ProjectData[]>([]);
-  const [progetti, setProgetti] =  useState<(ProjectData | undefined)[]>([]);
 
   const [acf, setAcf] = useState<AcfData>({});
   const [imageUrls, setImageUrls] = useState<string[]>([]);
 
-  const [pageLoaded, setPageLoaded] = useState(false)
-  const [pageImagesLoaded, setPageImagesLoaded] = useState(false)
-  const [projectsLoaded, setProjectsLoaded] = useState(false)
-  const [progettiImagesLoaded, setProgettiImagesLoaded] = useState(false)
-  const [categoriesLoaded, setCategoriesLoaded] = useState(false)
-  const [logosLoaded, setLogosLoaded] = useState(false)
-  const [newsLoaded, setNewsLoaded] = useState(false)
-  const [isHeroImageLoaded, setHeroImageLoaded] = useState(false);
-  const [heroImage, setHeroImage] = useState<ImageData>()
-
-  const { projects2, loading2 } = useProjects();
-
-  const categories2 = useCategories();
-
   function applyColorToApostrophes(text: string) {
     return text.replace(/'([^']*)'/g, "<span style='color: #F59D21;'>$1</span>");
   }
-
-  useEffect(() => {
-    console.log("Projects contexts while loading: ", projects2);
-    if (!loading2) {
-      console.log("Projects contexts: ", projects2);
-    }
-  }, [projects2, loading2]);
 
   function extractHighResUrls(htmlString : any) {
     const regex = /srcset="([^"]*)"/g;
@@ -167,15 +86,12 @@ export default function Home() {
         setAcf(resFetchHomepageACF);
 
       } catch (err) {
-        setIsLoading(true)
+        console.error(err);
       }
     }
 
     fetchData().then(() => {
-      setProjectsLoaded(true)
-      setPageLoaded(true)
-      setCategoriesLoaded(true)
-      
+      console.log("loaded")
     })
   }, [])
 
@@ -202,10 +118,8 @@ export default function Home() {
                 <div className='flex justify-end items-end flex-grow row-span-1 row-start-2'>
                   <div className="flex flex-col items-start gap-3 text-left z-20 max-w-[553px] ">
                     <h2 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
-                    <p className="nunito space-p-l font-light pr-16 text-gs-black">
-                      Un software all'avanguardia per la gestione integrata di qualità, ambiente e sicurezza nei cantieri. Massimizza l'efficienza con un'interfaccia intuitiva, prestazioni ottimali e convenienza immediata. Facile da adottare, potenzia la produttività e la conformità normativa. 
-                      Un investimento imprescindibile per chi punta alla massima sicurezza e efficienza.
-                    </p>
+                    <p className="nunito text-l font-light pr-16 text-grey-4" dangerouslySetInnerHTML={{ __html: acf.heroDescription }}> 
+                      </p>
                     <Link href='/#contattaci'>
                     <div className="border-0 text-white flex justify-start
                     h-10 relative mt-6">
@@ -213,7 +127,8 @@ export default function Home() {
                           <svg width="164" height="40" className='absolute z-0 left-0'>
                             <path d="M0,0 h148 l16,20 l-16,20 h-148z" fill="#ef7923" />
                           </svg>
-                          <span className='z-20 leading-button secular'>contattaci</span>
+                          <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}>
+                          </span>
                       </button>
                     </div>
                     </Link>
@@ -253,7 +168,7 @@ export default function Home() {
             {/* decorazione a sinistra */}
             <div className='flex flex-col max-w-[730px]'>
               <h1 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.chiSiamoTitle }}></h1>
-              <p className='nunito  text-gs-black' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
+              <p className='nunito  text-grey-4 text-h4 font-semibold' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
               </p>
             </div>
           </div>
@@ -268,20 +183,32 @@ export default function Home() {
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
             <h2 className='text-h1 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierciTitle }}></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
-                <div className='h-20 w-20 bg-slate-600'></div>
-                <h4>titolo 1</h4>
-                <p className='nunito '>testo 1</p>
+              <div className='flex flex-col gap-4 p-8 bg-white text-gs-black shadow-lg rounded'>
+                <div className='h-20 w-20'>
+                  <img src={acf.percheSceglierci1stItemIcon?.node?.link} alt="1sticon" />
+                </div>
+                <div className='flex flex-col gap-1'>
+                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci1stItemTitle }}></h4>
+                  <p className='nunito text-grey-4 text-S3' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci1stItemDescription }}></p>
+                </div>
               </div>
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
-                <div className='h-20 w-20 bg-slate-600'></div>
-                <h4>titolo 2</h4>
-                <p className='nunito '>testo 2</p>
+              <div className='flex flex-col gap-4 p-8 bg-white text-gs-black shadow-lg rounded'>
+                <div className='h-20 w-20'>
+                  <img src={acf.percheSceglierci2ndItemIcon?.node?.link} alt="2ndicon" />
+                </div>
+                <div className='flex flex-col gap-1'>
+                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci2ndItemTitle }}></h4>
+                  <p className='nunito text-grey-4 text-S3' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci2ndItemDescription }}></p>
+                </div>
               </div> 
-              <div className='flex flex-col p-8 bg-white text-gs-black shadow-lg rounded'>
-                <div className='h-20 w-20 bg-slate-600'></div>
-                <h4>titolo 3</h4>
-                <p className='nunito '>testo 3</p>
+              <div className='flex flex-col gap-4 p-8 bg-white text-gs-black shadow-lg rounded'>
+                <div className='h-20 w-20'>
+                  <img src={acf.percheSceglierci3rdItemIcon?.node?.link} alt="3rdicon" />
+                </div>
+                <div className='flex flex-col gap-1'>
+                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci3rdItemTitle }}></h4>
+                  <p className='nunito text-grey-4 text-S3' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci3rdItemDescription }}></p>
+                </div>
               </div>
             </div>
           </div>
@@ -291,12 +218,9 @@ export default function Home() {
         {/*  unico contenitore, 3 elementi verticali */}
         <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
           <div className='w-full max-w-[1106px]'>
-            <div className='flex flex-col items-start w-1/2'>
+            <div className='flex flex-col items-start w-1/2 gap-4'>
               <h2 className='text-h2' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareTitle }}></h2>
-              <p className='nunito'>Gesiqa è un prodotto integrato, un’applicazione software per la gestione documentale, 
-                operativa e di controllo della Sicurezza, della Qualità e dell’ Ambiente in 
-                tutti i settori produttivi, con particolare predisposizione per il settore delle 
-                Costruzioni
+              <p className='nunito text-h4 text-grey-1' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareDescriptionText }}>
               </p>
               <Link href='/il-software'>
                 <div className="border-0 text-white flex justify-start
@@ -305,7 +229,7 @@ export default function Home() {
                       <svg width="184" height="40" className='absolute z-0 left-0'>
                         <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
                       </svg>
-                      <span className='z-20 leading-button secular'>approfondisci</span>
+                      <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareButtonText }}></span>
                   </button>
                 </div>
               </Link>
@@ -322,38 +246,57 @@ export default function Home() {
             <div className='grid grid-cols-2'>
               <div className='grid grid-cols-2 gap-6'>
                 <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
-                  <div className='h-24 w-24 bg-slate-600'></div>
-                  <h4 className=' text-gs-black'>titolo 1</h4>
-                  <p className='nunito text-gs-black'>testo 1</p>
+                  <div className='h-16 w-16'>
+                    <img src={acf.vantaggi1stElementIcon?.node?.link} alt="1sticon" />
+                  </div>
+                  <div className='flex flex-col gap-1'>
+                    <h4 className='text-h4 text-gs-black' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementTitle }}></h4>
+                    <p className='nunito text-grey-4 text-S3' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementDescription }}></p>
+                  </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white shadow-lg rounded'>  
-                    <div className='h-24 w-24 bg-slate-600'></div>
-                    <h4 className=' text-gs-black'>titolo 2</h4>
-                    <p className='nunito text-gs-black'>testo 2</p>
+                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded -mt-6 mb-6'>
+                  <div className='h-16 w-16'>
+                    <img src={acf.vantaggi2ndElementIcon?.node?.link} alt="2ndicon" />
+                  </div>
+                  <div className='flex flex-col gap-1'>
+                    <h4 className='text-h4 text-gs-black' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementTitle }}></h4>
+                    <p className='nunito text-grey-4 text-S3' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementDescription }}></p>
                   </div>
                 </div>
                 <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
-                  <div className='h-24 w-24 bg-slate-600'></div>
-                  <h4 className=' text-gs-black'>titolo 3</h4>
-                  <p className='nunito text-gs-black'>testo 3</p>
+                  <div className='h-16 w-16'>
+                    <img src={acf.vantaggi3rdElementIcon?.node?.link} alt="3rdicon" />
+                  </div>
+                  <div className='flex flex-col gap-1'>
+                    <h4 className='text-h4 text-gs-black' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementTitle }}></h4>
+                    <p className='nunito text-grey-4 text-S3' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementDescription }}></p>
+                  </div>
                 </div>
-                <div className='flex flex-col gap-4'>
-                  <div className='flex flex-col gap-4 -mt-10 p-8 bg-white shadow-lg rounded'>  
-                    <div className='h-24 w-24 bg-slate-600'></div>
-                    <h4 className=' text-gs-black'>titolo 4</h4>
-                    <p className='nunito text-gs-black'>testo 4</p>
-                    </div>
+                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded -mt-6 mb-6'>
+                  <div className='h-16 w-16'>
+                    <img src={acf.vantaggi4thElementIcon?.node?.link} alt="4thicon" />
+                  </div>
+                  <div className='flex flex-col gap-1'>
+                    <h4 className='text-h4 text-gs-black' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementTitle }}></h4>
+                    <p className='nunito text-grey-4 text-S3' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementDescription }}></p>
+                  </div>
                 </div>
               </div>
               <div className='flex flex-col items-start justify-center'>
                 <div className='flex flex-col pl-28'>
-                  <h1 className='text-h1 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.vantaggiTitle }}></h1>
-                  <p className='nunito text-gs-black'>Gesiqa gestisce tutto ciò di cui hai bisogno per gestire la Sicurezza, la Qualità e l'Ambiente 
-                    nei cantieri.
-                    Potrai ottimizzare e semplificare le attività di routine, risparmiare risorse, ridurre i tempi e 
-                    gli errori. Inoltre, avrai la completa digitalizzazione dei processi che girano attorno all’attività 
-                    di cantiere e l'immediata disponibilità in caso di ispezioni.
+                  <h1 className='text-h1 text-gs-black' 
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggiTitle }}>
+                  </h1>
+                  <p className='nunito text-grey-4 text-l'
+                    dangerouslySetInnerHTML={{ __html: acf.vantaggiDescription }}>
                   </p>
                 </div>
               </div>
@@ -375,7 +318,8 @@ export default function Home() {
                       <svg width="256" height="40" className='absolute z-0 left-0'>
                         <path d="M0,0 h240 l16,20 l-16,20 h-240z" fill="#ef7923" />
                       </svg>
-                      <span className='z-20 leading-button secular'>scarica la brochure</span>
+                      <span className='z-20 leading-button secular' 
+                      dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuButtonText }}></span>
                   </button>
                 </div>
               </Link>
@@ -393,12 +337,8 @@ export default function Home() {
             <div className='grid grid-cols-2 items-center'>
               <div className='flex flex-col items-start pr-28'>
                 <h1 className='text-h1 text-gs-black mb-2' dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetTitle }}></h1>
-                <p className='nunito text-grey-4 text-l'>Ci rivolgiamo ad imprese di costruzioni che gestiscono appalti di lavori 
-                  pubblici e privati e che vogliono semplificare la gestione della sicurezza, 
-                  della qualità e dell’ambiente nei cantieri.
-                  Offriamo una soluzione personalizzata anche per i liberi professionisti 
-                  operanti nel settore delle costruzioni (Società di consulenza, Direttori 
-                  dei lavori e Coordinatori per la sicurezza)
+                <p className='nunito text-grey-4 text-l'
+                 dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetDescription }}>
                 </p>
                 <Link href='/#contattaci'>
                 <div className="border-0 text-white flex justify-start
@@ -407,23 +347,37 @@ export default function Home() {
                       <svg width="144" height="40" className='absolute z-0 left-0'>
                         <path d="M0,0 h128 l16,20 l-16,20 h-128z" fill="#ef7923" />
                       </svg>
-                      <span className='z-20 leading-button secular'>contattaci</span>
+                      <span className='z-20 leading-button secular'
+                        dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetButtonText }}>
+                      </span>
                   </button>
                 </div>
                 </Link>
               </div>
               <div className='flex flex-col gap-16 pl-24'>
                 <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-1'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>imprese di costruzione</h3>
+                  <div className='min-h-28 min-w-28 bg-yellow-1 flex items-center justify-center'>
+                    <img src={acf.ilNostroTarget1stElementIcon?.node?.link} alt="1sticon" />
+                  </div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget1stElementText }}>
+                  </h3>
                 </div>
                 <div className='flex gap-6 bg-white justify-center items-center ml-28 overflow-hidden	shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-2'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>Professionisti</h3>
+                  <div className='min-h-28 min-w-28 bg-yellow-2 flex items-center justify-center'>
+                    <img src={acf.ilNostroTarget2ndElementIcon?.node?.link} alt="2ndicon" />
+                  </div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget2ndElementText }}>
+                  </h3>
                 </div>
                 <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden	shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-3'></div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'>Aziende di consulenza</h3>
+                  <div className='min-h-28 min-w-28 bg-yellow-3 flex items-center justify-center'>
+                    <img src={acf.ilNostroTarget3rdElementIcon?.node?.link} alt="3rdicon" />
+                  </div>
+                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget3rdElementText }}>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -441,24 +395,34 @@ export default function Home() {
               <h3 className='text-contact-title text-center border-b-2 border-yellow-2 h-12 w-full'>contatti</h3>
               <div className='flex flex-col gap-5 items-center justify-center'>
                 <div className='flex flex-col items-center'>
-                  <div className='h-6 w-6 bg-white'></div>
+                  <div className='h-6 w-6'>
+                    <Image src={nameIcon} alt='name' />
+                  </div>
                   <p className='nunito text-contact'>Gesiqa Technology Srl</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                  <div className='h-6 w-6 bg-white'></div>
+                  <div className='h-6 w-6'>
+                    <Image src={locationIcon} alt='address' />
+                  </div>
                   <p className='nunito text-contact'>Via Vittorio Metz, 45 <br/> 00173 Roma, Italia</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                  <div className='h-6 w-6 bg-white'></div>
+                  <div className='h-6 w-6'>
+                    <Image src={phoneIcon} alt='telephone' />
+                  </div>
                   <p className='nunito text-contact'>+39 06 79811702</p>
                 </div>
                 <div className='flex flex-col items-center'>
-                  <div className='h-6 w-6 bg-white'></div>
-                  <p className='nunito text-contact'>info@gesiqa.it</p>
+                  <div className='h-6 w-6'>
+                    <Image src={emailIcon} alt='email' />
+                  </div>
+                  <p className='nunito text-contact underline'>info@gesiqa.it</p>
                 </div>
                 {/* Linkedin */}
                 <div className='flex flex-col items-center'>
-                  <div className='h-6 w-6 bg-white'></div>
+                  <div className='h-6 w-6'>
+                    <Image src={linkedinIcon} alt='linkedin' />
+                  </div>
                 </div>
               </div>
             </div>

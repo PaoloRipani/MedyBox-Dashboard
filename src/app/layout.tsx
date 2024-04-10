@@ -9,14 +9,9 @@ import { useState, useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 const outfit = Outfit({ subsets: ['latin'] })
 
-import { ProjectsProvider } from '../contexts/ProjectsContext';
-import { CategoriesProvider } from '../contexts/CategoriesContext';
-
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <ProjectsProvider>
-      <CategoriesProvider>
+    <>
         <div className="flex flex-col min-h-screen mx-auto ">
           <Head>
             <link rel="icon" href="/web/favicon.ico" sizes="any" />
@@ -30,7 +25,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </main>
           <Footer />
         </div>
-      </CategoriesProvider>
-    </ProjectsProvider>
+    </>
   )
 }

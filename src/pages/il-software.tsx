@@ -5,6 +5,9 @@ import Layout from '../app/layout'
 import '../app/globals.css'
 import '../app/globals.scss'
 
+import play from '../../public/Play.svg'
+import close from '../../public/material-symbols_close.svg'
+
 export default function IlSoftware() {
 type AcfData = {
     [key: string]: any;
@@ -53,6 +56,8 @@ const [selectedModule, setSelectedModule] = useState<ModuleType | null>(null);
 const [acf, setAcf] = useState<AcfData>({});
 const [moduli, setModuli] = useState<moduliData>([]);
 const [funzionalita, setFunzionalita] = useState<funzionalitaData>([]);
+const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+const [isModalLarge, setIsModalLarge] = useState(false);
 
 const handleModuleClick = (module : any) => {
     setSelectedModule(module);
@@ -65,6 +70,7 @@ useEffect(() => {
             resFetchIlSoftwareACF.heroTitle = applyColorToApostrophes(resFetchIlSoftwareACF.heroTitle);
             resFetchIlSoftwareACF.scopriIModuliTitle = applyColorToApostrophes(resFetchIlSoftwareACF.scopriIModuliTitle);
             resFetchIlSoftwareACF.vantaggiTitle = applyColorToApostrophes(resFetchIlSoftwareACF.vantaggiTitle);
+            resFetchIlSoftwareACF.funzionalitaPrincipaliTitle = applyColorToApostrophes(resFetchIlSoftwareACF.funzionalitaPrincipaliTitle);
             resFetchIlSoftwareACF.vuoiApprofondireTitle = applyColorToApostrophes(resFetchIlSoftwareACF.vuoiApprofondireTitle);
             setAcf(resFetchIlSoftwareACF);
 
@@ -91,18 +97,29 @@ return (
         <>
             {/* First Section - Scopri il software */}
             {/* 3 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[400px] bg-black'>
-                <div className='w-full max-w-[1106px]'>
+            <div className='flex w-full items-center justify-center min-h-[480px] bg-black relative'>
+                    <div className='absolute inset-0 object-cover overflow-hidden flex items-center justify-center'>
+                        {acf?.heroImage && (<img className='object-cover' src={acf.heroImage?.node?.link} alt="heroimage" />)}
+                        <div className='absolute inset-0 bg-black bg-opacity-30'></div>
+                        <div className='absolute inset-0 bg-gradient-to-r from-[#000000b6] to-transparent from-30% '></div>
+                    </div>
+                <div className='w-full max-w-[1106px] z-10'>
                     <div className='flex flex-col items-start'>
                     <h2 className='text-h1 text-white' 
                         dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
                     <p className='nunito text-h4 text-grey-1' 
                         dangerouslySetInnerHTML={{ __html: acf.heroDescription }}></p>
                     <Link href=''>
-                        <button className="px-8 py-1.5 bg-yellow-3 
-                        uppercase text-regular text-base cursor-pointer min-w-40 min-h-10 mt-3"
-                            dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}>
+                        <div className="border-0 text-white flex justify-start
+                        h-10 relative mt-6">
+                        <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
+                            <svg width="184" height="40" className='absolute z-0 left-0'>
+                                <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
+                            </svg>
+                            <span className='z-20 leading-tight secular' 
+                            dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}></span>
                         </button>
+                        </div>
                     </Link>
                     </div>
                 </div>
@@ -111,7 +128,7 @@ return (
             {/* Second Section - i vantaggi di Gesiqa */}
             {/* 3 Elementi in verticale. L'ultimo ha una griglia a 4 colonne che diventa 
             a 2 colonne in mobile*/}
-            <div className='flex w-full items-center justify-center min-h-[400px] py-20 bg-grey-1'>
+            <div className='flex w-full items-center justify-center min-h-[520px] py-20 bg-grey-1'>
                 <div className='max-w-[1106px]'>
                     <div className='grid grid-cols-1 gap-6'>
                     <div className='flex flex-col items-start justify-start gap-2'>
@@ -126,47 +143,47 @@ return (
                     </div>
                     <div className='absolute'>{/* elemento decorativo a dx */}</div>
                     <div className='grid grid-cols-4 gap-6'>
-                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl'>
+                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl min-h-60 min-w-60 rounded'>
                             <div className='h-16 w-16'>
-                                <img src={acf.vantaggi1stElementIcon?.node?.link} alt="1sticon" />
+                                {acf?.vantaggi1stElementIcon && (<img src={acf?.vantaggi1stElementIcon?.node?.link} alt="1sticon" />) }
                             </div>
                             <div className='flex flex-col gap-1'>
-                                <h4 className='text-h4 text-gs-black' 
+                                <h4 className='text-h4 text-gs-black min-h-6' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementTitle }}></h4>
-                                <p className='nunito text-grey-4 text-S3' 
+                                <p className='nunito text-grey-4 text-m min-h-6' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl'>
+                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl rounded'>
                             <div className='h-16 w-16'>
-                                <img src={acf.vantaggi2ndElementIcon?.node?.link} alt="2ndicon" />
+                            {acf?.vantaggi2ndElementIcon && (<img src={acf.vantaggi2ndElementIcon?.node?.link} alt="2ndicon" />) }
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <h4 className='text-h4 text-gs-black' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementTitle }}></h4>
-                                <p className='nunito text-grey-4 text-S3' 
+                                <p className='nunito text-grey-4 text-m' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl'>
+                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl rounded'>
                             <div className='h-16 w-16'>
-                                <img src={acf.vantaggi3rdElementIcon?.node?.link} alt="3rdicon" />
+                            {acf?.vantaggi3rdElementIcon && (<img src={acf.vantaggi3rdElementIcon?.node?.link} alt="3rdicon" />) }
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <h4 className='text-h4 text-gs-black' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementTitle }}></h4>
-                                <p className='nunito text-grey-4 text-S3' 
+                                <p className='nunito text-grey-4 text-m' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl'>
+                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl rounded'>
                             <div className='h-16 w-16'>
-                                <img src={acf.vantaggi4thElementIcon?.node?.link} alt="4thicon" />
+                            {acf?.vantaggi4thElementIcon && (<img src={acf.vantaggi4thElementIcon?.node?.link} alt="4thicon" />) }
                             </div>
                             <div className='flex flex-col gap-1'>
                                 <h4 className='text-h4 text-gs-black' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementTitle }}></h4>
-                                <p className='nunito text-grey-4 text-S3' 
+                                <p className='nunito text-grey-4 text-m' 
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementDescription }}></p>
                             </div>
                         </div>
@@ -177,12 +194,14 @@ return (
 
             {/* Third Section - funzionalità principali */}
             {/* 3 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 bg-gs-white'>
+            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 bg-gs-white z-20 relative'>
                 <div className='max-w-[1106px] w-full'>
                     <div className='flex flex-col items-start w-1/2'>
-                        <h1 className='text-h1 text-gs-black mb-8'>funzionalità principali</h1>
+                        <h1 className='text-h1 text-gs-black mb-8'
+                        dangerouslySetInnerHTML={{ __html: acf.funzionalitaPrincipaliTitle }}>
+                        </h1>
                     </div>
-                    <div className='grid grid-cols-2 w-full py-10 px-16 bg-white gap-x-6 gap-y-4 drop-shadow-xl -mb-20'>
+                    <div className='grid grid-cols-2 w-full py-10 px-16 bg-white gap-x-6 gap-y-4 drop-shadow-xl rounded -mb-20 z-20'>
                     { funzionalita && funzionalita.map((item : funzionalitaData, index : number) => (
                         <div key={index} className='flex gap-4 items-center'>
                             <div className='h-10 w-10'>
@@ -199,30 +218,41 @@ return (
 
             {/* Fourth Section - vuoi approfondire */}
             {/* 2 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[400px] bg-black pt-20'>
-                <div className='w-full max-w-[1106px] items-center'>
+            <div className='flex w-full items-center justify-center min-h-[400px] bg-black pt-20 relative z-0'>
+                    <div className='absolute inset-0 object-cover overflow-hidden flex items-center justify-center'>
+                        <img className='object-cover' src={acf.vuoiApprofondireImage?.node?.link} alt="vuoiapprofondireimage" />
+                        <div className='absolute inset-0 bg-black bg-opacity-30'></div>
+                        <div className='absolute inset-0 bg-gradient-to-r from-[#000000b6] to-transparent from-30% '></div>
+                    </div>
+                <div className='w-full max-w-[1106px] items-center z-10'>
                     <div className='flex flex-col items-start'>
                     <h2 className='text-h2'
                     dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireTitle}}>
                     </h2>
                     <Link href=''>
-                        <button className="px-8 py-1.5 bg-yellow-3 
-                        uppercase text-regular text-base hover:bg-light-blue cursor-pointer min-w-40 min-h-10 mt-3"
-                        dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireButtonText}}>
+                        <div className="border-0 text-white flex justify-start
+                        h-10 relative mt-6">
+                        <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
+                            <svg width="184" height="40" className='absolute z-0 left-0'>
+                                <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
+                            </svg>
+                            <span className='z-20 leading-button secular' 
+                            dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireButtonText }}></span>
                         </button>
+                        </div>
                     </Link>
                     </div>
                 </div>
             </div>
 
             {/* Fifth Section - scopri i moduli */}
-            <div className='flex w-full items-center justify-center min-h-[400px] py-20 bg-gs-white'>
+            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 pb-32 bg-gs-white'>
                 <div className='max-w-[1106px]'>
-                    <div className='mb-8'>
+                    <div className='mb-8 flex flex-col  gap-2'>
                         <h1 className='text-h1 text-gs-black'
                         dangerouslySetInnerHTML={{ __html: acf.scopriIModuliTitle}}>
                         </h1>
-                        <p className='nunito text-gs-black'
+                        <p className='nunito text-grey-4 text-l'
                         dangerouslySetInnerHTML={{ __html: acf.scopriIModuliDescription}}>
                         </p>
                     </div>
@@ -232,11 +262,11 @@ return (
                             <div className='h-14 w-14 mb-4 flex items-center justify-center'>
                                 <img src={item?.moduloAcf?.icon?.node?.link} alt="icon" />
                             </div>
-                            <h4 className='nunito grow'
+                            <h4 className='nunito grow font-bold text-category text-black'
                             dangerouslySetInnerHTML={{ __html: item?.moduloAcf?.titolo}}>
                             </h4>
                             <div>
-                                <button className="px-8 py-1.5 border-yellow-3 border-2 text-yellow-3
+                                <button className="px-8 py-1.5 border-yellow-3 border-2 text-yellow-3 hover:bg-yellow-3 hover:text-white
                                 text-regular text-base cursor-pointer min-w-40 min-h-10 mt-3"
                                 onClick={() => handleModuleClick(item)} >
                                 Dettagli
@@ -250,19 +280,43 @@ return (
         </>
     </Layout>
     {selectedModule && (
-    <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50' onClick={() => setSelectedModule(null)}>
-        <div className='modal bg-white m-8 max-w-96 sm:max-w-[480px]' onClick={e => e.stopPropagation()}>
-            <div className=''>
-                <div className=''>
-                    {selectedModule?.moduloAcf?.immagineOVideo[0] === 'Immagine' && <img src={selectedModule?.moduloAcf?.immagine?.node?.link ?? ''} alt='' />}
-                    {selectedModule?.moduloAcf?.immagineOVideo[0] === 'Video' && <video src={selectedModule?.moduloAcf?.video?.node?.link} />}
+    <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40' onClick={() => {setSelectedModule(null); setIsModalLarge(false); setIsVideoPlaying(false)}}>
+        <div className={`modal bg-white m-8 ${isModalLarge ? 'max-w-[calc(100vw - 96px)]' : 'max-w-96 sm:max-w-[480px]'}`} 
+            onClick={e => e.stopPropagation()}>
+            <div className='min-h-96 h-full relative'>
+                <div className={` relative ${!isModalLarge ? 'aspect-video' : 'w-full h-full'}`}>
+                    {selectedModule?.moduloAcf?.immagineOVideo?.[0] === 'Immagine' && (
+                        <div className='absolute inset-0'>
+                            <img className='object-cover h-full w-full' src={selectedModule?.moduloAcf?.immagine?.node?.link ?? ''} alt='' />
+                            <button className='absolute top-0 right-0 m-2 p-2 z-50 hover:bg-white hover:bg-opacity-20 rounded-full' onClick={() => {setSelectedModule(null); setIsModalLarge(false); setIsVideoPlaying(false)}}>
+                                <img src={close.src} alt='close' />
+                            </button>
+                        </div>
+                    )}
+                    {selectedModule?.moduloAcf?.immagineOVideo?.[0] === 'Video' && (
+                    <div className={`${!isModalLarge ? 'absolute inset-0' : ''}`}>
+                        <video {...(isVideoPlaying ? { controls: true } : {})} className='object-cover h-full'>
+                            <source src={selectedModule?.moduloAcf?.video?.node?.link} type='video/mp4' />
+                        </video>
+                        <button className='absolute top-0 right-0 m-2 p-2 z-50 hover:bg-white hover:bg-opacity-20 rounded-full' onClick={() => {setSelectedModule(null); setIsModalLarge(false); setIsVideoPlaying(false)}}>
+                            <img src={close.src} alt='close' />
+                        </button>
+                        {!isVideoPlaying && (
+                            <div className='bg-black bg-opacity-50 absolute inset-0 flex items-center justify-center'>
+                                <button className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2' onClick={() => {setIsVideoPlaying(true); setIsModalLarge(true);}}>
+                                    <img src={play.src} alt='play icon' />
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                    )}
                 </div>
-                <div className='flex flex-col p-8 pt-6 gap-4'>
+                <div className={`flex flex-col p-8 pt-6 gap-4 ${isVideoPlaying ? 'hidden' : ''}`}>
                     <div className='flex items-center text-black gap-3'>
                         <img src={selectedModule?.moduloAcf?.popupIcon?.node?.link ?? ''} alt='icon'></img>
                         <h4 className='text-h4'>{selectedModule?.moduloAcf?.titolo}</h4>
                     </div>
-                    <div className='flex text-grey-4 nunito text-S3'>
+                    <div className='flex text-grey-4 nunito text-m wordpress-content'>
                         <div dangerouslySetInnerHTML={{ __html: selectedModule?.moduloAcf?.descrizioneModulo ?? ''}}></div>
                     </div>
                 </div>

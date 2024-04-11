@@ -1,8 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useRouter } from 'next/router';
+import { useRouter, usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { fetchFooterACF, fetchIlSoftwareACF, fetchModuliACF, fetchFunzionalitaPrincipaliACF } from '@/lib/api'
 import Image from 'next/image'
@@ -12,6 +11,7 @@ import MenuPointer from '../../public/Menu Pointer.svg'
 
 export default function Header() {
   const router = useRouter();
+  const pathname = usePathname()
 
   useEffect(() => {
     //fetchFooterACF();
@@ -49,7 +49,6 @@ export default function Header() {
 
   }, []);
 
-  const pathname = usePathname();
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [categories, setCategories] = useState<any[]>([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,8 +104,8 @@ export default function Header() {
             }) */}
             <li className="flex flex-col items-center sm:w-auto w-full h-fit">
               <Link href='/#home' className={`flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto
-              ${router.pathname === '/' ? 'text-yellow-3 font-extrabold' : 'text-grey-3'}`}>Home
-              {router.pathname === '/' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
+              ${pathname === '/' ? 'text-yellow-3 font-extrabold' : 'text-grey-3'}`}>Home
+              {pathname === '/' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
               </Link>
             </li>
             <li className="flex flex-col items-center sm:w-auto w-full h-fit">
@@ -123,8 +122,8 @@ export default function Header() {
             </li>
             <li className="flex flex-col items-center sm:w-auto w-full pl-4 border-l-2 border-l-grey-2 h-fit">
               <Link href='/il-software' className={`flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto font-bold'>
-                ${router.pathname === '/il-software' ? 'text-yellow-3 font-extrabold' : 'text-grey-3'}`}>Il Software
-                {router.pathname === '/il-software' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
+                ${pathname === '/il-software' ? 'text-yellow-3 font-extrabold' : 'text-grey-3 font-bold'}`}>Il Software
+                {pathname === '/il-software' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
               </Link>
             </li>
           </ul>

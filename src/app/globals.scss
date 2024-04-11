@@ -288,19 +288,29 @@ button {
 }
 
 .wordpress-content ul {
-  list-style-type: none;
-  padding-left: 12px;
+  list-style-type: disc;
+  padding-left: 24px;
 }
 
+/*
 .wordpress-content ul li::before {
-  content: ""; /* Add custom bullet */
+  content: ""; 
   display: inline-block;
-  width: 2px; /* Adjust as needed */
-  height: 2px; /* Adjust as needed */
-  margin-right: 10px; /* Adjust as needed */
+  width: 2px; 
+  height: 2px; 
+  margin-right: 10px; 
   vertical-align: middle;
-  background-color: black; /* Adjust as needed */
-  border-radius: 50%; /* Make it circular */
+  background-color: black; 
+  border-radius: 50%; 
+}
+*/
+
+.slick-list, .slick-track, .slick-slide div {
+  height: 100%;
+}
+
+.slick-dots li button:before{
+  font-size: 12px !important;
 }
 
 .blocks-gallery-grid:not(.has-nested-images),.wp-block-gallery:not(.has-nested-images) {

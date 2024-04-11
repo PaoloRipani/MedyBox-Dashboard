@@ -49,7 +49,11 @@ const homepagequery = `query homepageAcf {
       scopriIlSoftwareButtonText
       scopriIlSoftwareDescriptionText
       scopriIlSoftwareTitle
-      copriIlSoftwareImage
+      scopriIlSoftwareImage{
+        node {
+          link
+        }
+      }
       vantaggi1stElementDescription
       vantaggi1stElementTitle
       vantaggi2ndElementDescription
@@ -62,7 +66,12 @@ const homepagequery = `query homepageAcf {
       vantaggiTitle
       vuoiSaperneDiPiuButtonText
       vuoiSaperneDiPiuTitle
-      vuoiSaperneDiPiuImage
+      vuoiSaperneDiPiuLink
+      vuoiSaperneDiPiuImage{
+        node {
+          link
+        }
+      }
       vantaggi4thElementIcon {
         node {
           link

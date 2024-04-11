@@ -127,7 +127,7 @@ export default function Home() {
               <div className="lg:grid flex flex-col lg:grid-cols-2 lg:grid-rows-3 grid-rows-2 items-stretch lg:h-full">
                 <div className='flex lg:justify-end lg:items-end flex-grow row-span-1 lg:row-start-2 row-start-1 lg:max-h-[auto] relative'>
                   <div className="flex flex-col items-start content-start justify-start gap-3 text-left z-20 lg:max-w-[553px] w-full px-6 lg:py-4 py-12">
-                    <h2 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
+                    <h2 className="lg:text-h1 text-h2 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
                     <p className="nunito text-l font-light lg:pr-16 text-grey-4" dangerouslySetInnerHTML={{ __html: acf.heroDescription }}> 
                       </p>
                     <Link href='/#contattaci'>

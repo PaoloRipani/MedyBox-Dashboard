@@ -127,7 +127,7 @@ export default function Home() {
               <div className="lg:grid flex flex-col lg:grid-cols-2 lg:grid-rows-3 grid-rows-2 items-stretch lg:h-full">
                 <div className='flex lg:justify-end lg:items-end flex-grow row-span-1 lg:row-start-2 row-start-1 lg:max-h-[auto] relative'>
                   <div className="flex flex-col items-start content-start justify-start gap-3 text-left z-20 lg:max-w-[553px] w-full px-6 lg:py-4 py-12">
-                    <h2 className="lg:text-h1 text-h2 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
+                    <h2 className="lg:text-h1 text-h1m text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
                     <p className="nunito text-l font-light lg:pr-16 text-grey-4" dangerouslySetInnerHTML={{ __html: acf.heroDescription }}> 
                       </p>
                     <Link href='/#contattaci'>
@@ -153,7 +153,7 @@ export default function Home() {
                     speed={500}
                     slidesToShow={1}
                     slidesToScroll={1}
-                    autoplay={false}
+                    autoplay={true}
                     autoplaySpeed={2000}
                     arrows={false}
                     className='lg:h-full h-96 relative'
@@ -177,8 +177,8 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             {/* decorazione a sinistra */}
             <div className='flex flex-col max-w-[730px]'>
-              <h1 className="text-h1 text-gs-black" dangerouslySetInnerHTML={{ __html: acf.chiSiamoTitle }}></h1>
-              <p className='nunito  text-grey-4 text-h4 font-semibold' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
+              <h1 className="lg:text-h1 text-h1m text-gs-black" dangerouslySetInnerHTML={{ __html: acf.chiSiamoTitle }}></h1>
+              <p className='nunito  text-grey-4 lg:text-h4 text-category font-semibold' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
               </p>
             </div>
           </div>
@@ -191,14 +191,14 @@ export default function Home() {
         <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section lg:px-6 lg:py-0 px-4 py-16'>
         <div className='anchor' id='perche-sceglierci'></div>
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
-            <h2 className='text-h1 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierciTitle }}></h2>
+            <h2 className='lg:text-h1 text-h1m text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierciTitle }}></h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className='flex flex-col gap-4 p-8 bg-white text-gs-black shadow-lg rounded'>
                 <div className='h-20 w-20'>
                 {acf.percheSceglierci1stItemIcon && (<img src={acf.percheSceglierci1stItemIcon?.node?.link} alt="1sticon" />)}
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci1stItemTitle }}></h4>
+                  <h4 className='lg:text-h4 text-l text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci1stItemTitle }}></h4>
                   <p className='nunito text-grey-4 text-m' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci1stItemDescription }}></p>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function Home() {
                 {acf.percheSceglierci2ndItemIcon && (<img src={acf.percheSceglierci2ndItemIcon?.node?.link} alt="2ndicon" />)}
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci2ndItemTitle }}></h4>
+                  <h4 className='lg:text-h4 text-l text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci2ndItemTitle }}></h4>
                   <p className='nunito text-grey-4 text-m' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci2ndItemDescription }}></p>
                 </div>
               </div> 
@@ -216,7 +216,7 @@ export default function Home() {
                 {acf.percheSceglierci3rdItemIcon && (<img src={acf.percheSceglierci3rdItemIcon?.node?.link} alt="3rdicon" />)}
                 </div>
                 <div className='flex flex-col gap-1'>
-                  <h4 className='text-h4 text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci3rdItemTitle }}></h4>
+                  <h4 className='lg:text-h4 text-l text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci3rdItemTitle }}></h4>
                   <p className='nunito text-grey-4 text-m' dangerouslySetInnerHTML={{ __html: acf.percheSceglierci3rdItemDescription }}></p>
                 </div>
               </div>
@@ -260,57 +260,57 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             <div className='lg:grid lg:grid-cols-2 flex flex-col-reverse lg:gap-0 gap-12'>
               <div className='grid grid-cols-2 gap-6'>
-                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
+                <div className='flex flex-col gap-4 lg:px-8 lg:py-8 px-4 py-5 bg-white shadow-lg rounded'>
                   <div className='h-16 w-16'>
                     <img src={acf.vantaggi1stElementIcon?.node?.link} alt="1sticon" />
                   </div>
                   <div className='flex flex-col gap-1'>
-                    <h4 className='text-h4 text-gs-black' 
+                    <h4 className='lg:text-h4 text-l text-gs-black' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementTitle }}></h4>
-                    <p className='nunito text-grey-4 text-m' 
+                    <p className='nunito text-grey-4 lg:text-m text-s' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementDescription }}></p>
                   </div>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded -mt-6 mb-6'>
+                <div className='flex flex-col gap-4 lg:px-8 lg:py-8 px-4 py-5 bg-white shadow-lg rounded -mt-6 mb-6'>
                   <div className='h-16 w-16'>
                     <img src={acf.vantaggi2ndElementIcon?.node?.link} alt="2ndicon" />
                   </div>
                   <div className='flex flex-col gap-1'>
-                    <h4 className='text-h4 text-gs-black' 
+                    <h4 className='lg:text-h4 text-l text-gs-black' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementTitle }}></h4>
-                    <p className='nunito text-grey-4 text-m' 
+                    <p className='nunito text-grey-4 lg:text-m text-s' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementDescription }}></p>
                   </div>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded'>
+                <div className='flex flex-col gap-4 lg:px-8 lg:py-8 px-4 py-5 bg-white shadow-lg rounded'>
                   <div className='h-16 w-16'>
                     <img src={acf.vantaggi3rdElementIcon?.node?.link} alt="3rdicon" />
                   </div>
                   <div className='flex flex-col gap-1'>
-                    <h4 className='text-h4 text-gs-black' 
+                    <h4 className='lg:text-h4 text-l text-gs-black' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementTitle }}></h4>
-                    <p className='nunito text-grey-4 text-m' 
+                    <p className='nunito text-grey-4 lg:text-m text-s' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementDescription }}></p>
                   </div>
                 </div>
-                <div className='flex flex-col gap-4 p-8 bg-white shadow-lg rounded -mt-6 mb-6'>
+                <div className='flex flex-col gap-4 lg:px-8 lg:py-8 px-4 py-5 bg-white shadow-lg rounded -mt-6 mb-6'>
                   <div className='h-16 w-16'>
                     <img src={acf.vantaggi4thElementIcon?.node?.link} alt="4thicon" />
                   </div>
                   <div className='flex flex-col gap-1'>
-                    <h4 className='text-h4 text-gs-black' 
+                    <h4 className='lg:text-h4 text-l text-gs-black' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementTitle }}></h4>
-                    <p className='nunito text-grey-4 text-m' 
+                    <p className='nunito text-grey-4 lg:text-m text-s' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggi4thElementDescription }}></p>
                   </div>
                 </div>
               </div>
               <div className='flex flex-col items-start justify-center'>
-                <div className='flex flex-col lg:pl-28'>
-                  <h1 className='text-h1 text-gs-black' 
+                <div className='flex flex-col lg:pl-28 gap-2'>
+                  <h1 className='lg:text-h1 text-h1m text-gs-black' 
                     dangerouslySetInnerHTML={{ __html: acf.vantaggiTitle }}>
                   </h1>
-                  <p className='nunito text-grey-4 text-l'
+                  <p className='nunito text-grey-4 lg:text-l text-category'
                     dangerouslySetInnerHTML={{ __html: acf.vantaggiDescription }}>
                   </p>
                 </div>
@@ -358,8 +358,8 @@ export default function Home() {
           <div className='max-w-[1106px]'>
             <div className='grid lg:grid-cols-2 grid-cols-1 items-center lg:gap-0 gap-12'>
               <div className='flex flex-col items-start lg:pr-28'>
-                <h1 className='text-h1 text-gs-black mb-2' dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetTitle }}></h1>
-                <p className='nunito text-grey-4 text-l'
+                <h1 className='lg:text-h1 text-h1m text-gs-black mb-2' dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetTitle }}></h1>
+                <p className='nunito text-grey-4 lg:text-l text-m'
                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetDescription }}>
                 </p>
                 <Link href='/#contattaci'>
@@ -376,30 +376,32 @@ export default function Home() {
                 </div>
                 </Link>
               </div>
-              <div className='flex flex-col lg:gap-16 gap-5 lg:pl-24'>
-                <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-1 flex items-center justify-center'>
+              <div className='flex flex-col lg:gap-16 gap-5 xl:pl-24 lg:pl-12'>
+                <div className='flex flex-col lg:gap-16 gap-5 w-full lg:items-start items-center'>
+                <div className='flex gap-6 bg-white justify-center items-center lg:mr-28 mr-12 max-w-96 overflow-hidden shadow-lg rounded'>
+                  <div className='h-28 w-28 bg-yellow-1 flex items-center justify-center'>
                     <img src={acf.ilNostroTarget1stElementIcon?.node?.link} alt="1sticon" />
                   </div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
                   dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget1stElementText }}>
                   </h3>
                 </div>
-                <div className='flex gap-6 bg-white justify-center items-center ml-28 overflow-hidden	shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-2 flex items-center justify-center'>
+                <div className='flex gap-6 bg-white justify-center items-center lg:ml-28 ml-12 max-w-96 overflow-hidden shadow-lg rounded'>
+                  <div className='h-28 w-28 bg-yellow-2 flex items-center justify-center'>
                     <img src={acf.ilNostroTarget2ndElementIcon?.node?.link} alt="2ndicon" />
                   </div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
                   dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget2ndElementText }}>
                   </h3>
                 </div>
-                <div className='flex gap-6 bg-white justify-center items-center mr-28 overflow-hidden	shadow-lg rounded'>
-                  <div className='min-h-28 min-w-28 bg-yellow-3 flex items-center justify-center'>
+                <div className='flex gap-6 bg-white justify-center items-center lg:ml-0 lg:mr-28 ml-4 mr-8 max-w-96 overflow-hidden shadow-lg rounded'>
+                  <div className='h-28 w-28 bg-yellow-3 flex items-center justify-center'>
                     <img src={acf.ilNostroTarget3rdElementIcon?.node?.link} alt="3rdicon" />
                   </div>
-                  <h3 className='text-h3 text-gs-black flex-grow pr-6'
+                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
                   dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget3rdElementText }}>
                   </h3>
+                </div>
                 </div>
               </div>
             </div>
@@ -455,7 +457,7 @@ export default function Home() {
             <div className='lg:ml-[16.66%] lg:pl-[16.66%] lg:w-5/6 w-full z-1 h-full flex flex-col flex-grow gap-4 p-6 bg-white shadow-lg rounded'>
               <div className='lg:px-16'>
                 <div className='flex justify-between'>
-                  <h2 className='lg:text-h2 text-h3 text-gs-black lg:mt-8' dangerouslySetInnerHTML={{ __html: acf.contattiTitle }}></h2>
+                  <h2 className='xl:text-h2 lg:text-h3 text-h4 text-gs-black lg:mt-8' dangerouslySetInnerHTML={{ __html: acf.contattiTitle }}></h2>
                   <button className='block lg:hidden w-12' onClick={handleButtonClick}>
                     <img className={isIconFlipped ? 'rotate-180' : ''} src={toggleIcon.src} />
                   </button>

@@ -58,76 +58,43 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 flex justify-center items-center px-6 h-20 z-50 bg-white">
+    <header className="fixed top-0 left-0 right-0 flex justify-center items-center px-6 h-20 z-30 bg-white">
       <div className="w-11/12 mx-auto max-w-1106 h-full flex justify-between items-center ">
         <Link href="/#home" passHref className='w-52'>
           <Image src={Logo} alt="Logo" />
         </Link>
         <nav className="flex items-center justify-end h-full">
-          <ul className={`sm:flex-row flex-grow space-x-4 sm:gap-0 gap-4
+          <div className={`sm:flex-row flex-grow md:space-x-4 sm:gap-0 gap-4
             absolute top-20 w-screen z-50 h-screen p-0 sm:w-auto
             sm:h-full sm:relative sm:flex flex-col sm:top-0 sm:p-0 sm:items-center
             transition-all sm:left-0 text-gs-black
-            ${isMenuOpen ? 'left-0 flex' : 'left-full hidden'}`}>
-            { /* categories?.length > 0 && ['Home', 'Chi siamo', 'Progetti', 'Contatti'].map((item) => {
-              const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`
-              const isCurrentPath = pathname === path || pathname === `${path}/`
-              return (
-                <li
-                  key={item}
-                  className="flex flex-col items-center sm:w-auto w-full ml-4"
-                  onMouseEnter={() => setHoveredItem(item)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <Link
-                    href={path}
-                    passHref
-                    className={`flex flex-col justify-center items-center px-0 sm:px-4 h-full w-auto ${
-                      isCurrentPath ? 'text-light-green' : hoveredItem === item ? 'text-off-white' : 'text-light-blue'
-                    }`}
-                  >
-                    {item}
-                  </Link>
-                  {item === 'Progetti' && hoveredItem === 'Progetti' && (
-                    <div className="hidden sm:flex absolute mt-20 p-8 gap-4 flex-col">
-                      <div className="hidden sm:flex text-tag text-light-green">CATEGORIA</div>
-                      {categories.map((category: any) => (
-                        <Link className="flex flex-row justify-left items-center gap-3" href={`/progetti#${category.slug}`} key={category.id}>
-                          <div className="w-4 h-[1px] bg-light-green"></div>
-                          <p className="m text-m space-p-m text-white">{category.name}</p>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </li>
-              )
-            }) */}
-            <li className="flex flex-col items-center sm:w-auto w-full h-fit">
+            ${isMenuOpen ? 'left-0 flex bg-white items-center justify-start' : 'left-full hidden'}`}>
+            <div className="flex flex-col items-center sm:w-auto w-full h-fit justify-center">
               <Link href='/#home' className={`flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto
               ${pathname === '/' ? 'text-yellow-3 font-extrabold' : 'text-grey-3'}`}>Home
               {pathname === '/' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
               </Link>
-            </li>
-            <li className="flex flex-col items-center sm:w-auto w-full h-fit">
+            </div>
+            <div className="flex flex-col items-center sm:w-auto w-full h-fit justify-center">
               <Link href='/#chi-siamo' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>Chi siamo</Link>
-            </li>
-            <li className="flex flex-col items-center sm:w-auto w-full h-fit">
+            </div>
+            <div className="flex flex-col items-center sm:w-auto w-full h-fit justify-center">
               <Link href='/#perche-sceglierci' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>Perché sceglierci</Link>
-            </li>
-            <li className="flex flex-col items-center sm:w-auto w-full h-fit">
+            </div>
+            <div className="flex flex-col items-center sm:w-auto w-full h-fit justify-center">
               <Link href='/#target' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>A chi ci rivolgiamo</Link>
-            </li>
-            <li className="flex flex-col items-center sm:w-auto w-full h-fit">
+            </div>
+            <div className="flex flex-col items-center sm:w-auto w-full h-fit">
               <Link href='/#contattaci' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>Contattaci</Link>
-            </li>
-            <li className="flex flex-col items-center sm:w-auto w-full pl-4 border-l-2 border-l-grey-2 h-fit">
+            </div>
+            <div className="flex flex-col items-center sm:w-auto w-full sm:pl-4 sm:border-l-2 sm:border-l-grey-2 h-fit">
               <Link href='/il-software' className={`flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto font-bold'>
                 ${pathname === '/il-software' ? 'text-yellow-3 font-extrabold' : 'text-grey-3 font-bold'}`}>Il Software
                 {pathname === '/il-software' && <img src={MenuPointer.src} alt="Home icon" className='absolute bottom-0' />}
               </Link>
-            </li>
-          </ul>
-          <ul className="sm:hidden flex space-x-4 h-full">
+            </div>
+          </div>
+          <ul className="sm:hidden flex md:space-x-4 h-full">
             <li className="flex items-center h-full">
               <button onClick={toggleMenu}>
                 <Image src={HamburgerIcon.src} width="22" height="22" alt="Menu" />

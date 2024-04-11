@@ -97,17 +97,17 @@ return (
         <>
             {/* First Section - Scopri il software */}
             {/* 3 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[480px] bg-black relative'>
+            <div className='flex w-full items-center justify-center min-h-[480px] bg-black relative p-6'>
                     <div className='absolute inset-0 object-cover overflow-hidden flex items-center justify-center'>
-                        {acf?.heroImage && (<img className='object-cover' src={acf.heroImage?.node?.link} alt="heroimage" />)}
+                        {acf?.heroImage && (<img className='object-cover h-full w-full' src={acf.heroImage?.node?.link} alt="heroimage" />)}
                         <div className='absolute inset-0 bg-black bg-opacity-30'></div>
                         <div className='absolute inset-0 bg-gradient-to-r from-[#000000b6] to-transparent from-30% '></div>
                     </div>
                 <div className='w-full max-w-[1106px] z-10'>
                     <div className='flex flex-col items-start'>
-                    <h2 className='text-h1 text-white' 
+                    <h2 className='lg:text-h1 text-h1m text-white' 
                         dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
-                    <p className='nunito text-h4 text-grey-1' 
+                    <p className='nunito lg:text-h4 text-m text-grey-1' 
                         dangerouslySetInnerHTML={{ __html: acf.heroDescription }}></p>
                     <Link href=''>
                         <div className="border-0 text-white flex justify-start
@@ -128,22 +128,22 @@ return (
             {/* Second Section - i vantaggi di Gesiqa */}
             {/* 3 Elementi in verticale. L'ultimo ha una griglia a 4 colonne che diventa 
             a 2 colonne in mobile*/}
-            <div className='flex w-full items-center justify-center min-h-[520px] py-20 bg-grey-1'>
+            <div className='flex w-full items-center justify-center min-h-[520px] py-20 bg-grey-1 p-6'>
                 <div className='max-w-[1106px]'>
                     <div className='grid grid-cols-1 gap-6'>
                     <div className='flex flex-col items-start justify-start gap-2'>
                         <div className='flex flex-col gap-2'>
-                        <h1 className='text-h1 text-gs-black'
+                        <h1 className='lg:text-h1 text-h1m text-gs-black'
                             dangerouslySetInnerHTML={{ __html: acf.vantaggiTitle }}>
                         </h1>
-                        <p className='nunito text-grey-4 text-l'
+                        <p className='nunito text-grey-4 lg:text-l text-m font-semibold'
                             dangerouslySetInnerHTML={{ __html: acf.vantaggiDescription }}>
                         </p>
                         </div>
                     </div>
                     <div className='absolute'>{/* elemento decorativo a dx */}</div>
-                    <div className='grid grid-cols-4 gap-6'>
-                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl min-h-60 min-w-60 rounded'>
+                    <div className='grid lg:grid-cols-4 grid-cols-2 gap-6 justify-items-center'>
+                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl min-w-40 max-w-64 rounded'>
                             <div className='h-16 w-16'>
                                 {acf?.vantaggi1stElementIcon && (<img src={acf?.vantaggi1stElementIcon?.node?.link} alt="1sticon" />) }
                             </div>
@@ -154,7 +154,7 @@ return (
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi1stElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl rounded'>
+                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl min-w-40 max-w-64 rounded'>
                             <div className='h-16 w-16'>
                             {acf?.vantaggi2ndElementIcon && (<img src={acf.vantaggi2ndElementIcon?.node?.link} alt="2ndicon" />) }
                             </div>
@@ -165,7 +165,7 @@ return (
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi2ndElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl rounded'>
+                        <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl min-w-40 max-w-64 rounded'>
                             <div className='h-16 w-16'>
                             {acf?.vantaggi3rdElementIcon && (<img src={acf.vantaggi3rdElementIcon?.node?.link} alt="3rdicon" />) }
                             </div>
@@ -176,7 +176,7 @@ return (
                                 dangerouslySetInnerHTML={{ __html: acf.vantaggi3rdElementDescription }}></p>
                             </div>
                         </div>
-                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl rounded'>
+                        <div className='flex flex-col gap-4 p-8 bg-white mt-10 -mb-10 drop-shadow-xl min-w-40 max-w-64 rounded'>
                             <div className='h-16 w-16'>
                             {acf?.vantaggi4thElementIcon && (<img src={acf.vantaggi4thElementIcon?.node?.link} alt="4thicon" />) }
                             </div>
@@ -194,14 +194,14 @@ return (
 
             {/* Third Section - funzionalità principali */}
             {/* 3 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 bg-gs-white z-20 relative'>
+            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 bg-gs-white z-20 relative p-6'>
                 <div className='max-w-[1106px] w-full'>
-                    <div className='flex flex-col items-start w-1/2'>
-                        <h1 className='text-h1 text-gs-black mb-8'
+                    <div className='flex flex-col items-start lg:w-1/2'>
+                        <h1 className='lg:text-h1 text-h1m text-gs-black mb-8'
                         dangerouslySetInnerHTML={{ __html: acf.funzionalitaPrincipaliTitle }}>
                         </h1>
                     </div>
-                    <div className='grid grid-cols-2 w-full py-10 px-16 bg-white gap-x-6 gap-y-4 drop-shadow-xl rounded -mb-20 z-20'>
+                    <div className='grid lg:grid-cols-2 grid-cols-1 w-full py-10 lg:px-16 px-4 bg-white gap-x-6 gap-y-4 drop-shadow-xl rounded -mb-20 z-20'>
                     { funzionalita && funzionalita.map((item : funzionalitaData, index : number) => (
                         <div key={index} className='flex gap-4 items-center'>
                             <div className='h-10 w-10'>
@@ -218,9 +218,9 @@ return (
 
             {/* Fourth Section - vuoi approfondire */}
             {/* 2 Elementi in verticale */}
-            <div className='flex w-full items-center justify-center min-h-[400px] bg-black pt-20 relative z-0'>
+            <div className='flex w-full items-center justify-center min-h-[400px] bg-black pt-20 relative z-0 p-6'>
                     <div className='absolute inset-0 object-cover overflow-hidden flex items-center justify-center'>
-                        <img className='object-cover' src={acf.vuoiApprofondireImage?.node?.link} alt="vuoiapprofondireimage" />
+                        <img className='object-cover h-full w-full' src={acf.vuoiApprofondireImage?.node?.link} alt="vuoiapprofondireimage" />
                         <div className='absolute inset-0 bg-black bg-opacity-30'></div>
                         <div className='absolute inset-0 bg-gradient-to-r from-[#000000b6] to-transparent from-30% '></div>
                     </div>
@@ -246,19 +246,19 @@ return (
             </div>
 
             {/* Fifth Section - scopri i moduli */}
-            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 pb-32 bg-gs-white'>
+            <div className='flex w-full items-center justify-center min-h-[400px] pt-20 pb-32 bg-gs-white p-6'>
                 <div className='max-w-[1106px]'>
-                    <div className='mb-8 flex flex-col  gap-2'>
-                        <h1 className='text-h1 text-gs-black'
+                    <div className='mb-8 flex flex-col gap-2'>
+                        <h1 className='lg:text-h1 text-h1m text-gs-black'
                         dangerouslySetInnerHTML={{ __html: acf.scopriIModuliTitle}}>
                         </h1>
-                        <p className='nunito text-grey-4 text-l'
+                        <p className='nunito text-grey-4 lg:text-l text-m'
                         dangerouslySetInnerHTML={{ __html: acf.scopriIModuliDescription}}>
                         </p>
                     </div>
-                    <div className='grid grid-cols-4 gap-6 relative'>
+                    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 relative'>
                     { moduli && moduli.map((item : moduliData, index : number) => (
-                        <div key={index} className='text-gs-black bg-white shadow-lg px-8 py-6 flex flex-col h-full'>
+                        <div key={index} className='text-gs-black bg-white shadow-lg px-8 py-6 flex flex-col h-full lg:items-start items-center'>
                             <div className='h-14 w-14 mb-4 flex items-center justify-center'>
                                 <img src={item?.moduloAcf?.icon?.node?.link} alt="icon" />
                             </div>
@@ -281,9 +281,9 @@ return (
     </Layout>
     {selectedModule && (
     <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40' onClick={() => {setSelectedModule(null); setIsModalLarge(false); setIsVideoPlaying(false)}}>
-        <div className={`modal bg-white m-8 ${isModalLarge ? 'max-w-[calc(100vw - 96px)]' : 'max-w-96 sm:max-w-[480px]'}`} 
+        <div className={`modal bg-white m-8 max-h-[calc(100vh-96px)] ${isModalLarge ? 'max-w-[calc(100vw - 96px)]' : 'max-w-96 sm:max-w-[480px]'}`} 
             onClick={e => e.stopPropagation()}>
-            <div className='min-h-96 h-full relative'>
+            <div className='lg:min-h-96 h-full relative'>
                 <div className={` relative ${!isModalLarge ? 'aspect-video' : 'w-full h-full'}`}>
                     {selectedModule?.moduloAcf?.immagineOVideo?.[0] === 'Immagine' && (
                         <div className='absolute inset-0'>
@@ -311,7 +311,7 @@ return (
                     </div>
                     )}
                 </div>
-                <div className={`flex flex-col p-8 pt-6 gap-4 ${isVideoPlaying ? 'hidden' : ''}`}>
+                <div className={`flex flex-col p-8 pt-6 gap-4 overflow-auto ${isVideoPlaying ? 'hidden' : ''}`}>
                     <div className='flex items-center text-black gap-3'>
                         <img src={selectedModule?.moduloAcf?.popupIcon?.node?.link ?? ''} alt='icon'></img>
                         <h4 className='text-h4'>{selectedModule?.moduloAcf?.titolo}</h4>

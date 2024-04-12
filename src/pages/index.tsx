@@ -459,7 +459,7 @@ export default function Home() {
                 <div className='flex justify-between'>
                   <h2 className='xl:text-h2 lg:text-h3 text-h4 text-gs-black lg:mt-8' dangerouslySetInnerHTML={{ __html: acf.contattiTitle }}></h2>
                   <button className='block lg:hidden w-12' onClick={handleButtonClick}>
-                    <img className={isIconFlipped ? 'rotate-180' : ''} src={toggleIcon.src} />
+                    <img className={isIconFlipped ? 'rotate-180' : ''} src={toggleIcon.src} alt='showContactForm'/>
                   </button>
                 </div>
                 <div className={`flex flex-grow lg:mt-6 mt-2 transition-transform origin-top ${isFormVisible ? 'scale-y-100' : 'scale-y-0'}`}>

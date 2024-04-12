@@ -1,13 +1,9 @@
-import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
 import './globals.scss'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { useState, useEffect } from 'react'
-
-const inter = Inter({ subsets: ['latin'] })
-const outfit = Outfit({ subsets: ['latin'] })
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

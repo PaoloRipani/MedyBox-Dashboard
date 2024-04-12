@@ -22,6 +22,7 @@ import emailIcon from '../../public/material-symbols_alternate-email.svg'
 import nameIcon from '../../public/material-symbols_domain.svg'
 import phoneIcon from '../../public/material-symbols_phone-in-talk-outline.svg'
 import toggleIcon from '../../public/material-symbols_chevron-right.svg'
+import decorazione1 from '../../public/elemento-decorativo-home-1.svg'
 import ContactForm from '@/components/contactus'
 
 export default function Home() {
@@ -121,30 +122,32 @@ export default function Home() {
         {/* First Section */}
         {/* 2 colonne, quella di sinistra con 3 elementi verticali, quella di destra con immagine.
           quando mobile la colonna di sinistra va sopra quella di destra. */}
-          <div className='flex w-full min-h-[640px] bg-gs-white section'>
+          <div className='flex w-full min-h-[640px] lg:min-h-[calc(100vh-80px)] bg-gs-white section'>
           <div className='anchor' id="home"></div>
             <div className='w-full lg:h-full'>
-              <div className="lg:grid flex flex-col lg:grid-cols-2 lg:grid-rows-3 grid-rows-2 items-stretch lg:h-full">
+              <div className="lg:grid flex flex-col lg:grid-cols-2 lg:grid-rows-3 grid-rows-2 items-stretch lg:h-full lg:max-h-[calc(100vh-80px)]">
                 <div className='flex lg:justify-end lg:items-end flex-grow row-span-1 lg:row-start-2 row-start-1 lg:max-h-[auto] relative'>
                   <div className="flex flex-col items-start content-start justify-start gap-3 text-left z-20 lg:max-w-[553px] w-full px-6 lg:py-4 py-12">
                     <h2 className="lg:text-h1 text-h1m text-gs-black" dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
                     <p className="nunito text-l font-light lg:pr-16 text-grey-4" dangerouslySetInnerHTML={{ __html: acf.heroDescription }}> 
                       </p>
-                    <Link href='/#contattaci'>
-                    <div className="border-0 text-white flex justify-start
-                    h-10 relative mt-6">
-                      <button type="submit" className='w-40 pr-2 flex items-center justify-center cursor-pointer '>
-                          <svg width="164" height="40" className='absolute z-0 left-0'>
-                            <path d="M0,0 h148 l16,20 l-16,20 h-148z" fill="#ef7923" />
-                          </svg>
-                          <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}>
-                          </span>
-                      </button>
-                    </div>
-                    </Link>
+                      {acf.heroButtonText && (
+                        <Link href='/#contattaci'>
+                        <div className="border-0 text-white flex justify-start
+                        h-10 relative mt-6">
+                          <button type="submit" className='w-40 pr-2 flex items-center justify-center cursor-pointer '>
+                              <svg width="164" height="40" className='absolute z-0 left-0'>
+                                <path d="M0,0 h148 l16,20 l-16,20 h-148z" fill="#ef7923" />
+                              </svg>
+                              <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}>
+                              </span>
+                          </button>
+                        </div>
+                        </Link>
+                      )}
                   </div>
                 </div>
-                <div className='bg-slate-400 flex-grow lg:row-span-full !relative lg:row-start-1 max-h-96 lg:max-h-[100vh] h-96 lg:h-full'>
+                <div className='flex-grow lg:row-span-full !relative lg:row-start-1 max-h-96 lg:max-h-[100vh] h-96 lg:h-full'>
                   {/* immagine */}
                   <Slider
                     dots={true}
@@ -172,10 +175,13 @@ export default function Home() {
         {/* Second Section - chi siamo */}
         {/*  unico contenitore, elemento grafico allineato a sinistra, 2 elementi verticali */}
         
-        <div className='flex w-full items-center justify-center min-h-[640px] bg-grey-1 section px-6'>
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-grey-1 section px-6 relative'>
         <div className='anchor' id='chi-siamo'></div>
-          <div className='max-w-[1106px]'>
-            {/* decorazione a sinistra */}
+          {/* decorazione a sinistra */}
+          <div className='absolute left-0 bottom-0 z-0'>
+            <img src={decorazione1.src} alt="decorazione1" />
+          </div>
+          <div className='max-w-[1106px] z-10'>
             <div className='flex flex-col max-w-[730px]'>
               <h1 className="lg:text-h1 text-h1m text-gs-black" dangerouslySetInnerHTML={{ __html: acf.chiSiamoTitle }}></h1>
               <p className='nunito  text-grey-4 lg:text-h4 text-category font-semibold' dangerouslySetInnerHTML={{ __html: acf.chiSiamoDescription }}>
@@ -188,7 +194,7 @@ export default function Home() {
         {/* contenitore con griglia su 3 colonne in desktop e 1 colonna in mobile.
         ogni elemento della graiglia ha 3 elementi in verticale */}
 
-        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section lg:px-6 lg:py-0 px-4 py-16'>
+        <div className='flex w-full items-center justify-center min-h-[640px] bg-gs-white section lg:px-6 lg:py-0 px-6 py-16'>
         <div className='anchor' id='perche-sceglierci'></div>
           <div className='max-w-[1106px] flex flex-col gap-8 items-center'>
             <h2 className='lg:text-h1 text-h1m text-gs-black' dangerouslySetInnerHTML={{ __html: acf.percheSceglierciTitle }}></h2>

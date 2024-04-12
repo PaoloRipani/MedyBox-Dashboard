@@ -7,6 +7,8 @@ import '../app/globals.scss'
 
 import play from '../../public/Play.svg'
 import close from '../../public/material-symbols_close.svg'
+import decorazione2 from '../../public/elemento-decorativo-ilsoftware-1.svg'
+import decorazione3 from '../../public/elemento-decorativo-ilsoftware-mobile-1.svg'
 
 export default function IlSoftware() {
 type AcfData = {
@@ -128,8 +130,13 @@ return (
             {/* Second Section - i vantaggi di Gesiqa */}
             {/* 3 Elementi in verticale. L'ultimo ha una griglia a 4 colonne che diventa 
             a 2 colonne in mobile*/}
-            <div className='flex w-full items-center justify-center min-h-[520px] py-20 bg-grey-1 p-6'>
-                <div className='max-w-[1106px]'>
+            <div className='flex w-full items-center justify-center min-h-[520px] pt-20 bg-grey-1 px-6 border-b-[80px] border-grey-1 relative'>
+                <div className='absolute w-full items-center justify-center self-end'>
+                    <div className='absolute w-full flex items-center justify-center'>{/* elemento decorativo a dx */}
+                        <img src={decorazione3.src} alt='decorative-element' className='z-[21] -mt-32'/>
+                    </div>
+                </div> 
+                <div className='max-w-[1106px] relative z-[22]'>
                     <div className='grid grid-cols-1 gap-6'>
                     <div className='flex flex-col items-start justify-start gap-2'>
                         <div className='flex flex-col gap-2'>
@@ -141,7 +148,6 @@ return (
                         </p>
                         </div>
                     </div>
-                    <div className='absolute'>{/* elemento decorativo a dx */}</div>
                     <div className='grid lg:grid-cols-4 grid-cols-2 gap-6 justify-items-center'>
                         <div className='flex flex-col gap-4 p-8 bg-white drop-shadow-xl min-w-40 max-w-64 rounded'>
                             <div className='h-16 w-16'>

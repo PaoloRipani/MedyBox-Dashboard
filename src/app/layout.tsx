@@ -13,6 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
             <meta name="theme-color" content="#005080"/>
+            <title>Gesiqa</title>
           </Head>
           <Header/>
           <div className="h-20"></div> {/* This is the spacing div */}

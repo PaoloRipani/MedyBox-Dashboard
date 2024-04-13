@@ -78,11 +78,9 @@ export default function Home() {
   }, [acf.heroImageSlider]);
 
   useEffect(() => {
-    //console.log("A: home contexts projects2 :", projects2)
-    //console.log("A: home contexts categories2 :", categories2)
+    
     const fetchData = async () => {
-      //console.log("B: home contexts projects2 :", projects2)
-      //console.log("B: home contexts categories2 :", categories2)
+      
       try {
         const resFetchHomepageACF = await fetchHomepageACF()
         console.log("resF: ",resFetchHomepageACF);
@@ -133,16 +131,13 @@ export default function Home() {
                       </p>
                       {acf.heroButtonText && (
                         <Link href='/#contattaci'>
-                        <div className="border-0 text-white flex justify-start
-                        h-10 relative mt-6">
-                          <button type="submit" className='w-40 pr-2 flex items-center justify-center cursor-pointer '>
-                              <svg width="164" height="40" className='absolute z-0 left-0'>
-                                <path d="M0,0 h148 l16,20 l-16,20 h-148z" fill="#ef7923" />
-                              </svg>
-                              <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}>
-                              </span>
-                          </button>
-                        </div>
+                          <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                              <button type="submit" className='pl-10 pr-[52px] w-fit flex items-center justify-center 
+                              cursor-pointer relative clip-path-buttons'>
+                                  <span className='z-20 leading-button secular' 
+                                  dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}></span>
+                              </button>
+                          </div>
                         </Link>
                       )}
                   </div>
@@ -241,19 +236,17 @@ export default function Home() {
           <div className='w-full max-w-[1106px] z-10'>
             <div className='flex flex-col items-start lg:w-1/2 gap-4'>
               <h2 className='text-h2 lg:pt-0 pt-24' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareTitle }}></h2>
-              <p className='nunito text-h4 text-grey-1' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareDescriptionText }}>
+              <p className='nunito text-h4 text-white' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareDescriptionText }}>
               </p>
-              <Link href='/il-software'>
-                <div className="border-0 text-white flex justify-start
-                h-10 relative">
-                  <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
-                      <svg width="184" height="40" className='absolute z-0 left-0'>
-                        <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
-                      </svg>
-                      <span className='z-20 leading-button secular' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareButtonText }}></span>
-                  </button>
-                </div>
-              </Link>
+                <Link href='/il-software'>
+                  <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                      <button type="submit" className='pl-10 pr-[52px] w-fit flex items-center justify-center 
+                      cursor-pointer relative clip-path-buttons'>
+                          <span className='z-20 leading-button secular' 
+                          dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareButtonText }}></span>
+                      </button>
+                  </div>
+                </Link>
             </div>
           </div>
         </div>
@@ -338,18 +331,15 @@ export default function Home() {
             <div className='flex flex-col items-start lg:w-1/2'>
               <h2 className='text-h2 lg:pt-0 pt-24' dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuTitle }}></h2>
               {acf?.vuoiSaperneDiPiuLink && (
-              <Link href={acf?.vuoiSaperneDiPiuLink } target='_blank'>
-                <div className="border-0 text-white flex justify-start
-                h-10 relative mt-6">
-                  <button type="submit" className='w-64 pr-2 flex items-center justify-center cursor-pointer '>
-                      <svg width="256" height="40" className='absolute z-0 left-0'>
-                        <path d="M0,0 h240 l16,20 l-16,20 h-240z" fill="#ef7923" />
-                      </svg>
-                      <span className='z-20 leading-button secular' 
-                      dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuButtonText }}></span>
-                  </button>
-                </div>
-              </Link>
+                <Link href={acf?.vuoiSaperneDiPiuLink } target='_blank'>
+                  <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                      <button type="submit" className='pl-10 pr-[52px] w-fit flex items-center justify-center 
+                      cursor-pointer relative clip-path-buttons'>
+                          <span className='z-20 leading-button secular' 
+                          dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuButtonText }}></span>
+                      </button>
+                  </div>
+                </Link>
               )}
             </div>
           </div>
@@ -369,17 +359,13 @@ export default function Home() {
                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetDescription }}>
                 </p>
                 <Link href='/#contattaci'>
-                <div className="border-0 text-white flex justify-start
-                h-10 relative mt-6">
-                  <button type="submit" className='w-36 pr-2 flex items-center justify-center cursor-pointer '>
-                      <svg width="144" height="40" className='absolute z-0 left-0'>
-                        <path d="M0,0 h128 l16,20 l-16,20 h-128z" fill="#ef7923" />
-                      </svg>
-                      <span className='z-20 leading-button secular'
-                        dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetButtonText }}>
-                      </span>
-                  </button>
-                </div>
+                  <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                      <button type="submit" className='w-44 pr-2 flex items-center justify-center 
+                      cursor-pointer relative clip-path-buttons'>
+                          <span className='z-20 leading-button secular' 
+                          dangerouslySetInnerHTML={{ __html: acf.ilNostroTargetButtonText }}></span>
+                      </button>
+                  </div>
                 </Link>
               </div>
               <div className='flex flex-col lg:gap-16 gap-5 xl:pl-24 lg:pl-12'>

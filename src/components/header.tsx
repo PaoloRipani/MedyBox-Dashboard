@@ -36,7 +36,7 @@ export default function Header() {
     };
   
     // Run once on mount for direct URL access (e.g., user enters "/#target" in the address bar)
-    handleHashChange();
+    setTimeout(handleHashChange, 200);
   
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange, false);

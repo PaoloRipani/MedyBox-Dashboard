@@ -109,18 +109,15 @@ return (
                     <div className='flex flex-col items-start'>
                     <h2 className='lg:text-h1 text-h1m text-white' 
                         dangerouslySetInnerHTML={{ __html: acf.heroTitle }}></h2>
-                    <p className='nunito lg:text-h4 text-m text-grey-1' 
+                    <p className='nunito lg:text-h4 text-m text-white' 
                         dangerouslySetInnerHTML={{ __html: acf.heroDescription }}></p>
-                    <Link href=''>
-                        <div className="border-0 text-white flex justify-start
-                        h-10 relative mt-6">
-                        <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
-                            <svg width="184" height="40" className='absolute z-0 left-0'>
-                                <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
-                            </svg>
-                            <span className='z-20 leading-tight secular' 
-                            dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}></span>
-                        </button>
+                    <Link href='/#contattaci'>
+                        <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                            <button type="submit" className='pl-10 pr-[52px] w-fit flex items-center justify-center 
+                            cursor-pointer relative clip-path-buttons'>
+                                <span className='z-20 leading-button secular' 
+                                dangerouslySetInnerHTML={{ __html: acf.heroButtonText }}></span>
+                            </button>
                         </div>
                     </Link>
                     </div>
@@ -231,23 +228,25 @@ return (
                         <div className='absolute inset-0 bg-gradient-to-r from-[#000000b6] to-transparent from-30% '></div>
                     </div>
                 <div className='w-full max-w-[1106px] items-center z-10'>
-                    <div className='flex flex-col items-start'>
-                    <h2 className='text-h2'
-                    dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireTitle}}>
-                    </h2>
-                    <Link href=''>
-                        <div className="border-0 text-white flex justify-start
-                        h-10 relative mt-6">
-                        <button type="submit" className='w-44 pr-2 flex items-center justify-center cursor-pointer '>
-                            <svg width="184" height="40" className='absolute z-0 left-0'>
-                                <path d="M0,0 h168 l16,20 l-16,20 h-168z" fill="#ef7923" />
-                            </svg>
-                            <span className='z-20 leading-button secular' 
-                            dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireButtonText }}></span>
-                        </button>
+                    <div className='grid lg:grid-cols-12 grid-cols-8'>
+                        <div className='lg:col-end-12 col-end-8 col-start-3'>
+                            <div className='flex flex-col items-start'>
+                                <h2 className='text-h2'
+                                dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireTitle}}>
+                                </h2>
+                                <Link href='/#contattaci'>
+                                <div className="border-0 text-white flex justify-start h-10 relative mt-6">
+                                    <button type="submit" className='pl-10 pr-[52px] w-fit flex items-center justify-center 
+                                    cursor-pointer clip-path-buttons'>
+                                        <span className='z-20 leading-button secular' 
+                                        dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireButtonText }}></span>
+                                    </button>
+                                </div>
+                                </Link>
+                            </div>
                         </div>
-                    </Link>
                     </div>
+
                 </div>
             </div>
 

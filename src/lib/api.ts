@@ -184,7 +184,7 @@ query ilsoftwarequery {
 }`;
 
 const moduliquery = `query moduliquery {
-  moduli {
+  moduli(first: 100) {
     nodes {
       moduloAcf {
         descrizioneModulo
@@ -217,7 +217,7 @@ const moduliquery = `query moduliquery {
 }`;
 
 const funzionalitaprincipaliquery = `query queryunzionalitaprincipali {
-  funzionalitPrincipali {
+  funzionalitPrincipali(first: 100) {
     nodes {
       funzionalitaPrincipaliAcf {
         name

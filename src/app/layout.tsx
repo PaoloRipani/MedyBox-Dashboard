@@ -4,8 +4,19 @@ import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  
+  const router = useRouter();
+
+  useEffect(() => {
+    // Check if the page was loaded with a path, and if so, navigate to that path
+    if (window.location.pathname !== '/') {
+      router.push(window.location.pathname);
+    }
+  }, []);
+
   return (
     <>
         <div className="flex flex-col min-h-screen mx-auto ">

@@ -82,12 +82,12 @@ export default function ContactForm() {
               </label>
               <div className="border-0 text-white flex justify-end
                   h-10 relative">
-                <button type="submit"  className='w-36 pr-2 flex items-center justify-center cursor-pointer '>
-                    <svg width="144" height="40" className='absolute z-0 right-0'>
-                      <path d="M0,0 h128 l16,20 l-16,20 h-128z" fill="#ef7923" />
-                    </svg>
-                    <span className='z-20 leading-button secular'>Invia</span>
-                </button>
+                    <div className="border-0 text-white flex justify-start h-10 relative">
+                      <button type="submit" className='w-44 pr-2 flex items-center justify-center 
+                      cursor-pointer relative clip-path-buttons'>
+                        <span className='z-20 leading-button secular'>Invia</span>
+                      </button>
+                    </div>
               </div>
             </div>
             {statusMessage && <p className='text-grey-4'>{statusMessage}</p>}

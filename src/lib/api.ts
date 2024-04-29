@@ -184,7 +184,7 @@ query ilsoftwarequery {
 }`;
 
 const moduliquery = `query moduliquery {
-  moduli(first: 100) {
+  moduli(  first: 100  where: {orderby: [ {field: TITLE, order: ASC}]})  {
     nodes {
       moduloAcf {
         descrizioneModulo
@@ -211,6 +211,7 @@ const moduliquery = `query moduliquery {
             link
           }
         }
+        order
       }
     }
   }
@@ -294,6 +295,25 @@ export async function fetchModuliACF() {
   })
     const ModuliAcf = await res.json();
     console.log("ModuliAcf: ", ModuliAcf.data?.moduli?.nodes);
+
+    // Sort the nodes array by the order field first, and then by the title field
+    ModuliAcf.data.moduli.nodes.sort((a: any, b: any) => {
+      // Compare the order fields
+      const orderDiff = a.moduloAcf.order - b.moduloAcf.order;
+      if (orderDiff !== 0) {
+        return orderDiff;
+      }
+
+      // If the order is the same, compare the title fields
+      if (a.moduloAcf.titolo && b.moduloAcf.titolo) {
+        return a.moduloAcf.titolo.localeCompare(b.moduloAcf.titolo);
+      } else if (a.moduloAcf.titolo) {
+        return -1; // a comes first if b.moduloAcf.titolo is undefined
+      } else {
+        return 1; // b comes first if a.moduloAcf.titolo is undefined
+      }
+    });
+
     return ModuliAcf.data?.moduli?.nodes;
   } catch (err) {
     console.error("Error fetching ModuliAcf: ", err);

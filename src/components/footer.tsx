@@ -64,9 +64,6 @@ export default function Footer() {
                         <div className='nunito lg:w-auto w-20'>
                             <a href={acf?.cookiePolicy ?? ''} className='m' target='_blank'>Cookie Policy</a>
                         </div>
-                        <div className='nunito lg:w-auto w-20'>
-                            <a href={acf?.terminiECondizioni ?? ''} className='m' target='_blank'>Termini e Condizioni</a>
-                        </div>
                     </div>
                 </div>
             </div>

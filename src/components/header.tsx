@@ -85,7 +85,8 @@ export default function Header() {
               <Link href='/#target' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>A chi ci rivolgiamo</Link>
             </div>
             <div className="flex flex-col items-center lg:w-auto w-full h-fit">
-              <Link href='/#contattaci' className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>Contattaci</Link>
+              <Link href='/#contattaci'
+              className='flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto'>Contattaci</Link>
             </div>
             <div className="flex flex-col items-center lg:w-auto w-full lg:pl-4 lg:border-l-2 lg:border-l-grey-2 h-fit">
               <Link href='/il-software' className={`flex flex-col nunito text-contact text-grey-3 justify-center items-center px-0 h-full w-auto font-bold'>

@@ -231,7 +231,7 @@ return (
                     <div className='grid lg:grid-cols-12 grid-cols-8'>
                         <div className='lg:col-end-12 col-end-8 col-start-3'>
                             <div className='flex flex-col items-start'>
-                                <h2 className='text-h2'
+                                <h2 className='text-h2 text-white'
                                 dangerouslySetInnerHTML={{ __html: acf.vuoiApprofondireTitle}}>
                                 </h2>
                                 <Link href='/#contattaci'>

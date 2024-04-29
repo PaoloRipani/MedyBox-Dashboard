@@ -235,7 +235,7 @@ export default function Home() {
           </div>
           <div className='w-full max-w-[1106px] z-10'>
             <div className='flex flex-col items-start lg:w-1/2 gap-4'>
-              <h2 className='text-h2 lg:pt-0 pt-24' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareTitle }}></h2>
+              <h2 className='text-h2 lg:pt-0 pt-24 text-white' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareTitle }}></h2>
               <p className='nunito text-h4 text-white' dangerouslySetInnerHTML={{ __html: acf.scopriIlSoftwareDescriptionText }}>
               </p>
                 <Link href='/il-software'>
@@ -329,7 +329,7 @@ export default function Home() {
           </div>
           <div className='w-full max-w-[1106px] z-10'>
             <div className='flex flex-col items-start lg:w-1/2'>
-              <h2 className='text-h2 lg:pt-0 pt-24' dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuTitle }}></h2>
+              <h2 className='text-h2 lg:pt-0 pt-24 text-white' dangerouslySetInnerHTML={{ __html: acf.vuoiSaperneDiPiuTitle }}></h2>
               {acf?.vuoiSaperneDiPiuLink && (
                 <Link href={acf?.vuoiSaperneDiPiuLink } target='_blank'>
                   <div className="border-0 text-white flex justify-start h-10 relative mt-6">
@@ -369,32 +369,34 @@ export default function Home() {
                 </Link>
               </div>
               <div className='flex flex-col lg:gap-16 gap-5 xl:pl-24 lg:pl-12'>
-                <div className='flex flex-col lg:gap-16 gap-5 w-full lg:items-start items-center'>
-                <div className='flex gap-6 bg-white justify-center items-center lg:mr-28 mr-12 max-w-96 overflow-hidden shadow-lg rounded'>
-                  <div className='h-28 w-28 bg-yellow-1 flex items-center justify-center'>
-                    <img src={acf.ilNostroTarget1stElementIcon?.node?.link} alt="1sticon" />
+                <div className='flex justify-center'>
+                <div className='flex flex-col lg:gap-16 gap-5 lg:w-full lg:items-start'>
+                  <div className='flex gap-6 bg-white justify-center items-center lg:mr-28 mr-12 max-w-96 overflow-hidden shadow-lg rounded'>
+                    <div className='h-28 w-28 bg-yellow-1 flex items-center justify-center'>
+                      <img src={acf.ilNostroTarget1stElementIcon?.node?.link} alt="1sticon" />
+                    </div>
+                    <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
+                    dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget1stElementText }}>
+                    </h3>
                   </div>
-                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
-                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget1stElementText }}>
-                  </h3>
-                </div>
-                <div className='flex gap-6 bg-white justify-center items-center lg:ml-28 ml-12 max-w-96 overflow-hidden shadow-lg rounded'>
-                  <div className='h-28 w-28 bg-yellow-2 flex items-center justify-center'>
-                    <img src={acf.ilNostroTarget2ndElementIcon?.node?.link} alt="2ndicon" />
+                  <div className='flex gap-6 bg-white justify-center items-center lg:ml-28 ml-12 max-w-96 overflow-hidden shadow-lg rounded'>
+                    <div className='h-28 w-28 bg-yellow-2 flex items-center justify-center'>
+                      <img src={acf.ilNostroTarget2ndElementIcon?.node?.link} alt="2ndicon" />
+                    </div>
+                    <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
+                    dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget2ndElementText }}>
+                    </h3>
                   </div>
-                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
-                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget2ndElementText }}>
-                  </h3>
-                </div>
-                <div className='flex gap-6 bg-white justify-center items-center lg:ml-0 lg:mr-28 ml-4 mr-8 max-w-96 overflow-hidden shadow-lg rounded'>
-                  <div className='h-28 w-28 bg-yellow-3 flex items-center justify-center'>
-                    <img src={acf.ilNostroTarget3rdElementIcon?.node?.link} alt="3rdicon" />
+                  <div className='flex gap-6 bg-white justify-center items-center lg:ml-0 lg:mr-28 ml-4 mr-8 max-w-96 overflow-hidden shadow-lg rounded'>
+                    <div className='h-28 w-28 bg-yellow-3 flex items-center justify-center'>
+                      <img src={acf.ilNostroTarget3rdElementIcon?.node?.link} alt="3rdicon" />
+                    </div>
+                    <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
+                    dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget3rdElementText }}>
+                    </h3>
                   </div>
-                  <h3 className='lg:text-h3 text-h4 text-gs-black pr-6 w-[calc(100%-136px)] break-words'
-                  dangerouslySetInnerHTML={{ __html: acf.ilNostroTarget3rdElementText }}>
-                  </h3>
                 </div>
-                </div>
+              </div>
               </div>
             </div>
           </div>
@@ -409,31 +411,31 @@ export default function Home() {
           <div className='w-full max-w-[1106px] relative flex flex-col-reverse lg:flex-col'>
             <div className='lg:absolute z-10 top-0 left-0 lg:w-2/6 w-full flex flex-col justify-center 
               items-center gap-8 p-8 lg:my-8 bg-yellow-3 lg:max-w-96 shadow-lg lg:rounded h-[calc(100%-64px)]'>
-              <h3 className='text-contact-title text-center border-b-2 border-yellow-2 h-12 w-full'>contatti</h3>
+              <h3 className='text-contact-title text-center border-b-2 border-yellow-2 h-12 w-full text-white'>contatti</h3>
               <div className='flex flex-col gap-5 items-center justify-center'>
                 <div className='flex flex-col items-center gap-1'>
                   <div className='h-6 w-6'>
                     <Image src={nameIcon} alt='name' />
                   </div>
-                  <p className='nunito text-contact'>{acf.contattiNomeSocieta}</p>
+                  <p className='nunito text-contact text-white'>{acf.contattiNomeSocieta}</p>
                 </div>
                 <div className='flex flex-col items-center gap-1'>
                   <div className='h-6 w-6'>
                     <Image src={locationIcon} alt='address' />
                   </div>
-                  <p className='nunito text-contact text-center'>{acf.contattiIndirizzo}</p>
+                  <p className='nunito text-contact text-center text-white'>{acf.contattiIndirizzo}</p>
                 </div>
                 <div className='flex flex-col items-center gap-1'>
                   <div className='h-6 w-6'>
                     <Image src={phoneIcon} alt='telephone' />
                   </div>
-                  <p className='nunito text-contact'>{acf.contattiTelefono}</p>
+                  <p className='nunito text-contact text-white'>{acf.contattiTelefono}</p>
                 </div>
                 <div className='flex flex-col items-center gap-1'>
                   <div className='h-6 w-6'>
                     <Image src={emailIcon} alt='email' />
                   </div>
-                  <p className='nunito text-contact underline'>{acf.contattiEmail}</p>
+                  <p className='nunito text-contact underline text-white'>{acf.contattiEmail}</p>
                 </div>
                 {/* Linkedin */}
                 <div className='flex flex-col items-center'>

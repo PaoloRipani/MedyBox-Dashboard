@@ -1,8 +1,6 @@
 import './globals.css'
 import './globals.scss'
 import Head from 'next/head'
-import Header from '../components/header'
-import Footer from '../components/footer'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
@@ -26,12 +24,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <meta name="theme-color" content="#005080"/>
             <title>Gesiqa</title>
           </Head>
-          <Header/>
           <div className="h-20"></div> {/* This is the spacing div */}
           <main className={`secular flex-grow bg-light-gray`}>
             {children}
           </main>
-          <Footer />
         </div>
     </>
   )

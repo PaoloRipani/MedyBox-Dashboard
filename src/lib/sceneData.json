@@ -1,0 +1,162 @@
+{
+    "A-A": {
+        "sketchfabUrl": "url1",
+        "previewUrl": "previewUrl1",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts1",
+        "annotation1": {
+            "title": "annotation1",
+            "text": "text1"
+        },
+        "annotation2": {
+            "title": "annotation2",
+            "text": "text1"
+        },
+        "annotation3": {
+            "title": "annotation3",
+            "text": "text1"
+        },
+        "annotation4": {
+            "title": "annotation4",
+            "text": "text1"
+        }
+    },
+    "A-B": {
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts2"
+    },
+    "A-C": {
+        "sketchfabUrl": "url5",
+        "previewUrl": "previewUrl5",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts5"
+    },
+    "A-": {
+        "sketchfabUrl": "url6",
+        "previewUrl": "previewUrl6",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts6"
+    },
+    "B-A": {
+        "sketchfabUrl": "url7",
+        "previewUrl": "previewUrl7",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts7"
+    },
+    "B-B": {
+        "sketchfabUrl": "url8",
+        "previewUrl": "previewUrl8",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts8"
+    },
+    "B-C": {
+        "sketchfabUrl": "url9",
+        "previewUrl": "previewUrl9",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts9"
+    },
+    "B-": {
+        "sketchfabUrl": "url10",
+        "previewUrl": "previewUrl10",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts10"
+    },
+    "C-A": {
+        "sketchfabUrl": "url11",
+        "previewUrl": "previewUrl11",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts11"
+    },
+    "C-B": {
+        "sketchfabUrl": "url12",
+        "previewUrl": "previewUrl12",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts12"
+    },
+    "C-C": {
+        "sketchfabUrl": "url13",
+        "previewUrl": "previewUrl13",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts13"
+    },
+    "C-": {
+        "sketchfabUrl": "url14",
+        "previewUrl": "previewUrl14",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts14"
+    },
+    "-A": {
+        "sketchfabUrl": "url15",
+        "previewUrl": "previewUrl15",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts15"
+    },
+    "-B": {
+        "sketchfabUrl": "url16",
+        "previewUrl": "previewUrl16",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts16"
+    },
+    "-C": {
+        "sketchfabUrl": "url17",
+        "previewUrl": "previewUrl17",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts17"
+    },
+    "-": {
+        "sketchfabUrl": "url18",
+        "previewUrl": "previewUrl18",
+        "name": "",
+        "larghezza": "",
+        "profondita" : "",
+        "altezza" : "",
+        "texts": "texts18"
+    }
+}

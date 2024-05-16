@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import sceneData from '../lib/sceneData.json';
 
-export default function ConfigurationModal({ onProductChange }) {
+export default function ConfigurationModal({ onProductChange, onClose }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [selectedModel, setSelectedModel] = useState(null);
+  const [selectedModel, setSelectedModel] = useState('None');
 
   const handleProductChange = (product) => {
     setSelectedProduct(product);
-    setSelectedModel(null);
+    setSelectedModel('None');
   };
 
   const handleModelChange = (model) => {
@@ -19,25 +19,28 @@ export default function ConfigurationModal({ onProductChange }) {
   };
 
   const products = Object.keys(sceneData);
-  const models = selectedProduct ? Object.keys(sceneData[selectedProduct]) : [];
+  const models = selectedProduct ? ['None', ...Object.keys(sceneData[selectedProduct])] : [];
 
   const key = `${selectedProduct}-${selectedModel}`;
   const previewUrl = sceneData[selectedProduct]?.[selectedModel]?.previewUrl || '/path/to/defaultPreview.png';
+  const dimensions = sceneData[selectedProduct]?.[selectedModel]?.dimensions || 'No dimensions available';
 
   return (
     <div>
       <div>
-        <button onClick={() => handleProductChange(null)}>Close Modal</button>
-        {products.map((product) => (
-          <button key={product} onClick={() => handleProductChange(product)}>
-            {product}
-          </button>
-        ))}
-      </div>
-      <div>
-        {selectedProduct ? (
+        <button onClick={onClose}>Close Modal</button>
+        {!selectedProduct ? (
           <>
-            <button onClick={() => handleProductChange(null)}>Close Modal</button>
+            <h1>Title</h1>
+            <p>Description</p>
+            {products.map((product) => (
+              <div key={product} onClick={() => handleProductChange(product)}>
+                {product}
+              </div>
+            ))}
+          </>
+        ) : (
+          <>
             {models.map((model) => (
               <div key={model} onClick={() => handleModelChange(model)}>
                 {model}
@@ -45,8 +48,15 @@ export default function ConfigurationModal({ onProductChange }) {
             ))}
             <button onClick={handleConfirm}>Confirm</button>
           </>
-        ) : (
-          <img src={previewUrl} alt="Preview" />
+        )}
+      </div>
+      <div>
+        {selectedProduct && (
+          <>
+            <h1>{selectedModel}</h1>
+            <p>{dimensions}</p>
+            <img src={previewUrl} alt="Preview" />
+          </>
         )}
       </div>
     </div>

@@ -24,7 +24,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <meta name="theme-color" content="#005080"/>
             <title>Gesiqa</title>
           </Head>
-          <div className="h-20"></div> {/* This is the spacing div */}
           <main className={`secular flex-grow bg-light-gray`}>
             {children}
           </main>

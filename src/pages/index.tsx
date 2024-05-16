@@ -20,7 +20,7 @@ import ConfigurationModal from '../components/ConfigurationModal';
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(true);
-  const [activeModal, setActiveModal] = useState(null);
+  const [activeModal, setActiveModal] = useState<string | null>(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const [selectedMedyBox, setSelectedMedyBox] = useState('A');
@@ -44,6 +44,9 @@ export default function Home() {
 <div>
   <Layout> 
     <div>
+      <button onClick={() => setActiveModal('language')}>Change Language</button>
+      <button onClick={() => setActiveModal('configuration')}>Change Configuration</button>
+      <button onClick={() => setShowVideo(true)}>Restart Experience</button>
       {activeModal === 'language' && <LanguageModal onLanguageChange={setSelectedLanguage} onClose={() => setActiveModal(null)} />}
       {activeModal === 'configuration' && <ConfigurationModal onProductChange={handleProductChange} onClose={() => setActiveModal(null)} />}
       <Scene3D language={selectedLanguage} medyBox={selectedMedyBox} medyLocker={selectedMedyLocker}/>

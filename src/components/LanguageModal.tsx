@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const LanguageModal: React.FC<{ onLanguageChange: (language: string) => void }> = ({ onLanguageChange }) => {
+export default function LanguageModal({ onLanguageChange, onClose }) {  
   const [showModal, setShowModal] = useState(false);
 
   const handleLanguageClick = (language: string) => {
@@ -22,5 +22,3 @@ const LanguageModal: React.FC<{ onLanguageChange: (language: string) => void }> 
     </div>
   );
 };
-
-export default LanguageModal;

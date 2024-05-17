@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import sceneData from '../lib/sceneData.json';
 import ARModal from './ARModal';
-import { useTranslation } from 'next-i18next';
 
 export default function Scene3D({ language, medyBox, medyLocker }) {
-  const { i18n } = useTranslation();
-  const lang = i18n.language;
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const key = `${medyBox}-${medyLocker}`;
@@ -32,15 +29,15 @@ export default function Scene3D({ language, medyBox, medyLocker }) {
 
   return (
     <div>
-      <h1>{scene.name[lang]}</h1>
-      <p>{scene.texts[lang].text1}</p>
-      <p>{scene.texts[lang].text2}</p>
+      <h1>{scene.name[language]}</h1>
+      <p>{scene.texts[language].text1}</p>
+      <p>{scene.texts[language].text2}</p>
       <ARModal arUrl={arUrl} />
       <div>
         {Object.keys(scene.annotations).map((key) => (
           <div key={key}>
-            <h2>{scene.annotations[key][lang].title}</h2>
-            <p>{scene.annotations[key][lang].text}</p>
+            <h2>{scene.annotations[key][language].title}</h2>
+            <p>{scene.annotations[key][language].text}</p>
           </div>
         ))}
       </div>

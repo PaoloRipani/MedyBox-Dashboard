@@ -15,11 +15,10 @@ import StartExperience from '../components/StartExperience';
 import Scene3D from '../components/Scene3D';
 import LanguageModal from '../components/LanguageModal';
 import ConfigurationModal from '../components/ConfigurationModal';
-import { useTranslation } from 'next-i18next';
 
 export default function Home() {
-  const { i18n } = useTranslation();
-  const lang = i18n.language;
+  const [translations, setTranslations] = useState({});
+  const [language, setLanguage] = useState('en');
   
   const [showVideo, setShowVideo] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -29,8 +28,13 @@ export default function Home() {
   const [selectedMedyLocker, setSelectedMedyLocker] = useState('A');
 
   useEffect(() => {
-    i18n.changeLanguage(selectedLanguage);
-  }, [selectedLanguage]);
+    const fetchTranslations = async () => {
+      const response = await fetch(`/locales/${language}/common.json`);
+      const data = await response.json();
+      setTranslations(data);
+    };
+    fetchTranslations();
+  }, [language]);
 
   const handleStartButtonClick = () => {
     // Handle button click here
@@ -51,17 +55,17 @@ export default function Home() {
   <Layout> 
     <div>
       <div>
-          <button onClick={() => setActiveModal('language')}>Change Language</button>
-          <button onClick={() => setActiveModal('configuration')}>Change Configuration</button>
-          <button onClick={() => setShowVideo(true)}>Restart Experience</button>
+          <button onClick={() => setActiveModal('language')}>{translations.changeLanguage}</button>
+          <button onClick={() => setActiveModal('configuration')}>{translations.changeConfiguration}</button>
+          <button onClick={() => setShowVideo(true)}>{translations.restartExperience}</button>
           {activeModal === 'language' && (
-            <LanguageModal onLanguageChange={setSelectedLanguage} onClose={() => setActiveModal(null)} />
+            <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
           )}
           {activeModal === 'configuration' && (
-            <ConfigurationModal onProductChange={handleProductChange} language={selectedLanguage} onClose={() => setActiveModal(null)} />
+            <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} />
           )}
       </div>
-      <Scene3D language={selectedLanguage} medyBox={selectedMedyBox} medyLocker={selectedMedyLocker} />
+      <Scene3D language={language} medyBox={selectedMedyBox} medyLocker={selectedMedyLocker} />
         {showVideo && (
           <div className="absolute inset-0 z-10">
             <StartExperience

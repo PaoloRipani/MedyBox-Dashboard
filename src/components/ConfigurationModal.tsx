@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import sceneData from '../lib/sceneData.json';
 
-export default function ConfigurationModal({ onProductChange, onClose }) {
+export default function ConfigurationModal({ language, onProductChange, onClose }) {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [selectedModel, setSelectedModel] = useState('None');
 

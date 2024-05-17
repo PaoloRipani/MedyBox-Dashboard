@@ -13,19 +13,21 @@ export default function Scene3D({ language, medyBox, medyLocker }) {
   const arUrl = sceneData['arUrl'] || '';
 
   useEffect(() => {
-    const client = new window.Sketchfab(iframeRef.current);
+    if (window.Sketchfab) {
+      const client = new window.Sketchfab(iframeRef.current);
 
-    client.init(scene.sketchfabUrl, {
-      success: function onSuccess(api) {
-        api.start();
-        api.addEventListener('annotationFocus', function (event) {
-          console.log('Annotation clicked: ', event);
-        });
-      },
-      error: function onError() {
-        console.log('Viewer error');
-      },
-    });
+      client.init(scene.sketchfabUrl, {
+        success: function onSuccess(api) {
+          api.start();
+          api.addEventListener('annotationFocus', function (event) {
+            console.log('Annotation clicked: ', event);
+          });
+        },
+        error: function onError() {
+          console.log('Viewer error');
+        },
+      });
+    }
   }, [scene.sketchfabUrl]);
 
   return (
@@ -35,17 +37,14 @@ export default function Scene3D({ language, medyBox, medyLocker }) {
       <p>{scene.texts[lang].text2}</p>
       <ARModal arUrl={arUrl} />
       <div>
-        {/* annotation bar */}
         {Object.keys(scene.annotations).map((key) => (
           <div key={key}>
             <h2>{scene.annotations[key][lang].title}</h2>
             <p>{scene.annotations[key][lang].text}</p>
           </div>
         ))}
-        {/* fullscreen modal for images and videos */}
-      </div>      
+      </div>
       <iframe ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
-      <div>{scene.texts[language]}</div>
     </div>
   );
 };

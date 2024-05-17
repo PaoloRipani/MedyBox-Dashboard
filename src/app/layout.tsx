@@ -22,6 +22,7 @@ function Layout({ children }: any ) {
           <Head>
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+            <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
             <meta name="theme-color" content="#005080"/>
             <title>Gesiqa</title>
           </Head>

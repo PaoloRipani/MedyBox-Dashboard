@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-const StartExperience: React.FC<{ videoSrc: string, buttonText: string, onButtonClick: () => void }> = ({ videoSrc, buttonText, onButtonClick }) => {
+function StartExperience({ videoSrc, onButtonClick }) {
   const { t } = useTranslation('common');
   return (
     <div className="relative">
@@ -15,6 +15,6 @@ const StartExperience: React.FC<{ videoSrc: string, buttonText: string, onButton
       </div>
     </div>
   );
-};
+}
 
 export default StartExperience;

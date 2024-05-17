@@ -3,18 +3,9 @@ import './globals.scss'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { appWithTranslation } from 'next-i18next';
 
 function Layout({ children }: any ) {
   
-  const router = useRouter();
-
-  useEffect(() => {
-    // Check if the page was loaded with a path, and if so, navigate to that path
-    if (window.location.pathname !== '/') {
-      router.push(window.location.pathname);
-    }
-  }, []);
 
   return (
     <>
@@ -24,7 +15,7 @@ function Layout({ children }: any ) {
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
             <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
             <meta name="theme-color" content="#005080"/>
-            <title>Gesiqa</title>
+            <title>MedyBox Experience</title>
           </Head>
           <main className={`secular flex-grow bg-light-gray`}>
             {children}
@@ -34,7 +25,7 @@ function Layout({ children }: any ) {
   )
 }
 
-export default appWithTranslation(Layout);
+export default Layout;
 
 /*
 Based on your requirements, here's a suggested structure for your Next.js project:

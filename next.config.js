@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config');
 
 const nextConfig = {
   basePath: '',
@@ -11,11 +10,10 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: "build",
   output: "export",
-  i18n,
   env: {
     SKETCHFAB_API_KEY: process.env.SKETCHFAB_API_KEY,
   },
-  exportTrailingSlash: true,
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

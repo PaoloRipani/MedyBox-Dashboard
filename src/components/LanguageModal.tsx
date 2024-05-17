@@ -13,10 +13,11 @@ export default function LanguageModal({ onLanguageChange, onClose }) {
       <button onClick={() => setShowModal(true)}>Change Language</button>
       {showModal && (
         <div className="modal">
-          <div onClick={() => handleLanguageClick('Italian')}>Italian</div>
-          <div onClick={() => handleLanguageClick('English')}>English</div>
-          <div onClick={() => handleLanguageClick('German')}>German</div>
-          <div onClick={() => handleLanguageClick('French')}>French</div>
+          <div onClick={() => handleLanguageClick('it')}>Italian</div>
+          <div onClick={() => handleLanguageClick('en')}>English</div>
+          <div onClick={() => handleLanguageClick('de')}>German</div>
+          <div onClick={() => handleLanguageClick('fr')}>French</div>
+          <div onClick={() => handleLanguageClick('es')}>Spanish</div>
         </div>
       )}
     </div>

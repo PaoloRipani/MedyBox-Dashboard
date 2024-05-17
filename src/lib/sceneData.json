@@ -2,161 +2,721 @@
     "A-A": {
         "sketchfabUrl": "url1",
         "previewUrl": "previewUrl1",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts1",
-        "annotation1": {
-            "title": "annotation1",
-            "text": "text1"
+        "name": {
+          "en": "Example Name",
+          "it": "Nome Esempio"
         },
-        "annotation2": {
-            "title": "annotation2",
-            "text": "text1"
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
         },
-        "annotation3": {
-            "title": "annotation3",
-            "text": "text1"
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
         },
-        "annotation4": {
-            "title": "annotation4",
-            "text": "text1"
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
         }
-    },
-    "A-B": {
+      },
+      "A-B": {
         "sketchfabUrl": "url2",
         "previewUrl": "previewUrl2",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts2"
-    },
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "A-C": {
-        "sketchfabUrl": "url5",
-        "previewUrl": "previewUrl5",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts5"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "A-": {
-        "sketchfabUrl": "url6",
-        "previewUrl": "previewUrl6",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts6"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "B-A": {
-        "sketchfabUrl": "url7",
-        "previewUrl": "previewUrl7",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts7"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "B-B": {
-        "sketchfabUrl": "url8",
-        "previewUrl": "previewUrl8",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts8"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "B-C": {
-        "sketchfabUrl": "url9",
-        "previewUrl": "previewUrl9",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts9"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "B-": {
-        "sketchfabUrl": "url10",
-        "previewUrl": "previewUrl10",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts10"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "C-A": {
-        "sketchfabUrl": "url11",
-        "previewUrl": "previewUrl11",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts11"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "C-B": {
-        "sketchfabUrl": "url12",
-        "previewUrl": "previewUrl12",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts12"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "C-C": {
-        "sketchfabUrl": "url13",
-        "previewUrl": "previewUrl13",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts13"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "C-": {
-        "sketchfabUrl": "url14",
-        "previewUrl": "previewUrl14",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts14"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "-A": {
-        "sketchfabUrl": "url15",
-        "previewUrl": "previewUrl15",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts15"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "-B": {
-        "sketchfabUrl": "url16",
-        "previewUrl": "previewUrl16",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts16"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "-C": {
-        "sketchfabUrl": "url17",
-        "previewUrl": "previewUrl17",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts17"
-    },
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
     "-": {
-        "sketchfabUrl": "url18",
-        "previewUrl": "previewUrl18",
-        "name": "",
-        "larghezza": "",
-        "profondita" : "",
-        "altezza" : "",
-        "texts": "texts18"
-    }
+        "sketchfabUrl": "url2",
+        "previewUrl": "previewUrl2",
+        "name": {
+          "en": "Example Name 2",
+          "it": "Nome Esempio 2"
+        },
+        "dimensions": {
+          "width": "",
+          "depth": "",
+          "height": ""
+        },
+        "texts": {
+          "en": {
+            "text1": "Example text1",
+            "text2": "Example text2"
+          },
+          "it": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          }
+        },
+        "annotations": {
+          "annotation1": {
+            "en": {
+              "title": "Annotation1",
+              "text": "Text1"
+            },
+            "it": {
+              "title": "Annotazione1",
+              "text": "Testo1"
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "Annotation2",
+              "text": "Text2"
+            },
+            "it": {
+              "title": "Annotazione2",
+              "text": "Testo2"
+            }
+          }
+        }
+      },
 }

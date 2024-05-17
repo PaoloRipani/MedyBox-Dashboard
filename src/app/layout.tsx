@@ -3,8 +3,9 @@ import './globals.scss'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { appWithTranslation } from 'next-i18next';
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+function Layout({ children }: any ) {
   
   const router = useRouter();
 
@@ -31,6 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </>
   )
 }
+
+export default appWithTranslation(Layout);
 
 /*
 Based on your requirements, here's a suggested structure for your Next.js project:

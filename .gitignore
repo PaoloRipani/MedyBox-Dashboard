@@ -124,3 +124,4 @@ build web/static/media/slick.653a4cbb.woff
 build web/static/media/slick.25572f22.eot
 build web/static/media/slick.f895cfdf.svg
 build web/types/package.json
+.env

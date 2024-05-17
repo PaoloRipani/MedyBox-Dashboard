@@ -1,4 +1,5 @@
 import React from "react";
+// import component to make QR codes from URLs
 
 export default function ARModal({ arUrl }) {
     

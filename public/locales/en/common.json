@@ -1,8 +1,9 @@
 {
     "startExperience": "Start Experience",
+    "restartExperience": "Restart Experience",
     "reset": "Reset",
     "arButton": "AR",
-    "language": "Language",
-    "configuration": "Configuration"
+    "changeLanguage": "Language",
+    "changeConfiguration": "Configuration"
   }
   

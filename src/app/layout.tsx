@@ -17,7 +17,7 @@ function Layout({ children }: any ) {
             <meta name="theme-color" content="#005080"/>
             <title>MedyBox Experience</title>
           </Head>
-          <main className={`secular flex-grow bg-light-gray`}>
+          <main className={`secular flex-grow relative h-full bg-light-gray`}>
             {children}
           </main>
         </div>

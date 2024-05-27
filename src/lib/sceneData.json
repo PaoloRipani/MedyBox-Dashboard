@@ -1,6 +1,6 @@
 {
     "A-A": {
-        "sketchfabUrl": "url1",
+        "sketchfabUrl": "eeabd20748ea44fe919c6cac88d1e4b0",
         "previewUrl": "previewUrl1",
         "name": {
           "en": "Example Name",
@@ -40,6 +40,66 @@
             "it": {
               "title": "Annotazione2",
               "text": "Testo2"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Annotation3",
+              "text": "Text3"
+            },
+            "it": {
+              "title": "Annotazione3",
+              "text": "Testo3"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Annotation4",
+              "text": "Text4"
+            },
+            "it": {
+              "title": "Annotazione4",
+              "text": "Testo4"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Annotation5",
+              "text": "Text5"
+            },
+            "it": {
+              "title": "Annotazione5",
+              "text": "Testo5"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Annotation6",
+              "text": "Text6"
+            },
+            "it": {
+              "title": "Annotazione6",
+              "text": "Testo6"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Annotation7",
+              "text": "Text7"
+            },
+            "it": {
+              "title": "Annotazione7",
+              "text": "Testo7"
+            }
+          },
+          "annotation78": {
+            "en": {
+              "title": "Annotation8",
+              "text": "Text8"
+            },
+            "it": {
+              "title": "Annotazione8",
+              "text": "Testo8"
             }
           }
         }

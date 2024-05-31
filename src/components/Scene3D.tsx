@@ -3,7 +3,8 @@ import sceneData from '../lib/sceneData.json';
 
 export default function Scene3D({ language, medyBox, medyLocker, 
   onSceneDataUpdate, 
-  onAnnotationDataUpdate}) {
+  onAnnotationDataUpdate,
+  onAnnotationClick}) {
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const key = `${medyBox}-${medyLocker}`;
@@ -42,16 +43,23 @@ export default function Scene3D({ language, medyBox, medyLocker,
           });
 
           // Update scene data
-          onSceneDataUpdate(scene.texts[language]);
+          if (scene.texts[language]) {
+            onSceneDataUpdate(scene.texts[language]);
+          } else {
+            console.error(`Texts for language ${language} not found in scene data.`);
+          }
+          
         });
         
         api.addEventListener('annotationFocus', function (event) {
           const annotationIndex = event.annotationIndex;
-          if (scene.annotations && scene.annotations[`annotation${annotationIndex + 1}`] && scene.annotations[`annotation${annotationIndex + 1}`][language]) {
-            const annotation = scene.annotations[`annotation${annotationIndex + 1}`][language];
+          const annotationKey = `annotation${annotationIndex + 1}`;
+          if (scene.annotations[annotationKey] && scene.annotations[annotationKey][language]) {
+            const annotation = scene.annotations[annotationKey][language];
             onAnnotationDataUpdate({ [annotationIndex]: annotation });
+            onAnnotationClick(annotationIndex);
           } else {
-            console.error(`Annotation ${annotationIndex + 1} or language ${language} not found in scene data.`);
+            console.error(`Annotation ${annotationKey} or language ${language} not found in scene data.`);
           }
         });
       },

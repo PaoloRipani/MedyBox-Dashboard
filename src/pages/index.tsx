@@ -15,6 +15,8 @@ import ConfigurationModal from '../components/ConfigurationModal';
 import sceneData from '../lib/sceneData.json';
 import ARModal from '../components/ARModal';
 
+import Logo from '../../public/MedyBox Logo.svg'
+
 export default function Home() {
   const [translations, setTranslations] = useState({});
   const [language, setLanguage] = useState('it');
@@ -25,6 +27,7 @@ export default function Home() {
   const [selectedMedyLocker, setSelectedMedyLocker] = useState('A');
   const [sceneDataState, setSceneData] = useState({});
   const [annotationData, setAnnotationData] = useState({});
+  const [selectedAnnotation, setSelectedAnnotation] = useState(null);
   const arUrl = sceneData['arUrl'] || '';
   
   const key = `${selectedMedyBox}-${selectedMedyLocker}`;
@@ -60,6 +63,17 @@ export default function Home() {
     setAnnotationData(data);
   };
 
+  const handleAnnotationClick = (annotationIndex) => {
+    setSelectedAnnotation(annotationIndex);
+  };
+  
+  const getAnnotationText = () => {
+    if (selectedAnnotation !== null) {
+      const annotationKey = `annotation${selectedAnnotation + 1}`;
+      return scene.annotations[annotationKey]?.[language]?.text || '';
+    }
+    return '';
+  };
 
   return (
 <div>
@@ -79,6 +93,7 @@ export default function Home() {
         medyLocker={selectedMedyLocker}
         onSceneDataUpdate={handleSceneDataUpdate}
         onAnnotationDataUpdate={handleAnnotationDataUpdate}
+        onAnnotationClick={handleAnnotationClick}
       />
         {showVideo && (
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
@@ -91,7 +106,9 @@ export default function Home() {
       <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay'>
         {/* div top left */}
         <div className='row-start-1 col-start-1 text-left align-top'>
-          <div className='z-10'>MedyBox Logo</div>
+          <div className='z-10'>
+            <img src={Logo.src} alt='logo' />
+          </div>
         </div>
         {/* div top center */}
         <div className='row-start-1 col-start-2 text-center align-top'>
@@ -99,13 +116,43 @@ export default function Home() {
           <h1 className='interactive'>{scene.name[language]}</h1>
         </div>
         {/* div top right */}
-        <div className='row-start-1 col-start-3 text-right align-top'>
+        <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
           <div className='z-10 interactive'>
             <button className={`bg-green-2 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
             onClick={() => setActiveModal('language')}>{translations.changeLanguage}</button>
           </div>
+          <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
+            {/* Box informazioni scena selezionata */}
+            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+              <div className='flex flex-row justify-between py-3 px-4'>
+                <div className='text-green-4'>Nome</div>
+                <div className='text-medy-black'>icona</div>
+              </div>
+              <div className='flex flex-col py-3 px-4'>
+                <div className='flex flex-row'>
+                  <div className='text-gray-500'>testo</div>
+                  <div className='text-gray-500 grow'>fill</div>
+                  <div className='text-gray-500'>testo</div>
+                </div>
+              </div>
+            </div>
+            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+              <div className='flex flex-row justify-between py-3 px-4'>
+                <div className='text-green-4'>Nome</div>
+                <div className='text-medy-black'>icona</div>
+              </div>
+              <div className='flex flex-col py-3 px-4'>
+                <div className='flex flex-row'>
+                  <div className='text-gray-500'>testo</div>
+                  <div className='text-gray-500 grow'>fill</div>
+                  <div className='text-gray-500'>testo</div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p>{scene.texts[language].text1}</p>
           <p>{scene.texts[language].text2}</p>
+          <p>{getAnnotationText()}</p>
         </div>
         {/* div bottom left */}
         <div className='row-start-2 col-start-1 text-left content-end'>
@@ -114,12 +161,12 @@ export default function Home() {
           <ARModal arUrl={arUrl} />
         </div>
         {/* div bottom right */}
-        <div className='row-start-2 col-start-3 text-right content-end'>
-          <div className='z-10 interactive flex flex-col'>          
-          <button className={`bg-green-1 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
-          onClick={() => setActiveModal('configuration')}>{translations.changeConfiguration}</button>
-          <button className='bg-green-1 py-3 px-5'
-          onClick={() => setShowVideo(true)}>{translations.restartExperience}</button>
+        <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
+          <div className='z-10 interactive w-52 gap-4 flex flex-col'>          
+            <button className={`bg-green-2 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            onClick={() => setActiveModal('configuration')}>{translations.changeConfiguration}</button>
+            <button className='bg-green-1 text-green-3 py-3 px-5'
+            onClick={() => setShowVideo(true)}>{translations.restartExperience}</button>
           </div>
         </div>
         <div className='invisible z-10 interactive'>

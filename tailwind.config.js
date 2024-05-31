@@ -9,6 +9,9 @@ module.exports = {
         'green-2': '#82C0B1',
         'green-3': '#038667',
         'green-4': '#003233',
+        'glass-green': 'rgba(201, 236, 227, 0.24)',
+        'glass-green-2': 'rgba(201, 236, 227, 0.40)',
+        'glass-green-3': 'rgba(201, 236, 227, 0.64)',
         'medy-black': '#121212',
       },
       fontFamily: {

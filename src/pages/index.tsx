@@ -16,6 +16,7 @@ import sceneData from '../lib/sceneData.json';
 import ARModal from '../components/ARModal';
 
 import Logo from '../../public/MedyBox Logo.svg'
+import LanguageIcon from '../../public/language icon.svg'
 
 export default function Home() {
   const [translations, setTranslations] = useState({});
@@ -103,11 +104,11 @@ export default function Home() {
           />
         </div>
         )}
-      <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay'>
+      <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay z-0'>
         {/* div top left */}
         <div className='row-start-1 col-start-1 text-left align-top'>
           <div className='z-10'>
-            <img src={Logo.src} alt='logo' />
+            <img src={Logo.src} alt='logo' className='w-52'/>
           </div>
         </div>
         {/* div top center */}
@@ -118,8 +119,11 @@ export default function Home() {
         {/* div top right */}
         <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
           <div className='z-10 interactive'>
-            <button className={`bg-green-2 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
-            onClick={() => setActiveModal('language')}>{translations.changeLanguage}</button>
+            <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
+              onClick={() => setActiveModal('language')}>
+              <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
+              <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}>{translations.changeLanguage}</div>
+              </div>
           </div>
           <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
             {/* Box informazioni scena selezionata */}

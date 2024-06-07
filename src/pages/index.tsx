@@ -28,7 +28,7 @@ export default function Home() {
   const [selectedMedyLocker, setSelectedMedyLocker] = useState('A');
   const [sceneDataState, setSceneData] = useState({});
   const [annotationData, setAnnotationData] = useState({});
-  const [selectedAnnotation, setSelectedAnnotation] = useState(null);
+  const [selectedAnnotation, setSelectedAnnotation] = useState(-1);
   const arUrl = sceneData['arUrl'] || '';
   
   const key = `${selectedMedyBox}-${selectedMedyLocker}`;
@@ -66,6 +66,7 @@ export default function Home() {
 
   const handleAnnotationClick = (annotationIndex) => {
     setSelectedAnnotation(annotationIndex);
+    console.info("Annotation selected: " + annotationIndex);
   };
   
   const getAnnotationText = () => {
@@ -81,10 +82,10 @@ export default function Home() {
   <Layout> 
     <div className={`min-h-screen flex flex-col ${isInteracting ? 'interacting' : ''}`}>
       <div className='absolute z-10'>
-          {activeModal === 'language' && (
+          {activeModal === 'language' && selectedAnnotation == null &&(
             <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
           )}
-          {activeModal === 'configuration' && (
+          {activeModal === 'configuration' && selectedAnnotation == null &&(
             <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} />
           )}
       </div>
@@ -96,7 +97,7 @@ export default function Home() {
         onAnnotationDataUpdate={handleAnnotationDataUpdate}
         onAnnotationClick={handleAnnotationClick}
       />
-        {showVideo && (
+        {showVideo && selectedAnnotation == null &&(
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
           <StartExperience
             videoSrc="/path/to/video.mp4"
@@ -112,11 +113,14 @@ export default function Home() {
           </div>
         </div>
         {/* div top center */}
+        {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-1 col-start-2 text-center align-top'>
           <div className={`z-10 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}>scene name</div>
           <h1 className='interactive'>{scene.name[language]}</h1>
         </div>
+          )}
         {/* div top right */}
+        {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
           <div className='z-10 interactive'>
             <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
@@ -158,13 +162,17 @@ export default function Home() {
           <p>{scene.texts[language].text2}</p>
           <p>{getAnnotationText()}</p>
         </div>
+          )}
         {/* div bottom left */}
+        {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-2 col-start-1 text-left content-end'>
           <div className='z-10 interactive'>bottom left</div>
-          {/* il pulsante è qui ma il modale dovrebbe essere in index. */}
           <ARModal arUrl={arUrl} />
         </div>
+          )}
         {/* div bottom right */}
+        {selectedAnnotation == null || selectedAnnotation < 0 && (
+          <>
         <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
           <div className='z-10 interactive w-52 gap-4 flex flex-col'>          
             <button className={`bg-green-2 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
@@ -181,6 +189,27 @@ export default function Home() {
             </div>
           ))}
         </div>
+          </>
+        )}
+        {/* Annotation HUD - visible when annotation index is > 0 */}
+        {selectedAnnotation != null && selectedAnnotation > -1 ? (
+        <div className='absolute right-0 h-svh w-80 p-4 flex flex-col bg-white text-black z-20 interactive'>
+          <div className='flex items-end justify-end'>
+            <div className=''>X</div>
+          </div>
+          <div className='p-4'>
+            <div className=''>
+              <div className='neue-plak-wide'>titolo</div>
+              <div className='lato-bold text-green-3'>sottotitolo</div>
+            </div>
+            <div className=''>
+              <div className='lato-regular text-lg'>testo paragrafo</div>
+              <div>slider immagini</div>
+              <div>video</div>
+            </div>
+          </div>
+        </div>
+        ) : (<></>)}
       </div>
     </div>
   </Layout>

@@ -30,7 +30,7 @@ export default function Scene3D({ language, medyBox, medyLocker,
           console.debug("viewer ready");
 
           api.getAnnotationList((err, annotationsList) => {
-            if (err) {
+             if (err) {
               console.error('Failed to retrieve annotations:', err);
               return;
             }
@@ -51,22 +51,28 @@ export default function Scene3D({ language, medyBox, medyLocker,
           
         });
         
-        api.addEventListener('annotationFocus', function (event) {
-          const annotationIndex = event.annotationIndex;
-          const annotationKey = `annotation${annotationIndex + 1}`;
+        api.addEventListener('annotationSelect', function (index) {
+          console.log('Selected annotation', index);
+          onAnnotationClick(index);
+          const annotationKey = `annotation${index + 1}`;
           if (scene.annotations[annotationKey] && scene.annotations[annotationKey][language]) {
             const annotation = scene.annotations[annotationKey][language];
-            onAnnotationDataUpdate({ [annotationIndex]: annotation });
-            onAnnotationClick(annotationIndex);
+            onAnnotationDataUpdate({ [index]: annotation });
           } else {
             console.error(`Annotation ${annotationKey} or language ${language} not found in scene data.`);
           }
         });
+        api.addEventListener('camerastart', function() {
+          window.console.log('Camera is moving');
+        });
+        api.addEventListener('camerastop', function() {
+          window.console.log('Camera stopped');
+        });
       },
       autostart: 1,
-      annotation: 1,
-      annotations_visible: 1,
-      ui_annotations: 1,
+      annotation: 0,
+      annotations_visible: 0,
+      ui_annotations: 0,
       ui_controls: 0,
       ui_watermark: 0,
       ui_infos: 0,
@@ -79,13 +85,13 @@ export default function Scene3D({ language, medyBox, medyLocker,
     client.init(scene.sketchfabUrl, config);
   }, [scene.sketchfabUrl, language]);
 
-  const runAnnotationLoop = (api, annotationsList) => {
+  const runAnnotationLoop = (apiInstance, annotationsList) => {
     const updateAnnotations = () => {
       const updatedAnnotations = [];
       let completed = 0;
 
       annotationsList.forEach((annotation, index) => {
-        api.getWorldToScreenCoordinates(annotation.position, (coord) => {
+        apiInstance.getWorldToScreenCoordinates(annotation.position, (coord) => {
           const updatedAnnotation = { ...annotation, position: coord.canvasCoord };
           updatedAnnotations[index] = updatedAnnotation;
 
@@ -102,10 +108,33 @@ export default function Scene3D({ language, medyBox, medyLocker,
     updateAnnotations();
   };
 
+  const onAnnotationPlaceholderClick = (eye, target) => {
+    apiInstance.lookat(
+        eye,
+        target,
+        0.5,  // duration, 0 for instant
+        () => { console.log('Camera moved to annotation position'); }
+    );
+  };
+
   return (
     <div className='relative w-full min-h-screen flex'>
       <iframe className='w-full  min-h-screen'
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
+      {annotations.map((annotation, index) => (
+        <div className='w-5 h-5 rounded-xl bg-green-3 leading-none cursor-pointer text-center' 
+            onClick={() => {onAnnotationPlaceholderClick(annotation.eye, annotation.target); 
+                            onAnnotationClick(index)}}
+            key={index}
+            style={{
+            position: "absolute",
+            transform: `translate(${(annotation.position && annotation.position[0]) || 0}px, ${(annotation.position && (annotation.position[1]-32)) || 0}px)`,
+            // ...other styles
+          }}
+        >
+            <div>{index+1}</div>
+        </div>
+      ))}
     </div>
   );
 };

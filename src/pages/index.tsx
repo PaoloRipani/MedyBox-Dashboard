@@ -80,12 +80,12 @@ export default function Home() {
   return (
 <div>
   <Layout> 
-    <div className={`min-h-screen flex flex-col ${isInteracting ? 'interacting' : ''}`}>
-      <div className='absolute z-10'>
-          {activeModal === 'language' && selectedAnnotation == null &&(
+    <div className={'min-h-screen flex flex-col'}>
+      <div className={'absolute z-10'}>
+          {activeModal === 'language' &&(
             <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
           )}
-          {activeModal === 'configuration' && selectedAnnotation == null &&(
+          {activeModal === 'configuration' &&(
             <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} />
           )}
       </div>
@@ -96,6 +96,7 @@ export default function Home() {
         onSceneDataUpdate={handleSceneDataUpdate}
         onAnnotationDataUpdate={handleAnnotationDataUpdate}
         onAnnotationClick={handleAnnotationClick}
+        onInteractionChange={setIsInteracting}
       />
         {showVideo && selectedAnnotation == null &&(
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
@@ -175,7 +176,7 @@ export default function Home() {
           <>
         <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
           <div className='z-10 interactive w-52 gap-4 flex flex-col'>          
-            <button className={`bg-green-2 py-3 px-5 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            <button className={`bg-green-2 py-3 px-5 ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
             onClick={() => setActiveModal('configuration')}>{translations.changeConfiguration}</button>
             <button className='bg-green-1 text-green-3 py-3 px-5'
             onClick={() => setShowVideo(true)}>{translations.restartExperience}</button>

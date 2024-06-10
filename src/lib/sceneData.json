@@ -4,7 +4,10 @@
         "previewUrl": "previewUrl1",
         "name": {
           "en": "Example Name",
-          "it": "Nome Esempio"
+          "it": "Nome Esempio",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -198,8 +201,8 @@
         "sketchfabUrl": "url2",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medybox - TOP 149 IT",
+          "it": "Medybox - TOP 149 IT"
         },
         "dimensions": {
           "width": "",
@@ -378,8 +381,8 @@
         "sketchfabUrl": "url2",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medybox - Medio 123 IT",
+          "it": "Medybox - Medio 123 IT"
         },
         "dimensions": {
           "width": "",
@@ -555,11 +558,11 @@
         }
       },
     "C-": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "540c32441f764be7a0595c88cffaa04d",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medybox - Mini 90 IT",
+          "it": "Medybox - Mini 90 IT"
         },
         "dimensions": {
           "width": "",
@@ -693,8 +696,8 @@
         "sketchfabUrl": "url2",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medylocker 11P 252 SLIM IT",
+          "it": "Medylocker 11P 252 SLIM IT"
         },
         "dimensions": {
           "width": "",

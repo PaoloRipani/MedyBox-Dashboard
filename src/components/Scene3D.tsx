@@ -4,7 +4,8 @@ import sceneData from '../lib/sceneData.json';
 export default function Scene3D({ language, medyBox, medyLocker, 
   onSceneDataUpdate, 
   onAnnotationDataUpdate,
-  onAnnotationClick}) {
+  onAnnotationClick,
+  onInteractionChange}) {
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const key = `${medyBox}-${medyLocker}`;
@@ -12,6 +13,7 @@ export default function Scene3D({ language, medyBox, medyLocker,
 
   const [annotations, setAnnotations] = useState([]);
   const [apiInstance, setApiInstance] = useState(null);
+  const [isCameraMoving, setIsCameraMoving] = useState(false);
 
   useEffect(() => {
     if (!iframeRef.current) return;
@@ -63,9 +65,13 @@ export default function Scene3D({ language, medyBox, medyLocker,
           }
         });
         api.addEventListener('camerastart', function() {
+          setIsCameraMoving(true);
+          onInteractionChange(true);
           window.console.log('Camera is moving');
         });
         api.addEventListener('camerastop', function() {
+          setIsCameraMoving(false);
+          onInteractionChange(false);
           window.console.log('Camera stopped');
         });
       },
@@ -122,18 +128,24 @@ export default function Scene3D({ language, medyBox, medyLocker,
       <iframe className='w-full  min-h-screen'
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
       {annotations.map((annotation, index) => (
-        <div className='w-5 h-5 rounded-xl bg-green-3 leading-none cursor-pointer text-center' 
-            onClick={() => {onAnnotationPlaceholderClick(annotation.eye, annotation.target); 
+        <>
+        {/* Annotation Div */}
+        <div className={`w-5 h-5 rounded-xl bg-green-3 leading-none text-center cursor-pointer
+           ${isCameraMoving ? 'opacity-50' : ''}`} 
+            onClick={isCameraMoving ? null : () => {onAnnotationPlaceholderClick(annotation.eye, annotation.target); 
                             onAnnotationClick(index)}}
             key={index}
             style={{
             position: "absolute",
-            transform: `translate(${(annotation.position && annotation.position[0]) || 0}px, ${(annotation.position && (annotation.position[1]-32)) || 0}px)`,
+            transform: `translate(${(annotation.position && annotation.position[0]) || 0}px, 
+                      ${(annotation.position && (annotation.position[1]-32)) || 0}px)`,
+            pointerEvents: isCameraMoving ? 'none' : 'auto',
             // ...other styles
           }}
         >
-            <div>{index+1}</div>
+        {index+1}
         </div>
+        </>
       ))}
     </div>
   );

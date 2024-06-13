@@ -57,8 +57,8 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
             </div>
             <div className='grow flex-col'>
               <div className='flex flex-col mb-8 gap-2'>
-                <h1>Configuratore</h1>
-                <p>Seleziona quale modello desideri configurare</p>
+                <h1 className='neue-plak-wide text-bold text-xl'>Configuratore</h1>
+                <p className='lato-regular text-lg'>Seleziona quale modello desideri configurare</p>
               </div>
             {!selectingMedyBox && !selectingMedyLocker ? (
               <>
@@ -66,8 +66,8 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
                 {/* MedyBox Selector*/}
                 <div className='bg-glass-green border border-green-1 rounded cursor-pointer'
                  onClick={() => setSelectingMedyBox(true)}>
-                  <div className='flex h-12 bg-glass-green-2 py-3 px-6 justify-between'>
-                    <h2>MedyBox</h2>
+                  <div className='flex h-12 bg-glass-green-2 py-3 px-6 justify-between items-center'>
+                    <h2 className='neue-plak-wide text-bold text-lg'>MedyBox</h2>
                     <img src={enterIcon.src} alt='Enter' className='w-6 h-6'/>
                   </div>
                   <div className=''>
@@ -76,7 +76,7 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
                       <div>
                         <img src='' alt='' className='w-16 h-16'/>
                       </div>
-                      <p>
+                      <p className='lato-bold text-md'>
                         MedyBox A
                       </p>
                     </div>
@@ -85,8 +85,8 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
                 {/* MedyLocker Selector*/}
                 <div className='bg-glass-green border border-green-1 rounded cursor-pointer'
                  onClick={() => setSelectingMedyLocker(true)}>
-                  <div className='flex h-12 bg-glass-green-2 py-3 px-6 justify-between'>
-                    <h2>MedyLocker</h2>
+                  <div className='flex h-12 bg-glass-green-2 py-3 px-6 justify-between items-center'>
+                    <h2 className='neue-plak-wide text-bold text-lg'>MedyLocker</h2>
                     <img src={enterIcon.src} alt='Enter' className='w-6 h-6'/>
                   </div>
                   <div className=''>
@@ -95,7 +95,7 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
                       <div>
                         <img src='' alt='' className='w-16 h-16'/>
                       </div>
-                      <p>
+                      <p className='lato-bold text-md'>
                         MedyLocker A
                       </p>
                     </div>
@@ -177,7 +177,7 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
             </div>
             <div>
               { !selectingMedyBox && !selectingMedyLocker ? (
-                <button onClick={onClose} className='bg-green-1 text-green-3 w-full h-11'>
+                <button onClick={onClose} className='bg-green-1 text-green-3 w-full h-11 lato-semi-bold text-md uppercase'>
                   Esci dal configuratore
                 </button>) : (
                 <div className='flex justify-end'>

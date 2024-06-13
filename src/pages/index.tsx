@@ -17,6 +17,10 @@ import ARModal from '../components/ARModal';
 
 import Logo from '../../public/MedyBox Logo.svg'
 import LanguageIcon from '../../public/language icon.svg'
+import ARIcon from '../../public/AR icon.svg'
+import ConfigurationIcon from '../../public/configuration-icon.svg'
+import RestartIcon from '../../public/restart icon.svg'
+import OpenIcon from '../../public/enter chevron icon.svg'
 
 export default function Home() {
   const [translations, setTranslations] = useState({});
@@ -88,6 +92,9 @@ export default function Home() {
           {activeModal === 'configuration' &&(
             <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} />
           )}
+          {activeModal === 'ar' &&(
+            <ARModal arUrl={arUrl} />
+          )}
       </div>
       <Scene3D
         language={language}
@@ -116,8 +123,7 @@ export default function Home() {
         {/* div top center */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-1 col-start-2 text-center align-top'>
-          <div className={`z-10 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}>scene name</div>
-          <h1 className='interactive'>{scene.name[language]}</h1>
+          <div className={`z-10 interactive neue-plak-wide text-xl text-green-4`}>{scene.name[language]}</div>
         </div>
           )}
         {/* div top right */}
@@ -127,17 +133,30 @@ export default function Home() {
             <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
               onClick={() => setActiveModal('language')}>
               <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
-              <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'}`}>{translations.changeLanguage}</div>
+              <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold`}>{translations.changeLanguage}</div>
               </div>
           </div>
           <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
             {/* Box informazioni scena selezionata */}
             <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
               <div className='flex flex-row justify-between py-3 px-4'>
-                <div className='text-green-4'>Nome</div>
-                <div className='text-medy-black'>icona</div>
+                <div className='text-green-4'>Standard</div>
+                <div className='text-medy-black'>
+                  <img src={OpenIcon.src}></img>
+                </div>
               </div>
               <div className='flex flex-col py-3 px-4'>
+                <div className='flex flex-row'>
+                  <div className='text-gray-500 lato-regular text-sm'>Larghezza</div>
+                  <div className='text-gray-500 grow dot-fill'></div>
+                  <div className='text-gray-500'>149 </div>
+                  <div className='text-gray-500'>cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className='text-gray-500'>testo</div>
+                  <div className='text-gray-500 grow'>fill</div>
+                  <div className='text-gray-500'>testo</div>
+                </div>
                 <div className='flex flex-row'>
                   <div className='text-gray-500'>testo</div>
                   <div className='text-gray-500 grow'>fill</div>
@@ -167,19 +186,36 @@ export default function Home() {
         {/* div bottom left */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-2 col-start-1 text-left content-end'>
-          <div className='z-10 interactive'>bottom left</div>
-          <ARModal arUrl={arUrl} />
+          <div className='z-10'>
+            <div className='interactive cursor-pointer flex items-center h-10 py-3 px-5 bg-green-2 gap-1.5 w-60'>
+              <div className='w-5 h-5'>
+                <img src={ARIcon.src} />
+              </div>
+              <div className='lato-semi-bold text-green-4 text-md uppercase'>
+                Realtà Aumentata
+              </div>
+            <div/>
+          </div>
+          </div>
         </div>
           )}
         {/* div bottom right */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
           <>
         <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
-          <div className='z-10 interactive w-52 gap-4 flex flex-col'>          
-            <button className={`bg-green-2 py-3 px-5 ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
-            onClick={() => setActiveModal('configuration')}>{translations.changeConfiguration}</button>
-            <button className='bg-green-1 text-green-3 py-3 px-5'
-            onClick={() => setShowVideo(true)}>{translations.restartExperience}</button>
+          <div className='z-10 interactive w-52 gap-4 flex flex-col'>      
+            <div className={`bg-green-3 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
+            ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            onClick={() => setActiveModal('configuration')}>
+              <img src={ConfigurationIcon.src}></img>
+              <div className=' lato-semi-bold'>{translations.changeConfiguration}</div>
+            </div>   
+            <div className={`bg-green-2 text-green-4 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
+            ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            onClick={() => setShowVideo(true)}>
+              <img src={RestartIcon.src}></img>
+              <div className=' lato-semi-bold'>{translations.restartExperience}</div>
+            </div>
           </div>
         </div>
         <div className='invisible z-10 interactive'>
@@ -194,14 +230,14 @@ export default function Home() {
         )}
         {/* Annotation HUD - visible when annotation index is > 0 */}
         {selectedAnnotation != null && selectedAnnotation > -1 ? (
-        <div className='absolute right-0 h-svh w-80 p-4 flex flex-col bg-white text-black z-20 interactive'>
+        <div className='absolute right-0 h-svh w-96 p-4 flex flex-col bg-white text-black z-20 interactive'>
           <div className='flex items-end justify-end'>
             <div className=''>X</div>
           </div>
           <div className='p-4'>
             <div className=''>
-              <div className='neue-plak-wide'>titolo</div>
-              <div className='lato-bold text-green-3'>sottotitolo</div>
+              <div className='neue-plak-wide text-xl'>titolo</div>
+              <div className='lato-bold text-green-3 text-sm uppercase'>sottotitolo</div>
             </div>
             <div className=''>
               <div className='lato-regular text-lg'>testo paragrafo</div>

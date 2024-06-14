@@ -46,7 +46,7 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
   const dimensionsMedyLocker = sceneData[tempMedyLocker]?.dimensions || 'No dimensions available';
 
   return (
-    <div className='absolute flex w-screen h-screen bg-white z-20'>
+    <div className='absolute flex w-screen h-screen bg-white z-20' style={{pointerEvents: "auto"}}>
       <div className='relative bg-white w-screen h-screen text-black'>
         <div className='flex w-full h-full'>
           <div className='flex flex-col w-96 z-20 p-6 shadow-sm'>

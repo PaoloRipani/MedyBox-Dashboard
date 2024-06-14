@@ -99,10 +99,13 @@
 
 .dot-fill::before {
   content: "";
-  flex-grow: 1;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><circle cx="5" cy="5" r="1" fill="gray"/></svg>') repeat-x;
+  flex-grow: 1;  
+  display: block;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Ccircle cx='5' cy='5' r='1' fill='dark-gray'/%3E%3C/svg%3E") repeat-x;
   background-position: bottom;
   background-size: 10px 1px;
+  margin: 0 4px;
 }
 
 :root {

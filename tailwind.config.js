@@ -13,6 +13,7 @@ module.exports = {
         'glass-green-2': 'rgba(201, 236, 227, 0.40)',
         'glass-green-3': 'rgba(201, 236, 227, 0.64)',
         'medy-black': '#121212',
+        'medy-gray': '#333333',
       },
       fontFamily: {
         'outfit': ['Outfit', 'sans-serif'],

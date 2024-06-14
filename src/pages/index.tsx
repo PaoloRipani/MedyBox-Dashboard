@@ -20,7 +20,8 @@ import LanguageIcon from '../../public/language icon.svg'
 import ARIcon from '../../public/AR icon.svg'
 import ConfigurationIcon from '../../public/configuration-icon.svg'
 import RestartIcon from '../../public/restart icon.svg'
-import OpenIcon from '../../public/enter chevron icon.svg'
+import OpenIcon from '../../public/open chevron icon.svg'
+import CloseIcon from '../../public/close chevron icon.svg'
 
 export default function Home() {
   const [translations, setTranslations] = useState({});
@@ -33,6 +34,10 @@ export default function Home() {
   const [sceneDataState, setSceneData] = useState({});
   const [annotationData, setAnnotationData] = useState({});
   const [selectedAnnotation, setSelectedAnnotation] = useState(-1);
+  const [showData, setShowData] = useState(true);
+  const [showData1, setShowData1] = useState(false);
+  const [showData2, setShowData2] = useState(false);
+  const [showData3, setShowData3] = useState(false);
   const arUrl = sceneData['arUrl'] || '';
   
   const key = `${selectedMedyBox}-${selectedMedyLocker}`;
@@ -85,15 +90,17 @@ export default function Home() {
 <div>
   <Layout> 
     <div className={'min-h-screen flex flex-col'}>
-      <div className={'absolute z-10'}>
+      <div className={'absolute z-10 w-full h-full'}
+        style={{pointerEvents: "none"}}>
           {activeModal === 'language' &&(
             <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
           )}
           {activeModal === 'configuration' &&(
-            <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} />
+            <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} 
+            />
           )}
           {activeModal === 'ar' &&(
-            <ARModal arUrl={arUrl} />
+            <ARModal arUrl={arUrl}  onClose={() => setActiveModal(null)}/>
           )}
       </div>
       <Scene3D
@@ -139,47 +146,99 @@ export default function Home() {
           <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
             {/* Box informazioni scena selezionata */}
             <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
-              <div className='flex flex-row justify-between py-3 px-4'>
+              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s' 
+              onClick={() => setShowData1(prevState => !prevState)}>
                 <div className='text-green-4'>Standard</div>
                 <div className='text-medy-black'>
-                  <img src={OpenIcon.src}></img>
+                  <img src={showData1 ? CloseIcon.src : OpenIcon.src}></img>
                 </div>
               </div>
-              <div className='flex flex-col py-3 px-4'>
+              {showData1 && (<div className='flex flex-col py-3 px-4'>
                 <div className='flex flex-row'>
-                  <div className='text-gray-500 lato-regular text-sm'>Larghezza</div>
-                  <div className='text-gray-500 grow dot-fill'></div>
-                  <div className='text-gray-500'>149 </div>
-                  <div className='text-gray-500'>cm</div>
+                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
                 </div>
                 <div className='flex flex-row'>
-                  <div className='text-gray-500'>testo</div>
-                  <div className='text-gray-500 grow'>fill</div>
-                  <div className='text-gray-500'>testo</div>
+                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
                 </div>
                 <div className='flex flex-row'>
-                  <div className='text-gray-500'>testo</div>
-                  <div className='text-gray-500 grow'>fill</div>
-                  <div className='text-gray-500'>testo</div>
+                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
                 </div>
-              </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                </div>
+              </div>)}
             </div>
             <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
-              <div className='flex flex-row justify-between py-3 px-4'>
-                <div className='text-green-4'>Nome</div>
-                <div className='text-medy-black'>icona</div>
-              </div>
-              <div className='flex flex-col py-3 px-4'>
-                <div className='flex flex-row'>
-                  <div className='text-gray-500'>testo</div>
-                  <div className='text-gray-500 grow'>fill</div>
-                  <div className='text-gray-500'>testo</div>
+              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+              onClick={() => setShowData2(prevState => !prevState)}>
+                <div className='text-green-4'>Slim</div>
+                <div className='text-medy-black'>
+                  <img src={showData2 ? CloseIcon.src : OpenIcon.src}></img>
                 </div>
               </div>
+              {showData2 && (<div className='flex flex-col py-3 px-4'>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                </div>
+              </div>)}
+            </div>
+            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+              onClick={() => setShowData3(prevState => !prevState)}>
+                <div className='text-green-4'>Baby</div>
+                <div className='text-medy-black'>
+                  <img src={showData3 ? CloseIcon.src : OpenIcon.src}></img>
+                </div>
+              </div>
+              {showData3 && (<div className='flex flex-col py-3 px-4'>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                </div>
+                <div className='flex flex-row'>
+                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                  <div className=' grow dot-fill'></div>
+                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                </div>
+              </div>)}
             </div>
           </div>
-          <p>{scene.texts[language].text1}</p>
-          <p>{scene.texts[language].text2}</p>
           <p>{getAnnotationText()}</p>
         </div>
           )}
@@ -187,7 +246,8 @@ export default function Home() {
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-2 col-start-1 text-left content-end'>
           <div className='z-10'>
-            <div className='interactive cursor-pointer flex items-center h-10 py-3 px-5 bg-green-2 gap-1.5 w-60'>
+            <div className='interactive cursor-pointer flex items-center h-10 py-3 px-5 bg-green-2 gap-1.5 w-60'
+            onClick={() => setActiveModal('ar')}>
               <div className='w-5 h-5'>
                 <img src={ARIcon.src} />
               </div>

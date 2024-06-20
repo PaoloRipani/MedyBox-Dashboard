@@ -38,6 +38,7 @@ export default function Home() {
   const [showData1, setShowData1] = useState(false);
   const [showData2, setShowData2] = useState(false);
   const [showData3, setShowData3] = useState(false);
+  const [isBoxShown, setIsBoxShown] = useState(false);
   const arUrl = sceneData['arUrl'] || '';
   
   const key = `${selectedMedyBox}-${selectedMedyLocker}`;
@@ -135,113 +136,120 @@ export default function Home() {
           )}
         {/* div top right */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
-        <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
-          <div className='z-10 interactive'>
-            <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
-              onClick={() => setActiveModal('language')}>
-              <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
-              <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold`}>{translations.changeLanguage}</div>
+          <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
+            <div className='z-10 interactive'>
+              <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
+                onClick={() => setActiveModal('language')}>
+                <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
+                <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold`}>{translations.changeLanguage}</div>
               </div>
-          </div>
-          <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
-            {/* Box informazioni scena selezionata */}
-            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
-              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s' 
-              onClick={() => setShowData1(prevState => !prevState)}>
-                <div className='text-green-4'>Standard</div>
-                <div className='text-medy-black'>
-                  <img src={showData1 ? CloseIcon.src : OpenIcon.src}></img>
-                </div>
-              </div>
-              {showData1 && (<div className='flex flex-col py-3 px-4'>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
-                </div>
-              </div>)}
             </div>
-            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
-              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
-              onClick={() => setShowData2(prevState => !prevState)}>
-                <div className='text-green-4'>Slim</div>
-                <div className='text-medy-black'>
-                  <img src={showData2 ? CloseIcon.src : OpenIcon.src}></img>
+            <div className='flex flex-row-reverse'>
+              {/* Pulsante Box informazioni scena selezionata */}
+              <div className='' onClick={() => setIsBoxShown(!isBoxShown)}>
+                {isBoxShown ? <img src={CloseIcon.src}></img> : <img src={OpenIcon.src}></img>}
+              </div>
+              {/* Box informazioni scena selezionata */}
+              {isBoxShown && (
+              <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s' 
+                  onClick={() => setShowData1(prevState => !prevState)}>
+                    <div className='text-green-4'>Standard</div>
+                    <div className='text-medy-black'>
+                      <img src={showData1 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData1 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
+                </div>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+                  onClick={() => setShowData2(prevState => !prevState)}>
+                    <div className='text-green-4'>Slim</div>
+                    <div className='text-medy-black'>
+                      <img src={showData2 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData2 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
+                </div>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+                  onClick={() => setShowData3(prevState => !prevState)}>
+                    <div className='text-green-4'>Baby</div>
+                    <div className='text-medy-black'>
+                      <img src={showData3 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData3 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
                 </div>
               </div>
-              {showData2 && (<div className='flex flex-col py-3 px-4'>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
-                </div>
-              </div>)}
+              )}
             </div>
-            <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
-              <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
-              onClick={() => setShowData3(prevState => !prevState)}>
-                <div className='text-green-4'>Baby</div>
-                <div className='text-medy-black'>
-                  <img src={showData3 ? CloseIcon.src : OpenIcon.src}></img>
-                </div>
-              </div>
-              {showData3 && (<div className='flex flex-col py-3 px-4'>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
-                </div>
-                <div className='flex flex-row'>
-                  <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
-                  <div className=' grow dot-fill'></div>
-                  <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
-                </div>
-              </div>)}
-            </div>
-          </div>
-          <p>{getAnnotationText()}</p>
-        </div>
-          )}
+          </div> 
+        )}
         {/* div bottom left */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-2 col-start-1 text-left content-end'>

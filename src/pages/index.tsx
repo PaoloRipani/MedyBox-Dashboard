@@ -14,6 +14,7 @@ import LanguageModal from '../components/LanguageModal';
 import ConfigurationModal from '../components/ConfigurationModal';
 import sceneData from '../lib/sceneData.json';
 import ARModal from '../components/ARModal';
+import MediaModal from '../components/MediaModal';
 
 import Logo from '../../public/MedyBox Logo.svg'
 import LanguageIcon from '../../public/language icon.svg'
@@ -22,12 +23,18 @@ import ConfigurationIcon from '../../public/configuration-icon.svg'
 import RestartIcon from '../../public/restart icon.svg'
 import OpenIcon from '../../public/open chevron icon.svg'
 import CloseIcon from '../../public/close chevron icon.svg'
+import CloseButtonIcon from '../../public/close button icon grey.svg'
+import InfoIcon from '../../public/material-symbols_info.png'
+import PlaceholderImage from '../../public/placeimg.png'
+import PlaceholderVideo from '../../public/placevideo.png'
 
 export default function Home() {
   const [translations, setTranslations] = useState({});
   const [language, setLanguage] = useState('it');
   const [showVideo, setShowVideo] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const [mediaType, setMediaType] = useState(null);
+  const [mediaSrc, setMediaSrc] = useState(null);
   const [isInteracting, setIsInteracting] = useState(false);
   const [selectedMedyBox, setSelectedMedyBox] = useState('A');
   const [selectedMedyLocker, setSelectedMedyLocker] = useState('A');
@@ -87,10 +94,20 @@ export default function Home() {
     return '';
   };
 
+  const handleMediaClick = (type, src) => {
+    setMediaType(type);
+    setMediaSrc(src);
+    setActiveModal('media');
+  };
+
+  const handleClose = () => {
+    setActiveModal(null);
+  };
+
   return (
 <div>
   <Layout> 
-    <div className={'min-h-screen flex flex-col'}>
+    <div className={'min-h-screen flex flex-col overflow-hidden'}>
       <div className={'absolute z-10 w-full h-full'}
         style={{pointerEvents: "none"}}>
           {activeModal === 'language' &&(
@@ -102,6 +119,9 @@ export default function Home() {
           )}
           {activeModal === 'ar' &&(
             <ARModal arUrl={arUrl}  onClose={() => setActiveModal(null)}/>
+          )}
+          {activeModal === 'media' &&(
+            <MediaModal mediaType={mediaType} mediaSrc={mediaSrc} onClose={handleClose} />
           )}
       </div>
       <Scene3D
@@ -141,13 +161,13 @@ export default function Home() {
               <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
                 onClick={() => setActiveModal('language')}>
                 <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
-                <div className={`text-green-2 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold`}>{translations.changeLanguage}</div>
+                <div className={`text-green-3 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold uppercase`}>{translations.changeLanguage}</div>
               </div>
             </div>
             <div className='flex flex-row-reverse'>
               {/* Pulsante Box informazioni scena selezionata */}
-              <div className='' onClick={() => setIsBoxShown(!isBoxShown)}>
-                {isBoxShown ? <img src={CloseIcon.src}></img> : <img src={OpenIcon.src}></img>}
+              <div className='z-10 interactive cursor-pointer bg-white rounded h-14 w-14 ml-2 flex items-center justify-center' onClick={() => setIsBoxShown(!isBoxShown)}>
+                {isBoxShown ? <img src={CloseButtonIcon.src}></img> : <img src={InfoIcon.src}></img>}
               </div>
               {/* Box informazioni scena selezionata */}
               {isBoxShown && (
@@ -300,17 +320,34 @@ export default function Home() {
         {selectedAnnotation != null && selectedAnnotation > -1 ? (
         <div className='absolute right-0 h-svh w-96 p-4 flex flex-col bg-white text-black z-20 interactive'>
           <div className='flex items-end justify-end'>
-            <div className=''>X</div>
+            <div className=''>
+              <img src={CloseButtonIcon.src} className='w-6 cursor-pointer' onClick={() => setSelectedAnnotation(-1)}></img>
+            </div>
           </div>
           <div className='p-4'>
-            <div className=''>
+            <div className='flex flex-col gap-8'>
               <div className='neue-plak-wide text-xl'>titolo</div>
               <div className='lato-bold text-green-3 text-sm uppercase'>sottotitolo</div>
             </div>
-            <div className=''>
-              <div className='lato-regular text-lg'>testo paragrafo</div>
-              <div>slider immagini</div>
-              <div>video</div>
+            <div className='flex flex-col gap-8'>
+              <div className='lato-regular text-lg'>
+              Lorem ipsum dolor sit amet consectetur. Risus maecenas ultrices augue tortor id eget morbi. Volutpat ultrices elementum pharetra vel molestie nisl libero vitae dui. Sem in a quam cras. Mauris euismod est viverra lacus sed.
+              Sapien nisl consectetur enim vulputate. Eleifend magnis orci euismod convallis a turpis. Platea etiam neque laoreet sed cras. Erat venenatis enim est turpis urna lectus.
+              </div>
+              {/* video container */}
+              <div>
+                <img src={PlaceholderVideo.src} alt='video' className='w-full'
+                 onClick={() => handleMediaClick('video', PlaceholderVideo.src)}></img>
+              </div>
+              {/* slider immagini */}
+              <div className='image-slider gap-4 hide-scrollbar'>
+                <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
+                 onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
+                <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
+                onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
+                <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
+                onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
+              </div>
             </div>
           </div>
         </div>

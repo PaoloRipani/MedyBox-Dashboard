@@ -334,6 +334,26 @@ button {
   display: none;
 }
 
+.image-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap-stop {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 @media (min-width: 1106px) {
   .logo-container::before {
     display: block;

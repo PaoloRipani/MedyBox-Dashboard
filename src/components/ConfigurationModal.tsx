@@ -15,13 +15,17 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
   const [selectingMedyLocker, setSelectingMedyLocker] = useState(false);
   const [tempMedyBox, setTempMedyBox] = useState<string>(selectedMedyBox);
   const [tempMedyLocker, setTempMedyLocker] = useState<string>(selectedMedyLocker);
+  const [hasChanges, setHasChanges] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
 
   const handleMedyBoxChange = (medyBox) => {
     setTempMedyBox(medyBox);
+    setHasChanges(true);
   };
 
   const handleMedyLockerChange = (medyLocker) => {
     setTempMedyLocker(medyLocker);
+    setHasChanges(true);
   };
 
   const handleConfirm = () => {
@@ -30,6 +34,7 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
     setSelectedProduct(`${tempMedyBox}-${tempMedyLocker}`);
     setSelectingMedyBox(false);
     setSelectingMedyLocker(false);
+    setHasChanges(false);
   };
 
   const products = Object.keys(sceneData);
@@ -45,13 +50,26 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
   const previewUrlMedyLocker = sceneData[tempMedyLocker]?.previewUrl || '/path/to/defaultPreview.png';
   const dimensionsMedyLocker = sceneData[tempMedyLocker]?.dimensions || 'No dimensions available';
 
+  const handleClose = () => {
+    if (hasChanges) {
+      setShowConfirmModal(true);
+    } else {
+      onClose();
+    }
+  };
+
+  const handleConfirmClose = () => {
+    setShowConfirmModal(false);
+    onClose();
+  };
+
   return (
     <div className='absolute flex w-screen h-screen bg-white z-20' style={{pointerEvents: "auto"}}>
       <div className='relative bg-white w-screen h-screen text-black'>
         <div className='flex w-full h-full'>
           <div className='flex flex-col w-96 z-20 p-6 shadow-sm'>
             <div className='flex items-end text-right justify-end'>
-              <button onClick={onClose}>
+              <button onClick={handleClose} className='cursor-pointer'>
                 <img src={Close.src} alt='Close' />
               </button>
             </div>
@@ -195,6 +213,20 @@ export default function ConfigurationModal({ language, onProductChange, onClose 
                 <h1>{selectedMedyBox || ''}{selectedMedyLocker || ''} || {selectedProduct}</h1>
                 <img src='' alt="Preview" />
               </>
+            )}
+            {showConfirmModal && (
+              <div className='absolute flex w-screen h-screen bg-white z-20' style={{pointerEvents: "auto"}}>
+                <div className='relative bg-white w-screen h-screen text-black'>
+                  <div className='flex w-full h-full justify-center items-center'>
+                    <div className='p-6 shadow-sm bg-white rounded'>
+                      <h2>Confirm Close</h2>
+                      <p>Are you sure you want to close? Any unsaved changes will be lost.</p>
+                      <button onClick={handleConfirmClose}>Yes, close</button>
+                      <button onClick={() => setShowConfirmModal(false)}>No, go back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             )}
           </div>
         </div>

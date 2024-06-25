@@ -14,9 +14,10 @@ export default function LanguageModal({ onLanguageChange, onClose }) {
     <div className='bg-white w-screen h-screen absolute top-0 z-20'>
       <div className='relative flex flex-col w-full h-full justify-center items-center px-28 py-16'>
         <h1 className='text-green-500 text-center neue-plak-wide text-7xl'>Change Language</h1>
-        <div className="grid grid-cols-1 grid-rows-2 gap-y-14 w-full h-full">
+        <div className="grid grid-cols-1 grid-rows-2 gap-y-14 w-full h-full"
+        style={{pointerEvents: "auto"}}>
           <div className='flex w-full gap-x-10 justify-center'>
-            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green" 
+            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green z-20" 
               onClick={() => handleLanguageClick('it')}>
               <img src={italianLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-xl'>Italian</h4>

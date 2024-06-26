@@ -1,10 +1,10 @@
 {
     "A-A": {
-        "sketchfabUrl": "eeabd20748ea44fe919c6cac88d1e4b0",
+        "sketchfabUrl": "3f26aa4e3c4e43e0a78f4b0cb8a6abe1",
         "previewUrl": "previewUrl1",
         "name": {
-          "en": "Example Name",
-          "it": "Nome Esempio",
+          "en": "MedyBox Top + MedyLocker 500",
+          "it": "MedyBox Top + MedyLocker 500",
           "fr": "Example",
           "de": "Example",
           "es": "Example"
@@ -28,7 +28,9 @@
           "annotation1": {
             "en": {
               "title": "Annotation1",
-              "text": "Text1"
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             },
             "it": {
               "title": "Annotazione1",
@@ -108,11 +110,14 @@
         }
       },
       "A-B": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "86ab8747699f412bb67bc8c89cf00740",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Top + MedyLocker 300",
+          "it": "MedyBox Top + MedyLocker 300",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -153,11 +158,14 @@
         }
       },
     "A-C": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "57ec6e1f9e744c908870425c23d81123",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Top + MedyLocker 252",
+          "it": "MedyBox Top + MedyLocker 252",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -198,11 +206,14 @@
         }
       },
     "A-": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "76aedd9c083e46febc171004521a74dd",
         "previewUrl": "previewUrl2",
         "name": {
           "en": "Medybox - TOP 149 IT",
-          "it": "Medybox - TOP 149 IT"
+          "it": "Medybox - TOP 149 IT",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -243,11 +254,14 @@
         }
       },
     "B-A": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "bb9bc31e793a41e4bf42f83a3249594c",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Medio + MedyLocker 500",
+          "it": "MedyBox Medio + MedyLocker 500",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -288,11 +302,14 @@
         }
       },
     "B-B": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "397bd777110e4a1c8e64fe53a0a035a5",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Medio + MedyLocker 300",
+          "it": "MedyBox Medio + MedyLocker 300",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -333,11 +350,14 @@
         }
       },
     "B-C": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "9ebb7380a026409ea60766931190b82c",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Medio + MedyLocker 252",
+          "it": "MedyBox Medio + MedyLocker 252",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -378,11 +398,14 @@
         }
       },
     "B-": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "6d9168242a644a9481756c039b26c9e0",
         "previewUrl": "previewUrl2",
         "name": {
           "en": "Medybox - Medio 123 IT",
-          "it": "Medybox - Medio 123 IT"
+          "it": "Medybox - Medio 123 IT",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -423,11 +446,14 @@
         }
       },
     "C-A": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "59265fa3e51f46c1a6bf3f61fa566806",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Mini + MedyLocker 500",
+          "it": "MedyBox Mini + MedyLocker 500",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -468,11 +494,14 @@
         }
       },
     "C-B": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "f1e40003c0e441aaa9ad796f4ca48ae8",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Mini + MedyLocker 300",
+          "it": "MedyBox Mini + MedyLocker 300",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -513,11 +542,14 @@
         }
       },
     "C-C": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "d87f9e51de454230934401e1898c2839",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "MedyBox Mini + MedyLocker 252",
+          "it": "MedyBox Mini + MedyLocker 252",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -562,7 +594,10 @@
         "previewUrl": "previewUrl2",
         "name": {
           "en": "Medybox - Mini 90 IT",
-          "it": "Medybox - Mini 90 IT"
+          "it": "Medybox - Mini 90 IT",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -603,11 +638,14 @@
         }
       },
     "-A": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "e818d12f5a4341519010cf7d1cb1b67b",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medylocker 11P 252",
+          "it": "Medylocker 11P 252",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -648,11 +686,14 @@
         }
       },
     "-B": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "1b4d31895b0c41d6b2cbfaee65dab9be",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "en": "Medylocker 300",
+          "it": "Medylocker 300",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -693,11 +734,14 @@
         }
       },
     "-C": {
-        "sketchfabUrl": "url2",
+        "sketchfabUrl": "4fb018fa729542e99e196dfe8976933a",
         "previewUrl": "previewUrl2",
         "name": {
-          "en": "Medylocker 11P 252 SLIM IT",
-          "it": "Medylocker 11P 252 SLIM IT"
+          "en": "Medylocker 500",
+          "it": "Medylocker 500",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",
@@ -742,7 +786,10 @@
         "previewUrl": "previewUrl2",
         "name": {
           "en": "Example Name 2",
-          "it": "Nome Esempio 2"
+          "it": "Nome Esempio 2",
+          "fr": "Example",
+          "de": "Example",
+          "es": "Example"
         },
         "dimensions": {
           "width": "",

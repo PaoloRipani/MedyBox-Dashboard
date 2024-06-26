@@ -12,7 +12,7 @@ import StartExperience from '../components/StartExperience';
 import Scene3D from '../components/Scene3D';
 import LanguageModal from '../components/LanguageModal';
 import ConfigurationModal from '../components/ConfigurationModal';
-import sceneData from '../lib/sceneData.json';
+import sceneDataJson from '../lib/sceneData.json';
 import ARModal from '../components/ARModal';
 import MediaModal from '../components/MediaModal';
 
@@ -29,29 +29,86 @@ import PlaceholderImage from '../../public/placeimg.png'
 import PlaceholderVideo from '../../public/placevideo.png'
 
 export default function Home() {
-  const [translations, setTranslations] = useState({});
+
+
+  interface Texts {
+    text1: string;
+    text2: string;
+  }
+
+  interface Scene {
+    sketchfabUrl: string;
+    previewUrl: string;
+    name: {
+      en: string,
+      it: string,
+      fr?: string,
+      de?: string,
+      es?: string
+    };
+    dimensions: {
+      width: string,
+      depth: string,
+      height: string
+    };
+    texts: {
+      en: Texts;
+      it: Texts;
+      // Add other languages as needed
+    };
+    annotations: {};
+  }
+  
+  interface SceneData {
+    [key: string]: Scene;
+  }
+
+  interface Translations {
+    startExperience: String,
+    restartExperience: String,
+    reset: String,
+    arButton: String,
+    changeLanguage: String,
+    changeConfiguration: String
+  }
+  const [translations, setTranslations] = useState<Translations | null>(null);
   const [language, setLanguage] = useState('it');
   const [showVideo, setShowVideo] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
-  const [mediaType, setMediaType] = useState(null);
-  const [mediaSrc, setMediaSrc] = useState(null);
+  const [mediaType, setMediaType] = useState<string | null>(null);
+  const [mediaSrc, setMediaSrc] = useState<string | null>(null);
   const [isInteracting, setIsInteracting] = useState(false);
-  const [selectedMedyBox, setSelectedMedyBox] = useState('A');
-  const [selectedMedyLocker, setSelectedMedyLocker] = useState('A');
-  const [sceneDataState, setSceneData] = useState({});
+  const [selectedMedyBox, setSelectedMedyBox] = useState<string>('A');
+  const [selectedMedyLocker, setSelectedMedyLocker] = useState<string>('A');
   const [annotationData, setAnnotationData] = useState({});
   const [selectedAnnotation, setSelectedAnnotation] = useState(-1);
-  const [showData, setShowData] = useState(true);
   const [showData1, setShowData1] = useState(false);
   const [showData2, setShowData2] = useState(false);
   const [showData3, setShowData3] = useState(false);
   const [isBoxShown, setIsBoxShown] = useState(false);
-  const arUrl = sceneData['arUrl'] || '';
+  const [sceneDataState, setSceneData] = useState<SceneData>(sceneDataJson as SceneData);
+  const [tempkey,setTempkey] = useState<string>(`${selectedMedyBox}-${selectedMedyLocker}`);
+
+  const sceneData: SceneData = sceneDataJson as SceneData;
+  //const typedSceneData: SceneData = sceneData;
+
+  //const [sceneDataState, setSceneData] = useState<SceneData>(typedSceneData);
   
   const key = `${selectedMedyBox}-${selectedMedyLocker}`;
-  const scene = sceneData[key] || { sketchfabUrl: 'defaultUrl', texts: 'defaultTexts' };
+  const scene : Scene | undefined = sceneData[key];
+  //const textsForLanguage = scene?.texts?.[language] ?? { text1: 'Default Text 1', text2: 'Default Text 2' };
+  const arUrl: string = 'https://sketchfab.com/models/' + (scene?.sketchfabUrl || 'defaultUrl') + '/ar-redirect';
+  
+  const getSceneName = (data: SceneData, key: string, language: string): string => {
+    const scene = data[key];
+    if (scene && scene.name) {
+      return scene.name[language as keyof typeof scene.name] || 'Default Scene Name';
+    }
+    return 'Default Scene Name';
+  };
 
   useEffect(() => {
+    console.log("scene: ", scene);
     const fetchTranslations = async () => {
       const response = await fetch(`/locales/${language}/common.json`);
       const data = await response.json();
@@ -73,28 +130,28 @@ export default function Home() {
     }
   };
 
-  const handleSceneDataUpdate = (data) => {
+  const handleSceneDataUpdate = (data : any) => {
     setSceneData(data);
   };
 
-  const handleAnnotationDataUpdate = (data) => {
+  const handleAnnotationDataUpdate = (data : any) => {
     setAnnotationData(data);
   };
 
-  const handleAnnotationClick = (annotationIndex) => {
+  const handleAnnotationClick = (annotationIndex : number) => {
     setSelectedAnnotation(annotationIndex);
-    console.info("Annotation selected: " + annotationIndex);
+    console.info("Annotation selected: ", annotationIndex);
   };
   
   const getAnnotationText = () => {
     if (selectedAnnotation !== null) {
       const annotationKey = `annotation${selectedAnnotation + 1}`;
-      return scene.annotations[annotationKey]?.[language]?.text || '';
+      // return scene?.annotations[annotationKey]?.[language]?.text || '';
     }
     return '';
   };
 
-  const handleMediaClick = (type, src) => {
+  const handleMediaClick = (type: string, src: string) => {
     setMediaType(type);
     setMediaSrc(src);
     setActiveModal('media');
@@ -114,7 +171,12 @@ export default function Home() {
             <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
           )}
           {activeModal === 'configuration' &&(
-            <ConfigurationModal onProductChange={handleProductChange} language={language} onClose={() => setActiveModal(null)} 
+            <ConfigurationModal onProductChange={handleProductChange} language={language} 
+            onClose={() => setActiveModal(null)}
+            selectedMedyBox={selectedMedyBox}
+            selectedMedyLocker={selectedMedyLocker}
+            setSelectedMedyBox={setSelectedMedyBox}
+            setSelectedMedyLocker={setSelectedMedyLocker} 
             />
           )}
           {activeModal === 'ar' &&(
@@ -133,7 +195,7 @@ export default function Home() {
         onAnnotationClick={handleAnnotationClick}
         onInteractionChange={setIsInteracting}
       />
-        {showVideo && selectedAnnotation == null &&(
+        {showVideo && selectedAnnotation < 0 &&(
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
           <StartExperience
             videoSrc="/path/to/video.mp4"
@@ -151,9 +213,11 @@ export default function Home() {
         {/* div top center */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-1 col-start-2 text-center align-top'>
-          <div className={`z-10 interactive neue-plak-wide text-xl text-green-4`}>{scene.name[language]}</div>
+          <div className={`z-10 interactive neue-plak-wide text-xl text-green-4`} >
+            {getSceneName(sceneData, key, language)}
+          </div>
         </div>
-          )}
+        )}
         {/* div top right */}
         {selectedAnnotation == null || selectedAnnotation < 0 && (
           <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
@@ -161,7 +225,7 @@ export default function Home() {
               <div className='flex flex-row gap-1.5 h-11 items-center justify-center cursor-pointer'
                 onClick={() => setActiveModal('language')}>
                 <img src={LanguageIcon.src} alt='icon' className='w-5 h-5' />
-                <div className={`text-green-3 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold uppercase`}>{translations.changeLanguage}</div>
+                <div className={`text-green-3 interactive ${isInteracting ? 'opacity-50' : 'opacity-100'} lato-semi-bold uppercase`}>{translations?.changeLanguage}</div>
               </div>
             </div>
             <div className='flex flex-row-reverse'>
@@ -291,28 +355,20 @@ export default function Home() {
         {selectedAnnotation == null || selectedAnnotation < 0 && (
           <>
         <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
-          <div className='z-10 interactive w-52 gap-4 flex flex-col'>      
+          <div className='z-10 interactive w-64 gap-4 flex flex-col'>      
             <div className={`bg-green-3 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
             ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
             onClick={() => setActiveModal('configuration')}>
               <img src={ConfigurationIcon.src}></img>
-              <div className=' lato-semi-bold'>{translations.changeConfiguration}</div>
+              <div className=' lato-semi-bold'>{translations?.changeConfiguration}</div>
             </div>   
             <div className={`bg-green-2 text-green-4 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
             ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
             onClick={() => setShowVideo(true)}>
               <img src={RestartIcon.src}></img>
-              <div className=' lato-semi-bold'>{translations.restartExperience}</div>
+              <div className=' lato-semi-bold'>{translations?.restartExperience}</div>
             </div>
           </div>
-        </div>
-        <div className='invisible z-10 interactive'>
-          {Object.keys(annotationData).map((key) => (
-            <div key={key}>
-              <h2>{annotationData[key].title}</h2>
-              <p>{annotationData[key].text}</p>
-            </div>
-          ))}
         </div>
           </>
         )}

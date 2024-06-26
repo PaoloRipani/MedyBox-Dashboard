@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../public/Medybox Start Experience Temp 1.svg';
 
-function StartExperience({ videoSrc, onButtonClick }) {
+function StartExperience({ videoSrc, onButtonClick } : any) {
   return (
     <div className="relative h-full w-full flex items-center">
       <video autoPlay loop muted className="absolute w-full h-full object-cover">

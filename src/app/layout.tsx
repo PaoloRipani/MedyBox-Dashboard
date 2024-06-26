@@ -3,6 +3,7 @@ import './globals.scss'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Script from 'next/script'
 
 function Layout({ children }: any ) {
   
@@ -13,7 +14,7 @@ function Layout({ children }: any ) {
           <Head>
             <link rel="icon" href="/favicon.ico" sizes="any" />
             <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-            <script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
+            <script  type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js" async></script>
             <meta name="theme-color" content="#005080"/>
             <title>MedyBox Experience</title>
           </Head>

@@ -1,19 +1,68 @@
 import React, { useEffect, useRef, useState } from 'react';
 import sceneData from '../lib/sceneData.json';
 
+
 export default function Scene3D({ language, medyBox, medyLocker, 
   onSceneDataUpdate, 
   onAnnotationDataUpdate,
   onAnnotationClick,
-  onInteractionChange}) {
+  onInteractionChange} : any) {
+
+  interface Dimensions {
+    width: string;
+    depth: string;
+    height: string;
+  }
+  
+  interface Texts {
+    text1: string;
+    text2: string;
+  }
+  
+  interface Annotation {
+    position?: [number, number]; // Assuming position is an optional tuple of two numbers
+    eye?: any; // Replace `any` with a more specific type if known
+    target?: any; // Replace `any` with a more specific type if known
+  }
+  
+  interface Scene {
+    sketchfabUrl: string;
+    previewUrl: string;
+    name: {
+      en: string;
+      it: string;
+      fr?: string;
+      de?: string;
+      es?: string;
+    };
+    dimensions: Dimensions;
+    texts: {
+      en: Texts;
+      it: Texts;
+      // Add other languages as needed
+    };
+    annotations: {
+      // Define the structure of annotations
+    };
+  }
+  const typedSceneData: SceneData = sceneData;
+
+  type SceneData = Record<string, Scene>;
+  const [sceneDataState, setSceneData] = useState<SceneData>(typedSceneData);
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const key = `${medyBox}-${medyLocker}`;
-  const scene = sceneData[key] || { sketchfabUrl: 'eeabd20748ea44fe919c6cac88d1e4b0', texts: 'defaultTexts' };
+  const key : any = `${medyBox}-${medyLocker}`;
+  const scene : any = sceneDataState[key] || { sketchfabUrl: 'eeabd20748ea44fe919c6cac88d1e4b0', texts: 'defaultTexts' };
 
-  const [annotations, setAnnotations] = useState([]);
+  const [annotations, setAnnotations] = useState<Annotation[]>([]);
   const [apiInstance, setApiInstance] = useState(null);
   const [isCameraMoving, setIsCameraMoving] = useState(false);
+
+  useEffect(() => {
+    console.log('sceneDataupdate: ', scene);
+    onSceneDataUpdate(scene);
+    onAnnotationDataUpdate(scene.annotations);
+  }, [scene, onSceneDataUpdate, onAnnotationDataUpdate]);
 
   useEffect(() => {
     if (!iframeRef.current) return;
@@ -24,14 +73,14 @@ export default function Scene3D({ language, medyBox, medyLocker,
     };
 
     const config = {
-      success: function onSuccess(api) {
+      success: function onSuccess(api : any) {
         setApiInstance(api);
         api.start();
 
         api.addEventListener('viewerready', function () {
           console.debug("viewer ready");
 
-          api.getAnnotationList((err, annotationsList) => {
+          api.getAnnotationList((err : any, annotationsList : any) => {
              if (err) {
               console.error('Failed to retrieve annotations:', err);
               return;
@@ -53,7 +102,7 @@ export default function Scene3D({ language, medyBox, medyLocker,
           
         });
         
-        api.addEventListener('annotationSelect', function (index) {
+        api.addEventListener('annotationSelect', function (index : number) {
           console.log('Selected annotation', index);
           onAnnotationClick(index);
           const annotationKey = `annotation${index + 1}`;
@@ -91,13 +140,13 @@ export default function Scene3D({ language, medyBox, medyLocker,
     client.init(scene.sketchfabUrl, config);
   }, [scene.sketchfabUrl, language]);
 
-  const runAnnotationLoop = (apiInstance, annotationsList) => {
+  const runAnnotationLoop = (apiInstance : any, annotationsList : any) => {
     const updateAnnotations = () => {
-      const updatedAnnotations = [];
+      const updatedAnnotations:any = [];
       let completed = 0;
 
-      annotationsList.forEach((annotation, index) => {
-        apiInstance.getWorldToScreenCoordinates(annotation.position, (coord) => {
+      annotationsList.forEach((annotation : any, index : number) => {
+        apiInstance.getWorldToScreenCoordinates(annotation.position, (coord : any) => {
           const updatedAnnotation = { ...annotation, position: coord.canvasCoord };
           updatedAnnotations[index] = updatedAnnotation;
 
@@ -114,13 +163,15 @@ export default function Scene3D({ language, medyBox, medyLocker,
     updateAnnotations();
   };
 
-  const onAnnotationPlaceholderClick = (eye, target) => {
-    apiInstance.lookat(
+  const onAnnotationPlaceholderClick = (eye : any, target : any) => {
+    if (apiInstance) {
+      (apiInstance as any).lookat(
         eye,
         target,
         0.5,  // duration, 0 for instant
         () => { console.log('Camera moved to annotation position'); }
-    );
+      );
+    }
   };
 
   return (
@@ -128,12 +179,11 @@ export default function Scene3D({ language, medyBox, medyLocker,
       <iframe className='w-full  min-h-screen'
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
       {annotations.map((annotation, index) => (
-        <>
-        {/* Annotation Div */}
         <div className={`w-5 h-5 rounded-xl bg-green-3 leading-none text-center cursor-pointer
            ${isCameraMoving ? 'opacity-50' : ''}`} 
-            onClick={isCameraMoving ? null : () => {onAnnotationPlaceholderClick(annotation.eye, annotation.target); 
-                            onAnnotationClick(index)}}
+            onClick={isCameraMoving ? undefined : () => {
+              onAnnotationPlaceholderClick(annotation.eye, annotation.target); 
+              onAnnotationClick(index)}}
             key={index}
             style={{
             position: "absolute",
@@ -143,9 +193,8 @@ export default function Scene3D({ language, medyBox, medyLocker,
             // ...other styles
           }}
         >
-        {index+1}
+          {index+1}
         </div>
-        </>
       ))}
     </div>
   );

@@ -30,15 +30,11 @@ import PlaceholderVideo from '../../public/placevideo.png'
 
 export default function Home() {
 
-
-  interface Texts {
-    text1: string;
-    text2: string;
-  }
-
   interface Scene {
     sketchfabUrl: string;
-    previewUrl: string;
+    previewImage: string;
+    selectingMedyBoxImage: string,
+    selectingMedyLockerImage: string,
     name: {
       en: string,
       it: string,
@@ -52,9 +48,8 @@ export default function Home() {
       height: string
     };
     texts: {
-      en: Texts;
-      it: Texts;
-      // Add other languages as needed
+      en: { text1: string, text2: string },
+      it: { text1: string, text2: string }
     };
     annotations: {};
   }
@@ -110,7 +105,7 @@ export default function Home() {
   useEffect(() => {
     console.log("scene: ", scene);
     const fetchTranslations = async () => {
-      const response = await fetch(`/locales/${language}/common.json`);
+      const response = await fetch(`/medyboxdashboard/locales/${language}/common.json`);
       const data = await response.json();
       setTranslations(data);
     };
@@ -163,6 +158,14 @@ export default function Home() {
 
   return (
 <div>
+  
+{/*<div className='z-50 top-0 left-0 w-screen h-screen'>
+        <iframe className='w-full h-full'
+        title="Medybox - Mini 90 IT" frameborder="0" allowfullscreen mozallowfullscreen="true" 
+        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" 
+        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+        src="https://sketchfab.com/models/57ec6e1f9e744c908870425c23d81123/embed?camera=0&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&annotations_visible=0"> </iframe>
+</div>*/}
   <Layout> 
     <div className={'min-h-screen flex flex-col overflow-hidden'}>
       <div className={'absolute z-10 w-full h-full'}
@@ -198,7 +201,7 @@ export default function Home() {
         {showVideo && selectedAnnotation < 0 &&(
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
           <StartExperience
-            videoSrc="/path/to/video.mp4"
+            videoSrc="/medyboxdashboard/videointroduttivo.mp4"
             onButtonClick={handleStartButtonClick}
           />
         </div>

@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  basePath: '',
+  basePath: '/medyboxdashboard',
   // Uncomment and set your asset prefix if needed
   assetPrefix: 'https://test.3danimate.it/medyboxdashboard/',
   images: {

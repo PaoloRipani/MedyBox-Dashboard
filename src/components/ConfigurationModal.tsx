@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import sceneData from '../lib/sceneData.json';
+import sceneDataJson from '../lib/sceneData.json';
 
 import Close from '../../public/material-symbols_close.svg'
 import enterIcon from '../../public/enter chevron icon.svg'
@@ -17,12 +17,50 @@ export default function ConfigurationModal({
   language, onProductChange, onClose, selectedMedyBox, selectedMedyLocker, setSelectedMedyBox, setSelectedMedyLocker }
   : { language: string, onProductChange: (product: string, model: string) => void, onClose: () => void, selectedMedyBox: any, 
     selectedMedyLocker: any, setSelectedMedyBox: (medyBox : string) => void, setSelectedMedyLocker: (medyLocker : string) => void }) {
+      
+  interface Scene {
+    sketchfabUrl: string;
+    previewImage: string;
+    selectingMedyBoxImage: string;
+    selectingMedyLockerImage: string;
+    name: {
+      en: string,
+      it: string,
+      fr?: string,
+      de?: string,
+      es?: string
+    };
+    dimensions: {
+      width: string,
+      depth: string,
+      height: string
+    };
+    texts: {
+      en: {
+        text1: string;
+        text2: string;
+      };
+      it: {
+        text1: string;
+        text2: string;
+      };
+    };
+    annotations: {};
+  }
+  
+  interface SceneData {
+    [key: string]: Scene;
+  } 
+  
   const [tempMedyBox, setTempMedyBox] = useState<string>(selectedMedyBox);
   const [tempMedyLocker, setTempMedyLocker] = useState<string>(selectedMedyLocker);
   const [selectingMedyBox, setSelectingMedyBox] = useState(false);
   const [selectingMedyLocker, setSelectingMedyLocker] = useState(false);
   const [hasChanges, setHasChanges] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [tempSceneData, setTempSceneData] = useState<SceneData>(sceneDataJson as SceneData);
+
+  const sceneData: SceneData = sceneDataJson as SceneData;
 
   const getMedyBoxImage = () => {
     switch(tempMedyBox) {
@@ -92,6 +130,21 @@ export default function ConfigurationModal({
   const handleConfirmClose = () => {
     setShowConfirmModal(false);
     onClose();
+  };
+
+  const getPreviewImage = () => {
+    const key = `${tempMedyBox}-${tempMedyLocker}`;
+    
+
+    if (selectingMedyBox) {
+      return "/medyboxdashboard/" + tempSceneData[key]?.selectingMedyBoxImage || 'path/to/defaultSelectingMedyBoxPreview.png';
+    }
+
+    if (selectingMedyLocker) {
+      return "/medyboxdashboard/" + tempSceneData[key]?.selectingMedyLockerImage || 'path/to/defaultSelectingMedyLockerPreview.png';
+    }
+
+    return "/medyboxdashboard/" + tempSceneData[key]?.previewImage || 'path/to/defaultPreviewImage.png';
   };
 
   return (
@@ -248,12 +301,12 @@ export default function ConfigurationModal({
               )}
             </div>
           </div>
-          <div className='flex flex-col grow bg-white z-20 p-6'>
+          <div className='flex flex-col grow bg-white z-20'>
             {tempMedyBox && tempMedyLocker && (
-              <>
-                <h1>{tempMedyBox}{tempMedyLocker} || {`${tempMedyBox}-${tempMedyLocker}`}</h1>
-                <img src='' alt="Preview" />
-              </>
+              <div className='flex w-full h-full'>
+                <h1 className='absolute top-4'>{tempMedyBox}{tempMedyLocker} || {`${tempMedyBox}-${tempMedyLocker}`}</h1>
+                <img src={getPreviewImage()} alt="Preview" className='object-cover' />
+              </div>
             )}
             {showConfirmModal && (
               <div className='absolute flex w-screen h-screen z-20 top-0 left-0' style={{pointerEvents: "auto"}}>

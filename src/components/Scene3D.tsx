@@ -27,7 +27,7 @@ export default function Scene3D({ language, medyBox, medyLocker,
   
   interface Scene {
     sketchfabUrl: string;
-    previewUrl: string;
+    previewImage: string;
     name: {
       en: string;
       it: string;
@@ -37,8 +37,14 @@ export default function Scene3D({ language, medyBox, medyLocker,
     };
     dimensions: Dimensions;
     texts: {
-      en: Texts;
-      it: Texts;
+      en: {
+        text1: string;
+        text2: string;
+      };
+      it: {
+        text1: string;
+        text2: string;
+      };
       // Add other languages as needed
     };
     annotations: {
@@ -179,7 +185,8 @@ export default function Scene3D({ language, medyBox, medyLocker,
       <iframe className='w-full  min-h-screen'
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
       {annotations.map((annotation, index) => (
-        <div className={`w-5 h-5 rounded-xl bg-green-3 leading-none text-center cursor-pointer
+        <div className={`w-7 rounded-3xl bg-green-3 leading-5 text-center cursor-pointer 
+          justify-center items-center lato-light border-4 border-opacity-35 border-green-3
            ${isCameraMoving ? 'opacity-50' : ''}`} 
             onClick={isCameraMoving ? undefined : () => {
               onAnnotationPlaceholderClick(annotation.eye, annotation.target); 

@@ -28,7 +28,58 @@ import InfoIcon from '../../public/material-symbols_info.png'
 import PlaceholderImage from '../../public/placeimg.png'
 import PlaceholderVideo from '../../public/placevideo.png'
 
+import { Steps, Hints } from 'intro.js-react';
+import 'intro.js/introjs.css';
+
 export default function Home() {
+
+  const steps = [
+    {
+      element: '.selector1',
+      intro: 'test 1',
+      position: 'right',
+      tooltipClass: 'myTooltipClass1',
+      highlightClass: 'myHighlightClass',
+    },
+    {
+      element: '.selector1',
+      intro: 'test 1',
+      position: 'right',
+      tooltipClass: 'myTooltipClass1',
+      highlightClass: 'myHighlightClass',
+    },
+    {
+      element: '.selector2',
+      intro: 'test 2',
+      position: 'left',
+      tooltipClass: 'myTooltipClass2',
+      highlightClass: 'myHighlightClass',
+    },
+    {
+      element: '.selector3',
+      intro: 'test 3',
+      tooltipClass: 'myTooltipClass3',
+      highlightClass: 'myHighlightClass',
+    },
+  ];
+
+  const options = {
+    showProgress: true,
+    showBullets: true,
+    //exitOnOverlayClick: true,
+    exitOnEsc: true,
+    nextLabel: "Procedi",
+    prevLabel: "Salta",
+    hideSkip: true,
+    doneLabel: "Capito",
+    overlayOpacity: 0.5,
+    overlayColor: "#003233",
+    showStepNumbers: true,
+    keyboardNavigation: true,
+    scrollToElement: true,
+    helperElementPadding: 2,
+    showButtons: true,
+  };
 
   interface Scene {
     sketchfabUrl: string;
@@ -77,12 +128,14 @@ export default function Home() {
   const [selectedMedyLocker, setSelectedMedyLocker] = useState<string>('A');
   const [annotationData, setAnnotationData] = useState({});
   const [selectedAnnotation, setSelectedAnnotation] = useState(-1);
-  const [showData1, setShowData1] = useState(false);
+  const [showData1, setShowData1] = useState(true);
   const [showData2, setShowData2] = useState(false);
   const [showData3, setShowData3] = useState(false);
-  const [isBoxShown, setIsBoxShown] = useState(false);
+  const [isBoxShown, setIsBoxShown] = useState(true);
   const [sceneDataState, setSceneData] = useState<SceneData>(sceneDataJson as SceneData);
   const [tempkey,setTempkey] = useState<string>(`${selectedMedyBox}-${selectedMedyLocker}`);
+  const [stepsEnabled, setStepsEnabled] = useState(false);
+  const [isFirstTime, setIsFirstTime] = useState(true);
 
   const sceneData: SceneData = sceneDataJson as SceneData;
   //const typedSceneData: SceneData = sceneData;
@@ -105,7 +158,8 @@ export default function Home() {
   useEffect(() => {
     console.log("scene: ", scene);
     const fetchTranslations = async () => {
-      const response = await fetch(`/medyboxdashboard/locales/${language}/common.json`);
+      //const response = await fetch(`/medyboxdashboard/locales/${language}/common.json`);
+      const response = await fetch(`/locales/${language}/common.json`);
       const data = await response.json();
       setTranslations(data);
     };
@@ -114,6 +168,7 @@ export default function Home() {
 
   const handleStartButtonClick = () => {
     setShowVideo(false);
+    setActiveModal("language")
   };
 
   const handleProductChange = (product : string, model : string) => {
@@ -156,7 +211,17 @@ export default function Home() {
     setActiveModal(null);
   };
 
+  const handleLanguageChange = (language : string) => {
+    if (isFirstTime) {
+      setStepsEnabled(true); // Enable steps only on the first selection
+      setIsFirstTime(false);
+    }
+    setLanguage(language);
+  };
+
   return (
+
+
 <div>
   
 {/*<div className='z-50 top-0 left-0 w-screen h-screen'>
@@ -167,11 +232,18 @@ export default function Home() {
         src="https://sketchfab.com/models/57ec6e1f9e744c908870425c23d81123/embed?camera=0&ui_animations=0&ui_infos=0&ui_stop=0&ui_inspector=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&annotations_visible=0"> </iframe>
 </div>*/}
   <Layout> 
-    <div className={'min-h-screen flex flex-col overflow-hidden'}>
+    <div className={'min-h-screen flex flex-col overflow-hidden selector1'}>
+    <Steps
+      enabled={stepsEnabled}
+      steps={steps}
+      initialStep={1}
+      options={options}
+      onExit={() => setStepsEnabled(false)}
+    />
       <div className={'absolute z-10 w-full h-full'}
         style={{pointerEvents: "none"}}>
           {activeModal === 'language' &&(
-            <LanguageModal onLanguageChange={setLanguage} onClose={() => setActiveModal(null)} />
+            <LanguageModal onLanguageChange={handleLanguageChange} onClose={() => setActiveModal(null)} />
           )}
           {activeModal === 'configuration' &&(
             <ConfigurationModal onProductChange={handleProductChange} language={language} 
@@ -197,11 +269,13 @@ export default function Home() {
         onAnnotationDataUpdate={handleAnnotationDataUpdate}
         onAnnotationClick={handleAnnotationClick}
         onInteractionChange={setIsInteracting}
+        id={"-start-experience"}
+        className="-start-experience"
       />
         {showVideo && selectedAnnotation < 0 &&(
         <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
           <StartExperience
-            videoSrc="/medyboxdashboard/videointroduttivo.mp4"
+            videoSrc="../../public/videointroduttivo.mp4"
             onButtonClick={handleStartButtonClick}
           />
         </div>
@@ -341,7 +415,8 @@ export default function Home() {
         {selectedAnnotation == null || selectedAnnotation < 0 && (
         <div className='row-start-2 col-start-1 text-left content-end'>
           <div className='z-10'>
-            <div className='interactive cursor-pointer flex items-center h-10 py-3 px-5 bg-green-2 gap-1.5 w-60'
+            <div className='interactive cursor-pointer flex items-center py-2.5 px-5 bg-green-2 
+            gap-1.5 w-60 justify-center'
             onClick={() => setActiveModal('ar')}>
               <div className='w-5 h-5'>
                 <img src={ARIcon.src} />
@@ -359,14 +434,14 @@ export default function Home() {
           <>
         <div className='row-start-2 col-start-3 text-right content-end justify-end items-end flex'>
           <div className='z-10 interactive w-64 gap-4 flex flex-col'>      
-            <div className={`bg-green-3 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
-            ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            <div className={`bg-green-3 py-2.5 px-5 flex gap-1.5 cursor-pointer uppercase selector3
+            ${isInteracting ? 'opacity-50' : 'opacity-100'} justify-center`}
             onClick={() => setActiveModal('configuration')}>
               <img src={ConfigurationIcon.src}></img>
               <div className=' lato-semi-bold'>{translations?.changeConfiguration}</div>
             </div>   
-            <div className={`bg-green-2 text-green-4 py-3 px-5 flex gap-1.5 cursor-pointer uppercase
-            ${isInteracting ? 'opacity-50' : 'opacity-100'}`}
+            <div className={`bg-green-2 text-green-4 py-2.5 px-5 flex gap-1.5 cursor-pointer uppercase
+            ${isInteracting ? 'opacity-50' : 'opacity-100'} justify-center`}
             onClick={() => setShowVideo(true)}>
               <img src={RestartIcon.src}></img>
               <div className=' lato-semi-bold'>{translations?.restartExperience}</div>
@@ -411,9 +486,12 @@ export default function Home() {
           </div>
         </div>
         ) : (<></>)}
+          <div id="start-experience"></div>
+          <div id="3d-scene"></div>
+          <div id="configuration-button"></div>
       </div>
     </div>
   </Layout>
 </div>
-    )
+)
 }

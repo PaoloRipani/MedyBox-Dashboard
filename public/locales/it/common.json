@@ -1,9 +1,9 @@
 {
     "startExperience": "Inizia l'esperienza",
-    "restartExperience": "Reset",
+    "restartExperience": "Ricomincia",
     "reset": "Reimposta",
-    "arButton": "AR",
-    "changeLanguage": "Lingua",
-    "changeConfiguration": "Configurazione"
+    "arButton": "Realtà aumentata",
+    "changeLanguage": "Scegli lingua",
+    "changeConfiguration": "Configuratore"
   }
   

@@ -32,29 +32,29 @@ export default function LanguageModal({ onLanguageChange, onClose } : any) {
         <div className="grid grid-cols-1 grid-rows-2 gap-y-14 w-full h-full"
         style={{pointerEvents: "auto"}}>
           <div className='flex w-full gap-x-10 justify-center'>
-            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green z-20" 
+            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green z-20 p-3" 
               onClick={() => handleLanguageClick('it')}>
               <img src={italianLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-h4 uppercase'>Italiano</h4>
             </div>
-            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green" 
+            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green p-3" 
               onClick={() => handleLanguageClick('fr')}>
               <img src={germanLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-h4 uppercase'>Français</h4>
             </div>
-              <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green" 
+              <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green p-3" 
               onClick={() => handleLanguageClick('de')}>
               <img src={spanishLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-h4 uppercase'>Deutsch</h4>
             </div>
           </div>
           <div className='flex w-full gap-x-10 justify-center'>
-            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green" 
+            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green p-3" 
               onClick={() => handleLanguageClick('es')}>
               <img src={englishLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-h4 uppercase'>Español</h4>
             </div>
-            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green" 
+            <div className="max-w-72 flex flex-col rounded border border-green-1 text-green-4 text-center cursor-pointer bg-glass-green p-3" 
               onClick={() => handleLanguageClick('en')}>
               <img src={frenchLogo.src} alt='icon' className='h-full m-auto mix-blend-multiply'/>
               <h4 className='neue-plak-wide text-h4 uppercase'>English</h4>

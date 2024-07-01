@@ -14,8 +14,8 @@ import hidewhite from '../../public/hide icon white.svg'
 import { StaticImageData } from 'next/image';
 
 export default function ConfigurationModal({ 
-  language, onProductChange, onClose, selectedMedyBox, selectedMedyLocker, setSelectedMedyBox, setSelectedMedyLocker }
-  : { language: string, onProductChange: (product: string, model: string) => void, onClose: () => void, selectedMedyBox: any, 
+  translation, onProductChange, onClose, selectedMedyBox, selectedMedyLocker, setSelectedMedyBox, setSelectedMedyLocker }
+  : { translation: any, onProductChange: (product: string, model: string) => void, onClose: () => void, selectedMedyBox: any, 
     selectedMedyLocker: any, setSelectedMedyBox: (medyBox : string) => void, setSelectedMedyLocker: (medyLocker : string) => void }) {
       
   interface Scene {
@@ -71,12 +71,30 @@ export default function ConfigurationModal({
     }
   };
 
+  const getMedyBoxName = () => {
+    switch(tempMedyBox) {
+      case 'A': return "MedyBox Top";
+      case 'B': return "MedyBox Medio";
+      case 'C': return "MedyBox Mini";
+      default: return translation.nomedybox;
+    }
+  };
+
   const getMedyLockerImage = () => {
     switch(tempMedyLocker) {
       case 'A': return medylocker252;
       case 'B': return medylocker300;
       case 'C': return medylocker500;
       default: return '-';
+    }
+  };
+
+  const getMedyLockerName = () => {
+    switch(tempMedyLocker) {
+      case 'A': return "MedyLocker 500";
+      case 'B': return "MedyLocker 300";
+      case 'C': return "MedyLocker 252";
+      default: return translation.nomedylocker;
     }
   };
 
@@ -137,21 +155,28 @@ export default function ConfigurationModal({
     
 
     if (selectingMedyBox) {
-      return "/medyboxdashboard/" + tempSceneData[key]?.selectingMedyBoxImage || 'path/to/defaultSelectingMedyBoxPreview.png';
+      return "/medyboxdashboard" + tempSceneData[key]?.selectingMedyBoxImage || 'path/to/defaultSelectingMedyBoxPreview.png';
+      //return "" + tempSceneData[key]?.selectingMedyBoxImage || 'path/to/defaultSelectingMedyBoxPreview.png';
     }
 
     if (selectingMedyLocker) {
-      return "/medyboxdashboard/" + tempSceneData[key]?.selectingMedyLockerImage || 'path/to/defaultSelectingMedyLockerPreview.png';
+      return "/medyboxdashboard" + tempSceneData[key]?.selectingMedyLockerImage || 'path/to/defaultSelectingMedyLockerPreview.png';
     }
 
-    return "/medyboxdashboard/" + tempSceneData[key]?.previewImage || 'path/to/defaultPreviewImage.png';
+    return "/medyboxdashboard" + tempSceneData[key]?.previewImage || 'path/to/defaultPreviewImage.png';
+  };
+
+  const getImagePath = () => {
+    let tempMedyBox = selectingMedyBox ? `s${selectedMedyBox}` : selectedMedyBox || 's';
+    let tempMedyLocker = selectingMedyLocker ? `s${selectedMedyLocker}` : selectedMedyLocker || 's';
+    return `/public/${tempMedyBox}-${tempMedyLocker}.png`;
   };
 
   return (
     <div className='absolute flex w-screen h-screen bg-white z-20' style={{pointerEvents: "auto"}}>
       <div className='relative bg-white w-screen h-screen text-black'>
         <div className='flex w-full h-full'>
-          <div className='flex flex-col w-96 z-20 p-6 shadow-sm'>
+          <div className='flex flex-col min-w-96 z-20 p-6 shadow-sm'>
             <div className='flex items-end text-right justify-end'>
               <button onClick={() => handleClose()} className='cursor-pointer'>
                 <img src={Close.src} alt='Close' />
@@ -159,8 +184,8 @@ export default function ConfigurationModal({
             </div>
             <div className='grow flex-col'>
               <div className='flex flex-col mb-8 gap-2'>
-                <h1 className='neue-plak-wide text-bold text-xl'>Configuratore</h1>
-                <p className='lato-regular text-lg'>Seleziona quale modello desideri configurare</p>
+                <h1 className='neue-plak-wide text-bold text-xl'>{translation.title}</h1>
+                <p className='lato-regular text-lg'>{translation.text}</p>
               </div>
             {!selectingMedyBox && !selectingMedyLocker ? (
               <>
@@ -179,7 +204,7 @@ export default function ConfigurationModal({
                       <img src={(getMedyBoxImage() as StaticImageData).src} alt='' className='h-16'/>
                       </div>
                       <p className='lato-bold text-md'>
-                        MedyBox {tempMedyBox}
+                        {getMedyBoxName()}
                       </p>
                     </div>
                   </div>
@@ -198,7 +223,7 @@ export default function ConfigurationModal({
                         <img src={(getMedyLockerImage() as StaticImageData).src} alt='' className='h-16'/>
                       </div>
                       <p className='lato-bold text-md'>
-                        MedyLocker {tempMedyLocker}
+                        {getMedyLockerName()}
                       </p>
                     </div>
                   </div>
@@ -237,7 +262,7 @@ export default function ConfigurationModal({
                       className={`h-10 mt-6 w-full ${tempMedyBox === '' ? 'bg-green-3 text-white' : 'bg-glass-green-3 text-green-3'} rounded`}>
                       <div className='flex gap-2 justify-center'>
                       <img src={tempMedyBox === '' ? hidewhite.src : hide.src} alt='hide icon'></img>
-                      <div className=''>Nascondi MedyBox</div>
+                      <div className=''>{translation.hidemedybox}</div>
                       </div>
                     </button>
                   </div>
@@ -275,7 +300,7 @@ export default function ConfigurationModal({
                      onClick={() => handleMedyLockerChange('')}>
                       <div className='flex gap-2 justify-center'>
                         <img src={tempMedyLocker === '' ? hidewhite.src : hide.src} alt='hide icon'></img>
-                        <div className=''>Nascondi MedyLocker</div>
+                        <div className=''>{translation.hidemedylocker}</div>
                       </div>
                     </button>
                   </div>
@@ -287,25 +312,27 @@ export default function ConfigurationModal({
             <div>
               { !selectingMedyBox && !selectingMedyLocker && !hasChanges ? (
                 <button onClick={() => (handleConfirm(),onClose())} className='bg-green-1 text-green-3 w-full h-11 lato-semi-bold text-md uppercase'>
-                  Esci dal configuratore
+                  {translation.exit}
                 </button>) : !selectingMedyBox && !selectingMedyLocker && hasChanges ? (
                 <button onClick={() => (handleConfirm(),onClose())} className='bg-green-3 text-white w-full h-11 lato-semi-bold text-md uppercase'>
-                  Applica
+                  {translation.apply}
                 </button>) : (
                 <div className='flex justify-end'>
                 <button className='bg-green-3 px-6 h-11 text-white'
                 onClick={() => handleBackToSelection()}>
-                  Conferma Selezione
+                  {translation.confirm}
                 </button>
                 </div>
               )}
             </div>
           </div>
           <div className='flex flex-col grow bg-white z-20'>
-            {tempMedyBox && tempMedyLocker && (
-              <div className='flex w-full h-full'>
-                <h1 className='absolute top-4'>{tempMedyBox}{tempMedyLocker} || {`${tempMedyBox}-${tempMedyLocker}`}</h1>
-                <img src={getPreviewImage()} alt="Preview" className='object-cover' />
+            {/* Preview Image container - left side */}
+            {tempMedyBox !== null && tempMedyLocker !== null && (
+              <div className='flex w-full h-full grow overflow-hidden'>
+                {/* <h1 className='absolute top-4'>{tempMedyBox}{tempMedyLocker} || {`${tempMedyBox}-${tempMedyLocker}`}</h1> */}
+                <img src={getPreviewImage()} alt="Preview" className='object-cover w-full h-full scale-105' />
+                {/* <img src={getImagePath()} alt="Preview" className='object-cover' /> */}
               </div>
             )}
             {showConfirmModal && (
@@ -313,16 +340,16 @@ export default function ConfigurationModal({
                 <div className='relative bg-opacity-30 bg-medy-black w-screen h-screen text-black'>
                   <div className='flex w-full h-full justify-center items-center'>
                     <div className='p-6 shadow-sm bg-white rounded w-80 flex flex-col gap-3'>
-                      <h2 className='text-h4 neue-plak-wide text-green-4'>Vuoi uscire senza configurare?</h2>
-                      <p className='lato-regular text-medy-gray text-lg'> Se esci perderai la configurazione appena impostata.</p>
+                      <h2 className='text-h4 neue-plak-wide text-green-4'>{translation.aystitle}</h2>
+                      <p className='lato-regular text-medy-gray text-lg'>{translation.aystext}</p>
                       <div className='grid grid-cols-2 gap-4 w-full'>
                         <button className='text-green-3 lato-semi-bold p-3 uppercase text-base'
                           onClick={() => setShowConfirmModal(false)}>
-                          Annulla
+                          {translation.ayscancel}
                         </button>
                         <button className='bg-green-3 p-3 lato-semi-bold uppercase text-base text-white'
                           onClick={handleConfirmClose}>
-                          Esci
+                          {translation.aysexit}
                         </button>
                       </div>
                     </div>

@@ -1,9 +1,32 @@
 {
-    "startExperience": "Inizia l'esperienza",
-    "restartExperience": "Ricomincia",
-    "reset": "Reimposta",
-    "arButton": "Realtà aumentata",
-    "changeLanguage": "Scegli lingua",
-    "changeConfiguration": "Configuratore"
-  }
-  
+  "startExperience": "Inizia l'esperienza",
+  "restartExperience": "Ricomincia",
+  "arButton": "Realtà aumentata",
+  "changeLanguage": "Scegli lingua",
+  "changeConfiguration": "Configuratore",
+  "onboarding": {
+    "1" : {"title" : "Benvenuto nella MedyBox Experience!", "text" : "Qui inizierà la tua esperienza nel mondo MedyBox!"},
+    "2" : {"title" : "Ambiente 3D", "text" : "Interagisci con il modello e seleziona i punti evidenziati per scoprie tutti i dettagli!"},
+    "3" : {"title" : "Configura", "text" : "Seleziona i modelli di MedyBox e MedyLocker per visualizzarli nell'ambiente 3D!"},
+    "buttons" : {"done": "Salta", "next": "Procedi"}
+  },
+  "configuration": {
+    "title" : "Configura", 
+    "text" : "Seleziona quale modello desideri configurare",
+    "hidemedybox" : "Nascondi MedyBox",
+    "nomedybox" : "Nessun MedyBox selezionato",
+    "hidemedylocker" : "Nascondi MedyLocker",
+    "nomedylocker" : "Nessun MedyLocker selezionato",
+    "confirm" : "Conferma selezione",
+    "apply" : "Applica",
+    "exit" : "Esci dal configuratore",
+    "aystitle" : "Vuoi uscire senza configurare?",
+    "aystext" : "Se esci perderai la configurazione appena impostata.",
+    "ayscancel" : "Annulla",
+    "aysexit" : "Esci"
+  },
+  "width" : "Larghezza",
+  "depth" : "Profondità",
+  "height" : "Altezza",
+  "capacity" : "Capienza"
+}

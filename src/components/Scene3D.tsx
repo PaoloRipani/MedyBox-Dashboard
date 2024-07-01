@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import sceneData from '../lib/sceneData.json';
 
 
-export default function Scene3D({ language, medyBox, medyLocker, 
+export default function Scene3D({ medyBox, medyLocker, 
   onSceneDataUpdate, 
   onAnnotationDataUpdate,
   onAnnotationClick,
@@ -20,9 +20,9 @@ export default function Scene3D({ language, medyBox, medyLocker,
   }
   
   interface Annotation {
-    position?: [number, number]; // Assuming position is an optional tuple of two numbers
-    eye?: any; // Replace `any` with a more specific type if known
-    target?: any; // Replace `any` with a more specific type if known
+    position?: [number, number]; 
+    eye?: any;
+    target?: any;
   }
   
   interface Scene {
@@ -45,10 +45,8 @@ export default function Scene3D({ language, medyBox, medyLocker,
         text1: string;
         text2: string;
       };
-      // Add other languages as needed
     };
     annotations: {
-      // Define the structure of annotations
     };
   }
   const typedSceneData: SceneData = sceneData;
@@ -100,25 +98,21 @@ export default function Scene3D({ language, medyBox, medyLocker,
           });
 
           // Update scene data
-          if (scene.texts[language]) {
-            onSceneDataUpdate(scene.texts[language]);
-          } else {
-            console.error(`Texts for language ${language} not found in scene data.`);
-          }
-          
+          onSceneDataUpdate(scene.texts || {});
         });
-        
+
         api.addEventListener('annotationSelect', function (index : number) {
           console.log('Selected annotation', index);
           onAnnotationClick(index);
           const annotationKey = `annotation${index + 1}`;
-          if (scene.annotations[annotationKey] && scene.annotations[annotationKey][language]) {
-            const annotation = scene.annotations[annotationKey][language];
+          if (scene.annotations[annotationKey] && scene.annotations[annotationKey]) {
+            const annotation = scene.annotations[annotationKey];
             onAnnotationDataUpdate({ [index]: annotation });
           } else {
-            console.error(`Annotation ${annotationKey} or language ${language} not found in scene data.`);
+            console.error(`Annotation ${annotationKey} not found in scene data.`);
           }
         });
+
         api.addEventListener('camerastart', function() {
           setIsCameraMoving(true);
           onInteractionChange(true);
@@ -144,7 +138,7 @@ export default function Scene3D({ language, medyBox, medyLocker,
     };
 
     client.init(scene.sketchfabUrl, config);
-  }, [scene.sketchfabUrl, language]);
+  }, [scene.sketchfabUrl]);
 
   const runAnnotationLoop = (apiInstance : any, annotationsList : any) => {
     const updateAnnotations = () => {
@@ -181,7 +175,8 @@ export default function Scene3D({ language, medyBox, medyLocker,
   };
 
   return (
-    <div className='relative w-full min-h-screen flex'>
+    <div className='relative w-full min-h-screen flex'
+        id={"3d-scene"}>
       <iframe className='w-full  min-h-screen'
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
       {annotations.map((annotation, index) => (

@@ -25,76 +25,89 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-thin {
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-light {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-regular {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-semi-bold {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-bold {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-black {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-thin-italic {
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-style: italic;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-light-italic {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: italic;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-regular-italic {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: italic;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-bold-italic {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: italic;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lato-black-italic {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-style: italic;
+  -webkit-font-smoothing: antialiased;
 }
 
 .neue-plak-wide{
   font-family: "Neue Plak Wide Bold", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .dot-fill::before {
@@ -336,8 +349,11 @@ button {
 
 .image-slider {
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 .scroll-snap-stop {
@@ -387,4 +403,40 @@ button {
 
 .interacting .interactive {
   pointer-events: auto;
+}
+
+// onboarding styling
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1002;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.avatar {
+  position: absolute;
+  left: -128px; /* Adjust this based on your layout */
+  top: -24px;
+  background: url('/path/to/avatar.png') no-repeat center center;
+  background-size: cover;
+  z-index: 1001;
+  transition: top 0.3s ease, left 0.3s ease;
 }

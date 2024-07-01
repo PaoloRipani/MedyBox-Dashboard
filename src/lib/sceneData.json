@@ -24,119 +24,151 @@
           "it": {
             "text1": "Testo esempio 1",
             "text2": "Testo esempio 2"
+          },
+          "fr": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          },
+          "es": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
+          },
+          "de": {
+            "text1": "Testo esempio 1",
+            "text2": "Testo esempio 2"
           }
         },
         "annotations": {
           "annotation1": {
             "en": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "it": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
               "title": "Annotation1",
               "text": "Text1",
               "images":{},
               "videos":{}
             },
-            "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             }
           },
           "annotation3": {
             "en": {
-              "title": "Annotation3",
-              "text": "Text3"
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
             },
             "it": {
-              "title": "Annotazione3",
-              "text": "Testo3"
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
             }
           },
           "annotation4": {
             "en": {
-              "title": "Annotation4",
-              "text": "Text4"
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
             },
             "it": {
-              "title": "Annotazione4",
-              "text": "Testo4"
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
             }
           },
           "annotation5": {
             "en": {
-              "title": "Annotation5",
-              "text": "Text5"
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
             },
             "it": {
-              "title": "Annotazione5",
-              "text": "Testo5"
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
             }
           },
           "annotation6": {
             "en": {
-              "title": "Annotation6",
-              "text": "Text6"
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
             },
             "it": {
-              "title": "Annotazione6",
-              "text": "Testo6"
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
             }
           },
           "annotation7": {
             "en": {
-              "title": "Annotation7",
-              "text": "Text7"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
             },
             "it": {
-              "title": "Annotazione7",
-              "text": "Testo7"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
             }
           },
           "annotation8": {
             "en": {
-              "title": "Annotation8",
-              "text": "Text8"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             },
             "it": {
-              "title": "Annotazione8",
-              "text": "Testo8"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             }
           },
           "annotation9": {
             "en": {
-              "title": "annotation9",
-              "text": "Text9"
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
             },
             "it": {
-              "title": "annotation9",
-              "text": "Testo9"
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
             }
           },
           "annotation10": {
             "en": {
-              "title": "annotation10",
-              "text": "Text10"
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
             },
             "it": {
-              "title": "annotation10",
-              "text": "Testo10"
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
             }
           },
           "annotation11": {
             "en": {
-              "title": "annotation11",
-              "text": "Text11"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             },
             "it": {
-              "title": "annotation11",
-              "text": "Testo11"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             }
           }
         }
@@ -169,27 +201,129 @@
         }
       },
       "annotations": {
-        "annotation1": {
-          "en": {
-            "title": "Annotation1",
-            "text": "Text1"
+          "annotation1": {
+            "en": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "it": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            }
           },
-          "it": {
-            "title": "Annotazione1",
-            "text": "Testo1"
-          }
-        },
-        "annotation2": {
-          "en": {
-            "title": "Annotation2",
-            "text": "Text2"
+          "annotation2": {
+            "en": {
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            },
+            "it": {
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
           },
-          "it": {
-            "title": "Annotazione2",
-            "text": "Testo2"
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            }
           }
         }
-      }
     },
     "A-C": {
         "sketchfabUrl": "57ec6e1f9e744c908870425c23d81123",
@@ -221,22 +355,124 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
             }
           }
         }
@@ -271,22 +507,94 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
             }
           }
         }
@@ -321,22 +629,134 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            }
+          },
+          "annotation11": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             }
           }
         }
@@ -371,22 +791,124 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
             }
           }
         }
@@ -421,22 +943,124 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
             }
           }
         }
@@ -471,22 +1095,94 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
             }
           }
         }
@@ -521,22 +1217,134 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale"
+            }
+          },
+          "annotation11": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             }
           }
         }
@@ -569,27 +1377,129 @@
           }
         },
         "annotations": {
-          "annotation1": {
-            "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+            "annotation1": {
+              "en": {
+                "title": "Struttura anti vandalica",
+                "text": "Struttura anti vandalica con allarme sonoro",
+                "images":{},
+                "videos":{}
+              },
+              "it": {
+                "title": "Struttura anti vandalica",
+                "text": "Struttura anti vandalica con allarme sonoro",
+                "images":{},
+                "videos":{}
+              },
+              "fr": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              },
+              "es": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              },
+              "de": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              }
             },
-            "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
-            }
-          },
-          "annotation2": {
-            "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+            "annotation2": {
+              "en": {
+                "title": "Display LCD",
+                "text": "Display LCD grafico touch screen e multilingual"
+              },
+              "it": {
+                "title": "Display LCD",
+                "text": "Display LCD grafico touch screen e multilingual"
+              }
             },
-            "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+            "annotation3": {
+              "en": {
+                "title": "Lettore banconote",
+                "text": "Lettore banconote Multi valuta con sistema antifrode"
+              },
+              "it": {
+                "title": "Lettore banconote",
+                "text": "Lettore banconote Multi valuta con sistema antifrode"
+              }
+            },
+            "annotation4": {
+              "en": {
+                "title": "Gettoniera rendiresto",
+                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              },
+              "it": {
+                "title": "Gettoniera rendiresto",
+                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              }
+            },
+            "annotation5": {
+              "en": {
+                "title": "Stampante di cortesia anti-inceppamento",
+                "text": "Stampante di cortesia"
+              },
+              "it": {
+                "title": "Stampante di cortesia anti-inceppamento",
+                "text": "Stampante di cortesia"
+              }
+            },
+            "annotation6": {
+              "en": {
+                "title": "Illuminazione LED ad alta luminosità",
+                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              },
+              "it": {
+                "title": "Illuminazione LED ad alta luminosità",
+                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              }
+            },
+            "annotation7": {
+              "en": {
+                "title": "Sistema refrigerante",
+                "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              },
+              "it": {
+                "title": "Sistema refrigerante",
+                "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              }
+            },
+            "annotation8": {
+              "en": {
+                "title": "Dimensione cassetti configurabile",
+                "text": "Dimensione cassetti configurabile"
+              },
+              "it": {
+                "title": "Dimensione cassetti configurabile",
+                "text": "Dimensione cassetti configurabile"
+              }
+            },
+            "annotation9": {
+              "en": {
+                "title": "Disponibile nella versione Stand alone",
+                "text": "Disponibile nella versione Stand alone"
+              },
+              "it": {
+                "title": "Disponibile nella versione Stand alone",
+                "text": "Disponibile nella versione Stand alone"
+              }
+            },
+            "annotation10": {
+              "en": {
+                "title": "Sistema di pagamento elettronico opzionale",
+                "text": "Sistema di pagamento elettronico opzionale"
+              },
+              "it": {
+                "title": "Sistema di pagamento elettronico opzionale",
+                "text": "Sistema di pagamento elettronico opzionale"
+              }
             }
           }
-        }
       },
     "C-C": {
         "sketchfabUrl": "d87f9e51de454230934401e1898c2839",
@@ -619,27 +1529,129 @@
           }
         },
         "annotations": {
-          "annotation1": {
-            "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+            "annotation1": {
+              "en": {
+                "title": "Struttura anti vandalica",
+                "text": "Struttura anti vandalica con allarme sonoro",
+                "images":{},
+                "videos":{}
+              },
+              "it": {
+                "title": "Struttura anti vandalica",
+                "text": "Struttura anti vandalica con allarme sonoro",
+                "images":{},
+                "videos":{}
+              },
+              "fr": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              },
+              "es": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              },
+              "de": {
+                "title": "Annotation1",
+                "text": "Text1",
+                "images":{},
+                "videos":{}
+              }
             },
-            "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
-            }
-          },
-          "annotation2": {
-            "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+            "annotation2": {
+              "en": {
+                "title": "Display LCD",
+                "text": "Display LCD grafico touch screen e multilingual"
+              },
+              "it": {
+                "title": "Display LCD",
+                "text": "Display LCD grafico touch screen e multilingual"
+              }
             },
-            "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+            "annotation3": {
+              "en": {
+                "title": "Lettore banconote",
+                "text": "Lettore banconote Multi valuta con sistema antifrode"
+              },
+              "it": {
+                "title": "Lettore banconote",
+                "text": "Lettore banconote Multi valuta con sistema antifrode"
+              }
+            },
+            "annotation4": {
+              "en": {
+                "title": "Gettoniera rendiresto",
+                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              },
+              "it": {
+                "title": "Gettoniera rendiresto",
+                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              }
+            },
+            "annotation5": {
+              "en": {
+                "title": "Stampante di cortesia anti-inceppamento",
+                "text": "Stampante di cortesia"
+              },
+              "it": {
+                "title": "Stampante di cortesia anti-inceppamento",
+                "text": "Stampante di cortesia"
+              }
+            },
+            "annotation6": {
+              "en": {
+                "title": "Illuminazione LED ad alta luminosità",
+                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              },
+              "it": {
+                "title": "Illuminazione LED ad alta luminosità",
+                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              }
+            },
+            "annotation7": {
+              "en": {
+                "title": "Sistema refrigerante",
+                "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              },
+              "it": {
+                "title": "Sistema refrigerante",
+                "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              }
+            },
+            "annotation8": {
+              "en": {
+                "title": "Dimensione cassetti configurabile",
+                "text": "Dimensione cassetti configurabile"
+              },
+              "it": {
+                "title": "Dimensione cassetti configurabile",
+                "text": "Dimensione cassetti configurabile"
+              }
+            },
+            "annotation9": {
+              "en": {
+                "title": "Disponibile nella versione Stand alone",
+                "text": "Disponibile nella versione Stand alone"
+              },
+              "it": {
+                "title": "Disponibile nella versione Stand alone",
+                "text": "Disponibile nella versione Stand alone"
+              }
+            },
+            "annotation10": {
+              "en": {
+                "title": "Sistema di pagamento elettronico opzionale",
+                "text": "Sistema di pagamento elettronico opzionale"
+              },
+              "it": {
+                "title": "Sistema di pagamento elettronico opzionale",
+                "text": "Sistema di pagamento elettronico opzionale"
+              }
             }
           }
-        }
       },
     "C-": {
         "sketchfabUrl": "540c32441f764be7a0595c88cffaa04d",
@@ -671,22 +1683,94 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":{},
+              "videos":{}
+            },
+            "fr": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "es": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
+            },
+            "de": {
+              "title": "Annotation1",
+              "text": "Text1",
+              "images":{},
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingual"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            },
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia"
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico"
             }
           }
         }
@@ -721,22 +1805,52 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante"
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
+            },
+            "it": {
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
             }
           }
         }
@@ -771,22 +1885,42 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
             }
           }
         }
@@ -821,22 +1955,42 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile"
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico"
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico",
+              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone"
             }
           }
         }

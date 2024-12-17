@@ -104,6 +104,7 @@ export default function Home() {
   const scene3DRef = useRef(null);
   const configurationButtonRef = useRef(null);
   const [configurationLanguage, setConfigurationLanguage] = useState(null);
+  const [transitioning, setTransitioning] = useState(false);
 
   const sceneData: SceneData = sceneDataJson as SceneData;
   //const typedSceneData: SceneData = sceneData;
@@ -191,8 +192,11 @@ export default function Home() {
   }, [language]);
 
   const handleStartButtonClick = () => {
-    setShowVideo(false);
-    setActiveModal("language")
+    setTransitioning(true); // Trigger the transition
+    setTimeout(() => {
+      setShowVideo(false); // Hide StartExperience after the transition
+      setOnboardingActive(true); // Activate Onboarding
+    }, 1000); // Match this timeout with the transition duration
   };
 
   const handleProductChange = (product : string, model : string) => {
@@ -217,6 +221,13 @@ export default function Home() {
     console.info("Annotation selected: ", annotationIndex);
   };
 
+  const handleRestartExperience = () => {
+    setTransitioning(false); // Reset any transitions
+    setShowVideo(true); // Show StartExperience again
+    setIsFirstTime(true); // Reset onboarding
+    setOnboardingStep(0); // Reset onboarding steps
+    setSelectedAnnotation(-1); // Clear annotations
+  };
 
   const handleMediaClick = (type: string, src: string) => {
     setMediaType(type);
@@ -247,6 +258,7 @@ export default function Home() {
       setOnboardingStep(onboardingStep + 1);
     } else {
       setOnboardingActive(false);
+      setOnboardingStep(0);
     }
   };
 
@@ -271,10 +283,18 @@ export default function Home() {
       { onboardingStep === 2 && onboardingActive ? (
       <div className={`bg-green-3 py-2.5 px-5 flex gap-1.5 uppercase absolute bottom-20 right-4 justify-center z-40 w-64`}>
         <img src={ConfigurationIcon.src}></img>
-        <div className=' lato-semi-bold'>{translations?.changeConfiguration}</div>
+        <div className=' lato-semi-bold'
+            ref={configurationButtonRef}>{translations?.changeConfiguration}</div>
       </div>) : (<></>)}
-      <div className={'absolute z-10 w-full h-full'}
-        style={{pointerEvents: "none"}}>
+
+      {/* Transition Container */}
+      <div
+          className={`transition-container ${
+            transitioning ? 'roll-up' : ''
+          }`}
+        >
+      {/* Modals Container */}
+      <div className={'absolute z-10 w-full h-full'} style={{pointerEvents: "none"}}>
           {activeModal === 'language' &&(
             <LanguageModal onLanguageChange={handleLanguageChange} onClose={() => setActiveModal(null)} />
           )}
@@ -293,25 +313,57 @@ export default function Home() {
           {activeModal === 'media' &&(
             <MediaModal mediaType={mediaType} mediaSrc={mediaSrc} onClose={handleClose} />
           )}
-      </div>
-      <Scene3D
-        medyBox={selectedMedyBox}
-        medyLocker={selectedMedyLocker}
-        onSceneDataUpdate={handleSceneDataUpdate}
-        onAnnotationDataUpdate={handleAnnotationDataUpdate}
-        onAnnotationClick={handleAnnotationClick}
-        onInteractionChange={setIsInteracting}
-        ref={scene3DRef}
-      />
-        {showVideo && selectedAnnotation < 0 &&(
-        <div className="absolute inset-0 z-20 w-full min-h-screen flex flex-col items-center bg-black">
-          <StartExperience
-            videoSrc="../../public/videointroduttivo.mp4"
-            onButtonClick={handleStartButtonClick}
-          />
-        </div>
+      </div> {/* End Modals Container */}
+
+      {/* Start Experience Section */}
+      {showVideo && selectedAnnotation < 0 && (
+            <div className={`start-experience absolute inset-0 z-10 w-full min-h-screen flex flex-col items-center bg-black
+                  ${!showVideo ? 'hidden' : 'visible'}`}>
+              <StartExperience
+                videoSrc="../../public/videointroduttivo.mp4"
+                onButtonClick={handleStartButtonClick}
+              />
+            </div>
+          )}
+      {/* End Start Experience Section */}
+
+      {/* Scene3D Section */}
+      <div className="scene-3d">
+        <Scene3D
+          medyBox={selectedMedyBox}
+          medyLocker={selectedMedyLocker}
+          onSceneDataUpdate={handleSceneDataUpdate}
+          onAnnotationDataUpdate={handleAnnotationDataUpdate}
+          onAnnotationClick={handleAnnotationClick}
+          onInteractionChange={setIsInteracting}
+          ref={scene3DRef}
+        />
+        {/* creating onboarding background - glass element with z-index 1000 */}
+        {onboardingActive && (
+          <div className='h-full w-full absolute top-0 left-0'>
+            <div className='z-[1001] absolute top-0 left-0 h-full w-full'
+            style={{pointerEvents: "auto"}}>
+              <OnboardingDialog
+                step={onboardingSteps[onboardingStep]}
+                onNext={handleNextStep}
+                onClose={handleCloseOnboarding}
+                translations={onboardingTranslations}
+              />
+            </div>
+          </div>
         )}
-      <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay z-0'>
+        {onboardingActive && onboardingStep !== 1 ? (
+          <div className="shadow-2xl bg-green-4 bg-opacity-30 backdrop-blur-md h-full w-full z-20 absolute top-0 left-0">
+            <img src={MedyboxExperience.src} alt="logo" className="w-52 m-auto mt-20" />
+          </div>
+        ) : (<></>)}
+        </div>
+      </div> {/* Closing Transition Container */}
+
+      {/* Overlays in 6 Zone Container */}
+      {(!onboardingActive && !showVideo && activeModal == null) &&(
+      <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay z-10'>
+
         {/* div top left */}
         {onboardingStep !== 1 && (
           <>
@@ -485,14 +537,13 @@ export default function Home() {
           <div className='z-10 interactive w-64 gap-4 flex flex-col'>      
             <div className={`bg-green-3 py-2.5 px-5 flex gap-1.5 cursor-pointer uppercase
             ${isInteracting ? 'opacity-50' : 'opacity-100'} justify-center`}
-            onClick={() => setActiveModal('configuration')}
-            ref={configurationButtonRef}>
+            onClick={() => setActiveModal('configuration')}>
               <img src={ConfigurationIcon.src}></img>
               <div className=' lato-semi-bold'>{translations?.changeConfiguration}</div>
             </div>   
             <div className={`bg-green-2 text-green-4 py-2.5 px-5 flex gap-1.5 cursor-pointer uppercase
             ${isInteracting ? 'opacity-50' : 'opacity-100'} justify-center`}
-            onClick={() => {setShowVideo(true),setIsFirstTime(true),setOnboardingStep(0)}}>
+            onClick={handleRestartExperience}>
               <img src={RestartIcon.src}></img>
               <div className=' lato-semi-bold'>{translations?.restartExperience}</div>
             </div>
@@ -536,26 +587,8 @@ export default function Home() {
           </div>
         </div>
         ) : (<></>)}
-        {/* creating onboarding background - glass element with z-index 1000 */}
-        {onboardingActive && onboardingTranslations !== null ? (
-          <div className='h-full w-full absolute top-0 left-0'>
-            <div className='z-[1001] absolute top-0 left-0 h-full w-full'
-            style={{pointerEvents: "auto"}}>
-              <OnboardingDialog className="z-[1002]"
-                    step={onboardingSteps[onboardingStep]}
-                    onNext={handleNextStep}
-                    onClose={handleCloseOnboarding}
-                    translations={onboardingTranslations}
-                  />
-            </div>
-          </div>
-        ): (<></>)}
-        {onboardingActive && onboardingStep !== 1 ? (
-          <div className="shadow-2xl bg-green-4 bg-opacity-30 backdrop-blur-md h-full w-full z-30 absolute top-0 left-0">
-            <img src={MedyboxExperience.src} alt="logo" className="w-52 m-auto mt-20" />
-          </div>
-        ) : (<></>)}
       </div>
+      )} {/* End Overlays in 6 Zone Container */}
     </div>
   </Layout>
 </div>

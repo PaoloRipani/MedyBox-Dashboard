@@ -173,10 +173,10 @@ export default function ConfigurationModal({
   };
 
   return (
-    <div className='absolute flex w-screen h-screen bg-white z-20' style={{pointerEvents: "auto"}}>
+    <div className='absolute flex w-screen h-screen bg-white z-30' style={{pointerEvents: "auto"}}>
       <div className='relative bg-white w-screen h-screen text-black'>
         <div className='flex w-full h-full'>
-          <div className='flex flex-col min-w-96 z-20 p-6 shadow-sm'>
+          <div className='flex flex-col min-w-96 z-30 p-6 shadow-sm'>
             <div className='flex items-end text-right justify-end'>
               <button onClick={() => handleClose()} className='cursor-pointer'>
                 <img src={Close.src} alt='Close' />
@@ -237,22 +237,22 @@ export default function ConfigurationModal({
                   <div className='grid gap-4'>
                     <div className='relative cursor-pointer' onClick={() => handleMedyBoxChange('C')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={mini.src} alt='' className='h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyBox === 'C' ? 'text-white' : ''}`}>Mini</p>
+                        <img src={mini.src} alt='' className='h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyBox === 'C' ? 'text-white' : ''}`}>Mini</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyBox === 'C' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>
                     <div className='relative cursor-pointer' onClick={() => handleMedyBoxChange('B')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={medio.src} alt='' className='h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyBox === 'B' ? 'text-white' : ''}`}>Medio</p>
+                        <img src={medio.src} alt='' className='h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyBox === 'B' ? 'text-white' : ''}`}>Medio</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyBox === 'B' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>
                     <div className='relative col-span-2 cursor-pointer' onClick={() => handleMedyBoxChange('A')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={top.src} alt='' className='h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyBox === 'A' ? 'text-white' : ''}`}>Top</p>
+                        <img src={top.src} alt='' className='h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyBox === 'A' ? 'text-white' : ''}`}>Top</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyBox === 'A' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>                  
@@ -275,22 +275,22 @@ export default function ConfigurationModal({
                   <div className='grid gap-4'>
                     <div className='relative cursor-pointer' onClick={() => handleMedyLockerChange('C')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={medylocker252.src} alt='' className='w-28 h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyLocker === 'C' ? 'text-white' : ''}`}>252</p>
+                        <img src={medylocker252.src} alt='' className='w-28 h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyLocker === 'C' ? 'text-white' : ''}`}>252</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyLocker === 'C' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>
                     <div className='relative cursor-pointer' onClick={() => handleMedyLockerChange('B')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={medylocker300.src} alt='' className='w-28 h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyLocker === 'B' ? 'text-white' : ''}`}>300</p>
+                        <img src={medylocker300.src} alt='' className='w-28 h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyLocker === 'B' ? 'text-white' : ''}`}>300</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyLocker === 'B' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>
                     <div className='relative col-span-2 cursor-pointer' onClick={() => handleMedyLockerChange('A')}>
                       <div className='p-3 flex flex-col text-center items-center'>
-                        <img src={medylocker500.src} alt='' className='w-28 h-28 z-20'></img>
-                        <p className={`z-20 ${tempMedyLocker === 'A' ? 'text-white' : ''}`}>500</p>
+                        <img src={medylocker500.src} alt='' className='w-28 h-28 z-30'></img>
+                        <p className={`z-30 ${tempMedyLocker === 'A' ? 'text-white' : ''}`}>500</p>
                       </div>
                       <div className={`absolute top-0 mt-8 h-[calc(100%-32px)] w-full ${tempMedyLocker === 'A' ? 'bg-green-3' : 'bg-glass-green-3'} border border-green-1 rounded-s z-10`}></div>
                     </div>                  
@@ -326,7 +326,7 @@ export default function ConfigurationModal({
               )}
             </div>
           </div>
-          <div className='flex flex-col grow bg-white z-20'>
+          <div className='flex flex-col grow bg-white z-30'>
             {/* Preview Image container - left side */}
             {tempMedyBox !== null && tempMedyLocker !== null && (
               <div className='flex w-full h-full grow overflow-hidden'>
@@ -336,7 +336,7 @@ export default function ConfigurationModal({
               </div>
             )}
             {showConfirmModal && (
-              <div className='absolute flex w-screen h-screen z-20 top-0 left-0' style={{pointerEvents: "auto"}}>
+              <div className='absolute flex w-screen h-screen z-30 top-0 left-0' style={{pointerEvents: "auto"}}>
                 <div className='relative bg-opacity-30 bg-medy-black w-screen h-screen text-black'>
                   <div className='flex w-full h-full justify-center items-center'>
                     <div className='p-6 shadow-sm bg-white rounded w-80 flex flex-col gap-3'>

@@ -1,160 +1,154 @@
 import React, { useEffect, useState } from 'react';
 
-import robot from '../../public/robot onboarding.svg'
-import close from '../../public/close button icon grey.svg'
+import robotLeft from '../../public/left-loop.gif';
+import robotBottom from '../../public/bottom-loop.gif';
+import close from '../../public/close button icon grey.svg';
 
-const OnboardingDialog = ({ step, onNext, onClose, translations } : any) => {
-    const [position, setPosition] = useState({ top: 0, left: 0 });
-    const [avatarPosition, setAvatarPosition] = useState({ top: 0, left: 0 });
+const OnboardingDialog = ({ step, onNext, onClose, translations }: any) => {
+  const [dialogTransform, setDialogTransform] = useState({ x: 0, y: 0 });
+  const [avatarTransform, setAvatarTransform] = useState({ x: 0, y: 0 });
+  const [avatarSrc, setAvatarSrc] = useState(robotLeft); // Default avatar GIF
 
-    useEffect(() => {
-        console.log('Current step:', step);
-        console.log('Current translations:', translations);
-        const target = step.ref.current;
+  useEffect(() => {
+    const target = step.ref?.current;
 
-        if (target) {
-            const rect = target.getBoundingClientRect();
-            console.log("rect: ", rect);
-            let newPosition = { top: 0, left: 0 };
+    console.log('Step:', step);
+    console.log('Target Ref:', target);
 
-            switch (step.position) {
-            case 'left':
-                newPosition = {
-                top: rect.top + window.scrollY - 136,
-                left: rect.left + window.scrollX - 336,
-                };
-                break;
-            case 'right':
-                newPosition = {
-                top: rect.top + window.scrollY,
-                left: rect.right + window.scrollX + 20,
-                };
-                break;
-            case 'top':
-                newPosition = {
-                top: rect.top + window.scrollY - 100,
-                left: rect.left + window.scrollX,
-                };
-                break;
-            case 'bottom':
-                newPosition = {
-                top: rect.bottom + window.scrollY + 20,
-                left: rect.left + window.scrollX,
-                };
-                break;
-            case 'center-left':
-                newPosition = {
-                top: (window.scrollY / 2) + 20,
-                left: -250,
-                };
-                break;
-            default:
-                newPosition = {
-                top: window.innerHeight / 2 - 100,
-                left: window.innerWidth / 2 - 150,
-                };
-                break;
-            }
+    let newDialogTransform = { x: 0, y: 0 };
+    let newAvatarTransform = { x: 0, y: 0 };
 
-            setPosition(newPosition);
-            setAvatarPosition(getAvatarPosition(newPosition, step.avatarPosition));
-        } else {
+    // Calculate dialog position
+    if (target) {
+      const rect = target.getBoundingClientRect();
+      switch (step.position) {
+        case 'left':
+          newDialogTransform = { x: rect.left - 420, y: rect.top - 150 };
+          break;
+        case 'right':
+          newDialogTransform = { x: rect.right + 20, y: rect.top };
+          break;
+        case 'top':
+          newDialogTransform = { x: rect.left, y: rect.top - 120 };
+          break;
+        case 'bottom':
+          newDialogTransform = { x: rect.left, y: rect.bottom + 20 };
+          break;
+        default:
+          newDialogTransform = { x: window.innerWidth / 2 - 150, y: window.innerHeight / 2 - 100 };
+      }
+    } else {
+      console.warn('Ref is null, applying fallback positions.');
+      switch (step.position) {
+        case 'center-left':
+          newDialogTransform = { x: 40, y: window.innerHeight / 2 - 100 };
+          break;
+        case 'center':
+          newDialogTransform = { x: window.innerWidth / 2 - 150, y: window.innerHeight / 2 - 100 };
+          break;
+        default:
+          newDialogTransform = { x: 50, y: 50 };
+      }
+    }
 
-          let newPosition = { top: 0, left: 0 };
+    // Avatar positioning and GIF selection
+    switch (step.avatarPosition) {
+      case 'left':
+        newAvatarTransform = { x: newDialogTransform.x - 40, y: newDialogTransform.y + 40 };
+        setAvatarSrc(robotLeft); // Use left avatar GIF
+        break;
+      case 'bottom':
+        newAvatarTransform = { x: newDialogTransform.x + 100, y: newDialogTransform.y + 260 };
+        setAvatarSrc(robotBottom); // Use bottom avatar GIF
+        break;
+      default:
+        newAvatarTransform = { x: newDialogTransform.x - 50, y: newDialogTransform.y };
+        setAvatarSrc(robotLeft); // Default to left avatar GIF
+    }
 
-          switch (step.position) {
-            case 'left':
-                newPosition = {
-                top: window.innerHeight - 96,
-                left: window.innerWidth - 336,
-                };
-                break;
-            case 'right':
-                newPosition = {
-                top: window.innerHeight,
-                left: window.innerWidth + 20,
-                };
-                break;
-            case 'top':
-                newPosition = {
-                top: window.innerHeight - 100,
-                left: window.innerWidth,
-                };
-                break;
-            case 'bottom':
-                newPosition = {
-                top: window.innerHeight + 20,
-                left: window.innerWidth,
-                };
-                break;
-            case 'center-left':
-                newPosition = {
-                top: (window.innerHeight / 2) - 120,
-                left: 20,
-                };
-                break;
-            default:
-                newPosition = {
-                top: window.innerHeight / 2 - 100,
-                left: window.innerWidth / 2 - 150,
-                };
-                break;
-            }
-            setPosition(newPosition);
-            setAvatarPosition(getAvatarPosition(newPosition, step.avatarPosition));
-        }
-    }, [step]);
+    console.log('New Dialog Transform:', newDialogTransform);
+    console.log('New Avatar Transform:', newAvatarTransform);
 
-    const getAvatarPosition = (dialogPosition : any, avatarPosition : string) => {
-      console.info("positions avatar dialog: ", avatarPosition, dialogPosition);
-        switch (avatarPosition) {
-            case 'left':
-                return { top: -32, left: -128 };
-            case 'right':
-                return { top: dialogPosition.top, left: dialogPosition.left + 336 };
-            case 'top':
-                return { top: dialogPosition.top - 128, left: dialogPosition.left };
-            case 'bottom':
-                return { top: 240, left: 24 };
-            case 'center-left':
-                return { top: 0, left: -128 };
-            default:
-                return { top: 0, left: 0 };
-        }
-    };
+    setDialogTransform(newDialogTransform);
+    setAvatarTransform(newAvatarTransform);
+  }, [step]);
 
-    const handleNext = () => {
-        onNext();
-    };
+  const handleNext = () => onNext();
+  const handleClose = () => onClose();
 
-    const handleClose = () => {
-        onClose();
-    };
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+      }}
+    >
+      {/* Avatar */}
+      <div
+        className="avatar"
+        style={{
+          position: 'absolute',
+          transform: `translate(${avatarTransform.x}px, ${avatarTransform.y}px)`,
+          transition: 'transform 0.5s ease-in-out',
+          zIndex: 1001,
+          pointerEvents: 'auto',
+        }}
+      >
+        <img
+          src={avatarSrc.src}
+          alt="avatar"
+          className="h-40 w-40 object-contain"
+        />
+      </div>
 
-    return (
-        <div style={{ position: 'absolute', top: position.top, left: position.left, transition: 'transform 0.3s ease' }}>
-          <div className="avatar h-40 w-40" style={{ position: 'absolute', zIndex: 1001, top: avatarPosition.top, left: avatarPosition.left, transition: 'top 0.3s ease, left 0.3s ease' }}>
-            <img src={robot.src} alt="robot" />
-          </div>
-          <div className="pt-8 px-6 pb-6 text-black bg-white rounded-lg max-w-80" style={{ zIndex: 1002, transition: 'top 0.3s ease, left 0.3s ease' }}>
-            <div className="dialog-content flex flex-col gap-2">
-              <h4 className='neue-plak-wide text-h4'>{translations[step.index].title}</h4>
-              <p className='text-lg lato-regular'>{translations[step.index].text}</p>
-              <div className="dialog-actions w-full flex gap-3 mt-2">
-                <button onClick={handleClose} 
-                className='text-green-3 lato-semi-bold flex-grow py-3 text-base uppercase'>
-                  {translations['buttons'].done}</button>
-                <button onClick={handleNext} 
-                className='bg-green-3 text-white lato-semi-bold flex-grow py-3 text-base uppercase'>
-                  {translations['buttons'].next}</button>
-              </div>
-              <button onClick={handleClose} className="close-button">
-                <img src={close.src} alt="close" />
-              </button>
-            </div>
+      {/* Dialog */}
+      <div
+        className="dialog-box"
+        style={{
+          position: 'absolute',
+          transform: `translate(${dialogTransform.x}px, ${dialogTransform.y}px)`,
+          transition: 'transform 0.5s ease-in-out',
+          zIndex: 1002,
+          backgroundColor: 'white',
+          borderRadius: '8px',
+          padding: '1.5rem',
+          maxWidth: '320px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.2)',
+          pointerEvents: 'auto',
+        }}
+      >
+        <div className="dialog-content flex flex-col gap-2 text-black">
+          <h4 className="neue-plak-wide text-h4 text-gray-900">
+            {translations[step.index]?.title}
+          </h4>
+          <p className="text-lg lato-regular text-gray-800">
+            {translations[step.index]?.text}
+          </p>
+          <div className="dialog-actions flex gap-3 mt-4">
+            <button
+              onClick={handleClose}
+              className="text-green-3 lato-semi-bold flex-grow py-2 text-base uppercase"
+            >
+              {translations?.buttons?.done || 'Done'}
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-green-3 text-white lato-semi-bold flex-grow py-2 text-base uppercase"
+            >
+              {translations?.buttons?.next || 'Next'}
+            </button>
           </div>
         </div>
-      );
+        <button onClick={handleClose} className="absolute top-2 right-2">
+          <img src={close.src} alt="close" className="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default OnboardingDialog;

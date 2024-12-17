@@ -370,6 +370,51 @@ button {
   scrollbar-width: none;  /* Firefox */
 }
 
+/* Container styles for transition */
+.transition-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.start-experience {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: transform 1s ease-in-out;
+}
+
+.start-experience.hidden {
+  transform: translateY(-100%); /* Move it out of the viewport */
+}
+
+.start-experience.visible {
+  transform: translateY(0); /* Reset to visible state */
+}
+
+.scene-3d {
+  position: absolute;
+  // top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform: translateY(100%);
+  transition: transform 1s ease-in-out;
+}
+
+/* When transitioning */
+.transition-container.roll-up .start-experience {
+  transform: translateY(-100%);
+}
+
+.transition-container.roll-up .scene-3d {
+  transform: translateY(0);
+}
+
 @media (min-width: 1106px) {
   .logo-container::before {
     display: block;

@@ -11,11 +11,15 @@ import medylocker300 from '../../public/medylocker-300.png'
 import medylocker500 from '../../public/medylocker-500.png'
 import hide from '../../public/hide icon.svg'
 import hidewhite from '../../public/hide icon white.svg'
+import CloseButtonIcon from '../../public/close button icon grey.svg'
+import InfoIcon from '../../public/material-symbols_info.png'
+import OpenIcon from '../../public/open chevron icon.svg'
+import CloseIcon from '../../public/close chevron icon.svg'
 import { StaticImageData } from 'next/image';
 
 export default function ConfigurationModal({ 
-  translation, onProductChange, onClose, selectedMedyBox, selectedMedyLocker, setSelectedMedyBox, setSelectedMedyLocker }
-  : { translation: any, onProductChange: (product: string, model: string) => void, onClose: () => void, selectedMedyBox: any, 
+  translation, translations, onProductChange, onClose, selectedMedyBox, selectedMedyLocker, setSelectedMedyBox, setSelectedMedyLocker }
+  : { translation: any, translations: any, onProductChange: (product: string, model: string) => void, onClose: () => void, selectedMedyBox: any, 
     selectedMedyLocker: any, setSelectedMedyBox: (medyBox : string) => void, setSelectedMedyLocker: (medyLocker : string) => void }) {
       
   interface Scene {
@@ -51,7 +55,7 @@ export default function ConfigurationModal({
   interface SceneData {
     [key: string]: Scene;
   } 
-  
+
   const [tempMedyBox, setTempMedyBox] = useState<string>(selectedMedyBox);
   const [tempMedyLocker, setTempMedyLocker] = useState<string>(selectedMedyLocker);
   const [selectingMedyBox, setSelectingMedyBox] = useState(false);
@@ -59,6 +63,10 @@ export default function ConfigurationModal({
   const [hasChanges, setHasChanges] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [tempSceneData, setTempSceneData] = useState<SceneData>(sceneDataJson as SceneData);
+  const [showData1, setShowData1] = useState(true);
+  const [showData2, setShowData2] = useState(false);
+  const [showData3, setShowData3] = useState(false);
+  const [isBoxShown, setIsBoxShown] = useState(true);
 
   const sceneData: SceneData = sceneDataJson as SceneData;
 
@@ -99,11 +107,19 @@ export default function ConfigurationModal({
   };
 
   const handleMedyBoxChange = (medyBox : string) => {
+    if (medyBox === '' && tempMedyLocker === '') {
+      alert(translation.errorNoSelection|| "You must select at least one MedyBox or MedyLocker."); 
+      return;
+    }
     setTempMedyBox(medyBox);
     setHasChanges(true);
   };
 
   const handleMedyLockerChange = (medyLocker : string) => {
+    if (medyLocker === '' && tempMedyBox === '') {
+      alert(translation.errorNoSelection|| "You must select at least one MedyBox or MedyLocker.");
+      return;
+    }
     setTempMedyLocker(medyLocker);
     setHasChanges(true);
   };
@@ -171,6 +187,9 @@ export default function ConfigurationModal({
     let tempMedyLocker = selectingMedyLocker ? `s${selectedMedyLocker}` : selectedMedyLocker || 's';
     return `/public/${tempMedyBox}-${tempMedyLocker}.png`;
   };
+
+  const isConfirmDisabled = !tempMedyBox || !tempMedyLocker;
+  console.log("Translations in ConfigurationModal:", translations);
 
   return (
     <div className='absolute flex w-screen h-screen bg-white z-30' style={{pointerEvents: "auto"}}>
@@ -318,7 +337,7 @@ export default function ConfigurationModal({
                   {translation.apply}
                 </button>) : (
                 <div className='flex justify-end'>
-                <button className='bg-green-3 px-6 h-11 text-white'
+                <button className={`w-full h-11 lato-semi-bold text-md uppercase bg-green-3 text-white`}
                 onClick={() => handleBackToSelection()}>
                   {translation.confirm}
                 </button>
@@ -357,6 +376,119 @@ export default function ConfigurationModal({
                 </div>
               </div>
             )}
+            {/* div top right */}
+        
+          </div>
+        <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay z-30'>
+          <div className='row-start-1 col-start-3 text-right align-top gap-3 flex flex-col items-end'>
+            <div className='flex flex-row-reverse'>
+              {/* Pulsante Box informazioni scena selezionata */}
+              <div className={`z-10 interactive cursor-pointer bg-white rounded h-14 w-14 ml-2 flex items-center 
+              shadow-lg justify-center opacity-100'}`} 
+              onClick={() => setIsBoxShown(!isBoxShown)}>
+                {isBoxShown ? <img src={CloseButtonIcon.src}></img> : <img src={InfoIcon.src}></img>}
+              </div>
+              {/* Box informazioni scena selezionata */}
+              {isBoxShown && (
+              <div className='z-10 interactive w-60 p-2 bg-white flex flex-col rounded-lg gap-2 shadow-lg relative'>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 
+                  rounded-s' 
+                  onClick={() => setShowData1(prevState => !prevState)}>
+                    <div className='text-green-4'>Standard</div>
+                    <div className='text-medy-black'>
+                      <img src={showData1 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData1 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.width}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.depth}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.capacity}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
+                </div>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+                  onClick={() => setShowData2(prevState => !prevState)}>
+                    <div className='text-green-4'>Slim</div>
+                    <div className='text-medy-black'>
+                      <img src={showData2 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData2 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.width}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.depth}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.capacity}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
+                </div>
+                <div className='flex min-h-12 bg-glass-green flex-col rounded-s'>
+                  <div className='flex flex-row justify-between py-3 px-4 cursor-pointer hover:bg-green-1 rounded-s'
+                  onClick={() => setShowData3(prevState => !prevState)}>
+                    <div className='text-green-4'>Baby</div>
+                    <div className='text-medy-black'>
+                      <img src={showData3 ? CloseIcon.src : OpenIcon.src}></img>
+                    </div>
+                  </div>
+                  {showData3 && (<div className='flex flex-col py-3 px-4'>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.width}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.depth}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                    </div>
+                    <div className='flex flex-row'>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.capacity}</div>
+                      <div className=' grow dot-fill'></div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
+                    </div>
+                  </div>)}
+                </div>
+              </div>
+              )}
+            </div>
+          </div> 
           </div>
         </div>
       </div>

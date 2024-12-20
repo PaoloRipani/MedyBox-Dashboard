@@ -6,7 +6,8 @@ export default function Scene3D({ medyBox, medyLocker,
   onSceneDataUpdate, 
   onAnnotationDataUpdate,
   onAnnotationClick,
-  onInteractionChange} : any) {
+  onInteractionChange,
+  onResetCameraRef} : any) {
 
   interface Dimensions {
     width: string;
@@ -99,6 +100,16 @@ export default function Scene3D({ medyBox, medyLocker,
 
           // Update scene data
           onSceneDataUpdate(scene.texts || {});
+
+          // Assign the resetCamera function
+          if (onResetCameraRef) {
+            console.log("onResetCameraRef");
+            onResetCameraRef(() => {
+              api.recenterCamera((err: any) => {
+                if (!err) console.log('Camera reset successfully');
+              });
+            });
+          }
         });
 
         api.addEventListener('annotationSelect', function (index : number) {
@@ -123,6 +134,7 @@ export default function Scene3D({ medyBox, medyLocker,
           onInteractionChange(false);
           window.console.log('Camera stopped');
         });
+
       },
       autostart: 1,
       annotation: 0,
@@ -134,6 +146,7 @@ export default function Scene3D({ medyBox, medyLocker,
       ui_hint: 0,
       ui_start: 0,
       ui_stop: 0,
+      orbit_constraint_pitch_down: -0.1,
       error: error
     };
 
@@ -181,7 +194,7 @@ export default function Scene3D({ medyBox, medyLocker,
       ref={iframeRef} title="3D Scene" allowFullScreen></iframe>
       {annotations.map((annotation, index) => (
         <div className={`w-7 rounded-3xl bg-green-3 leading-5 text-center cursor-pointer 
-          justify-center items-center lato-light border-4 border-opacity-35 border-green-3
+          justify-center items-center lato-regular border-4 border-opacity-35 border-green-3 text-black
            ${isCameraMoving ? 'opacity-50' : ''}`} 
             onClick={isCameraMoving ? undefined : () => {
               onAnnotationPlaceholderClick(annotation.eye, annotation.target); 

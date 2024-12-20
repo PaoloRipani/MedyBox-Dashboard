@@ -28,5 +28,9 @@
   "width" : "Larghezza",
   "depth" : "Profondità",
   "height" : "Altezza",
-  "capacity" : "Capienza"
+  "capacity" : "Capienza",
+  "close" : "Chiudi",
+  "errorNoSelection" : "Errore: devi selezionare almeno un MedyBox o un MedyLocker!",
+  "artitle": "Visualizza il modello in Realtà Aumentata",
+  "artext": "Scansiona il codice QR per visualizzare il modello in Realtà Aumentata"
 }

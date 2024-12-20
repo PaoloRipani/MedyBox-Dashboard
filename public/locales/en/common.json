@@ -28,5 +28,9 @@
   "width" : "Width",
   "depth" : "Depth",
   "height" : "Height",
-  "capacity" : "Capacity"
+  "capacity" : "Capacity",
+  "close" : "close",
+  "errorNoSelection" : "Error: you must select at least a MedyBox or MedyLocker!",
+  "artitle": "View the model in Augmented Reality",
+  "artext": "Scan the QR code with your phone to activate augmented reality!"
 }

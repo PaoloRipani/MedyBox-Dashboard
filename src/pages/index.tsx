@@ -57,8 +57,9 @@ export default function Home() {
     annotations: {
       [key: string]: {
         [lang: string]: {
-          title: string;
-          text: string;
+          title: string,
+          text: string,
+          images: string
         };
       };
     };
@@ -80,6 +81,7 @@ export default function Home() {
     capacity: String
   }
   const [translations, setTranslations] = useState<Translations | null>(null);
+  const [fetchedTranslations, setFetchedTranslations] = useState(false);
   const [language, setLanguage] = useState('it');
   const [showVideo, setShowVideo] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
@@ -102,6 +104,7 @@ export default function Home() {
   const [isFirstTime, setIsFirstTime] = useState(true);
   const startExperienceRef = useRef(null);
   const scene3DRef = useRef(null);
+  const [resetCamera, setResetCamera] = useState<(() => void) | null>(null);
   const configurationButtonRef = useRef(null);
   const [configurationLanguage, setConfigurationLanguage] = useState(null);
   const [transitioning, setTransitioning] = useState(false);
@@ -174,6 +177,16 @@ export default function Home() {
     return '';
   };
 
+  const getAnnotationImage = () => {
+    if (selectedAnnotation !== null) {
+      const annotationKey = `annotation${selectedAnnotation + 1}`;
+      if (scene && scene.annotations[annotationKey] && scene.annotations[annotationKey][language]) {
+        return scene.annotations[annotationKey][language].images;
+      }
+    }
+    return ''; // Return an empty string if no image is found
+  };
+  
   useEffect(() => {
     console.log("scene: ", scene);
     const fetchTranslations = async () => {
@@ -184,6 +197,7 @@ export default function Home() {
           setTranslations(data);
           setOnboardingTranslations(data.onboarding);
           setConfigurationLanguage(data.configuration);
+          setFetchedTranslations(true);
       } catch (error) {
           console.error("Error fetching translations: ", error);
       }
@@ -192,10 +206,11 @@ export default function Home() {
   }, [language]);
 
   const handleStartButtonClick = () => {
+    setActiveModal('language')
     setTransitioning(true); // Trigger the transition
     setTimeout(() => {
       setShowVideo(false); // Hide StartExperience after the transition
-      setOnboardingActive(true); // Activate Onboarding
+      // setOnboardingActive(true); // Activate Onboarding
     }, 1000); // Match this timeout with the transition duration
   };
 
@@ -237,6 +252,19 @@ export default function Home() {
 
   const handleClose = () => {
     setActiveModal(null);
+  };
+
+  const handleCloseAnnotationModal = () => {
+    console.log("Close annotation modal");
+    setSelectedAnnotation(-1);
+    setActiveModal(null);
+  
+    if (resetCamera) {
+      console.log('ResetCamera function exists');
+      resetCamera(); // Reset camera to the initial position
+    } else {
+      console.warn('ResetCamera function is not assigned');
+    }
   };
 
   const handleLanguageChange = (language : string) => {
@@ -283,7 +311,7 @@ export default function Home() {
       { onboardingStep === 2 && onboardingActive ? (
       <div className={`bg-green-3 py-2.5 px-5 flex gap-1.5 uppercase absolute bottom-20 right-4 justify-center z-40 w-64`}>
         <img src={ConfigurationIcon.src}></img>
-        <div className=' lato-semi-bold'
+        <div className=' lato-semi-bold text-white'
             ref={configurationButtonRef}>{translations?.changeConfiguration}</div>
       </div>) : (<></>)}
 
@@ -295,23 +323,22 @@ export default function Home() {
         >
       {/* Modals Container */}
       <div className={'absolute z-10 w-full h-full'} style={{pointerEvents: "none"}}>
-          {activeModal === 'language' &&(
-            <LanguageModal onLanguageChange={handleLanguageChange} onClose={() => setActiveModal(null)} />
-          )}
           {activeModal === 'configuration' &&(
-            <ConfigurationModal onProductChange={handleProductChange} translation={configurationLanguage} 
+            <ConfigurationModal onProductChange={handleProductChange} 
+            translation={configurationLanguage} 
             onClose={() => setActiveModal(null)}
             selectedMedyBox={selectedMedyBox}
             selectedMedyLocker={selectedMedyLocker}
             setSelectedMedyBox={setSelectedMedyBox}
             setSelectedMedyLocker={setSelectedMedyLocker} 
+            translations={translations}
             />
           )}
           {activeModal === 'ar' &&(
-            <ARModal arUrl={arUrl}  onClose={() => setActiveModal(null)}/>
+            <ARModal arUrl={arUrl} translations={translations} onClose={() => setActiveModal(null)}/>
           )}
           {activeModal === 'media' &&(
-            <MediaModal mediaType={mediaType} mediaSrc={mediaSrc} onClose={handleClose} />
+            <MediaModal mediaType={mediaType} mediaSrc={mediaSrc} translation={translations} onClose={handleClose} />
           )}
       </div> {/* End Modals Container */}
 
@@ -336,8 +363,12 @@ export default function Home() {
           onAnnotationDataUpdate={handleAnnotationDataUpdate}
           onAnnotationClick={handleAnnotationClick}
           onInteractionChange={setIsInteracting}
+          onResetCameraRef={setResetCamera}
           ref={scene3DRef}
         />
+        {activeModal === 'language' &&(
+          <LanguageModal onLanguageChange={handleLanguageChange} onClose={() => (setActiveModal(null),startOnboarding())} />
+        )}
         {/* creating onboarding background - glass element with z-index 1000 */}
         {onboardingActive && (
           <div className='h-full w-full absolute top-0 left-0'>
@@ -354,14 +385,14 @@ export default function Home() {
         )}
         {onboardingActive && onboardingStep !== 1 ? (
           <div className="shadow-2xl bg-green-4 bg-opacity-30 backdrop-blur-md h-full w-full z-20 absolute top-0 left-0">
-            <img src={MedyboxExperience.src} alt="logo" className="w-52 m-auto mt-20" />
+            <img src={MedyboxExperience.src} alt="logo" className="w-60 m-auto mt-20" />
           </div>
         ) : (<></>)}
         </div>
       </div> {/* Closing Transition Container */}
 
       {/* Overlays in 6 Zone Container */}
-      {(!onboardingActive && !showVideo && activeModal == null) &&(
+      {(!onboardingActive && !showVideo && fetchedTranslations && activeModal == null) &&(
       <div className='h-full w-full absolute grid grid-rows-2 grid-cols-3 gap-4 p-5 overlay z-10'>
 
         {/* div top left */}
@@ -455,22 +486,22 @@ export default function Home() {
                   </div>
                   {showData2 && (<div className='flex flex-col py-3 px-4'>
                     <div className='flex flex-row'>
-                      <div className=' lato-regular text-sm text-medy-gray'>Larghezza</div>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.width}</div>
                       <div className=' grow dot-fill'></div>
                       <div className='lato-regular text-medy-gray text-sm'><b>149</b> cm</div>
                     </div>
                     <div className='flex flex-row'>
-                      <div className=' lato-regular text-sm text-medy-gray'>Profondità</div>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.depth}</div>
                       <div className=' grow dot-fill'></div>
                       <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
                     </div>
                     <div className='flex flex-row'>
-                      <div className=' lato-regular text-sm text-medy-gray'>Altezza</div>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
                       <div className=' grow dot-fill'></div>
                       <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
                     </div>
                     <div className='flex flex-row'>
-                      <div className=' lato-regular text-sm text-medy-gray'>Capienza</div>
+                      <div className=' lato-regular text-sm text-medy-gray'>{translations?.capacity}</div>
                       <div className=' grow dot-fill'></div>
                       <div className='lato-regular text-medy-gray text-sm'><b>100+</b></div>
                     </div>
@@ -557,32 +588,36 @@ export default function Home() {
         style={{pointerEvents: "auto"}}>
           <div className='flex items-end justify-end'>
             <div className=''>
-              <img src={CloseButtonIcon.src} className='w-6 cursor-pointer' onClick={() => setSelectedAnnotation(-1)}></img>
+              <img src={CloseButtonIcon.src} className='w-6 cursor-pointer' onClick={handleCloseAnnotationModal}></img>
             </div>
           </div>
           <div className='p-4'>
             <div className='flex flex-col gap-8'>
               <div className='neue-plak-wide text-xl'>{getAnnotationTitle()}</div>
-              <div className='lato-bold text-green-3 text-sm uppercase'>sottotitolo</div>
-            </div>
+              <div className='lato-bold text-green-3 text-sm uppercase'>{getAnnotationText()}</div>
+            </div> 
             <div className='flex flex-col gap-8'>
               <div className='lato-regular text-lg'>
-              {getAnnotationText()}
+              {/* {getAnnotationText()} */}
               </div>
               {/* video container */}
               <div>
-                <img src={PlaceholderVideo.src} alt='video' className='w-full'
-                 onClick={() => handleMediaClick('video', PlaceholderVideo.src)}></img>
+                {/* <img src={PlaceholderVideo.src} alt='video' className='w-full'
+                 onClick={() => handleMediaClick('video', PlaceholderVideo.src)}></img> */}
+                 <img src={getAnnotationImage() ? `./${getAnnotationImage()}` : PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
+                  onClick={() => handleMediaClick('image', `./${getAnnotationImage()}`)}></img>
               </div>
               {/* slider immagini */}
-              <div className='image-slider gap-4 hide-scrollbar' onWheel={(e) => handleScroll(e)}>
+              
+              {/* <div className='image-slider gap-4 hide-scrollbar' onWheel={(e) => handleScroll(e)}>
                 <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
                  onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
                 <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
                 onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
                 <img src={PlaceholderImage.src} alt='image' className='scroll-snap-stop h-3/4 w-3/4'
                 onClick={() => handleMediaClick('image', PlaceholderImage.src)}></img>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </div>

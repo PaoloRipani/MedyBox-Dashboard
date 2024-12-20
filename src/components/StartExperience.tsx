@@ -56,7 +56,7 @@ function StartExperience({ videoSrc, onButtonClick } : any) {
             onClick={handleButtonClick}
             disabled={buttonDisabled} // Prevent multiple clicks
           >
-            Inizia Esperienza
+            Start
           </button>
         </div>
       )}

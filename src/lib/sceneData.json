@@ -41,134 +41,354 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation11": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system",
+              "images":"ann11.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "text": "Sistema refrigerante",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem",
+              "images":"ann11.png",
+              "videos":{}
             }
           }
         }
@@ -201,130 +421,360 @@
         }
       },
       "annotations": {
-          "annotation1": {
-            "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
-              "videos":{}
-            },
-            "it": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
-              "videos":{}
-            },
-            "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
-              "videos":{}
-            },
-            "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
-              "videos":{}
-            },
-            "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
-              "videos":{}
-            }
+        "annotation1": {
+          "en": {
+            "title": "Anti-vandal structure",
+            "text": "Anti-vandal structure with sound alarm",
+            "images":"ann1.png",
+            "videos":{}
           },
-          "annotation2": {
-            "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
-            },
-            "it": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
-            }
+          "it": {
+            "title": "Struttura anti vandalica",
+            "text": "Struttura anti vandalica con allarme sonoro",
+            "images":"ann1.png",
+            "videos":{}
           },
-          "annotation3": {
-            "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
-            },
-            "it": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
-            }
+          "fr": {
+            "title": "Structure antivandale",
+            "text": "Structure antivandale avec alarme sonore",
+            "images":"ann1.png",
+            "videos":{}
           },
-          "annotation4": {
-            "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-            },
-            "it": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-            }
+          "es": {
+            "title": "Estructura antivandálica",
+            "text": "Estructura antivandálica con alarma sonora",
+            "images":"ann1.png",
+            "videos":{}
           },
-          "annotation5": {
-            "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
-            },
-            "it": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
-            }
+          "de": {
+            "title": "Vandalensichere Struktur",
+            "text": "Vandalensichere Struktur mit akustischem Alarm",
+            "images":"ann1.png",
+            "videos":{}
+          }
+        },
+        "annotation2": {
+          "en": {
+            "title": "LCD Display",
+            "text": "Graphic touch screen LCD display, multilingual",
+            "images":"ann2.png",
+            "videos":{}
           },
-          "annotation6": {
-            "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-            },
-            "it": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-            }
+          "it": {
+            "title": "Display LCD",
+            "text": "Display LCD grafico touch screen e multilingue",
+            "images":"ann2.png",
+            "videos":{}
           },
-          "annotation7": {
-            "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
-            },
-            "it": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
-            }
+          "fr": {
+            "title": "Écran LCD",
+            "text": "Écran LCD graphique, tactile et multilingue",
+            "images":"ann2.png",
+            "videos":{}
           },
-          "annotation8": {
-            "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
-            },
-            "it": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
-            }
+          "es": {
+            "title": "Pantalla LCD",
+            "text": "Pantalla LCD gráfica, táctil y multilingüe",
+            "images":"ann2.png",
+            "videos":{}
           },
-          "annotation9": {
-            "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
-            },
-            "it": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
-            }
+          "de": {
+            "title": "LCD-Display",
+            "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+            "images":"ann2.png",
+            "videos":{}
+          }
+        },
+        "annotation3": {
+          "en": {
+            "title": "Banknote reader",
+            "text": "Multi-currency banknote reader with anti-fraud system",
+            "images":"ann3.png",
+            "videos":{}
           },
-          "annotation10": {
-            "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
-            },
-            "it": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
-            }
+          "it": {
+            "title": "Lettore banconote",
+            "text": "Lettore banconote Multi valuta con sistema antifrode",
+            "images":"ann3.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Lecteur de billets",
+            "text": "Lecteur de billets multidevise avec système antifraude",
+            "images":"ann3.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Lector de billetes",
+            "text": "Lector de billetes multimoneda con sistema antifraude",
+            "images":"ann3.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Banknotenleser",
+            "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+            "images":"ann3.png",
+            "videos":{}
+          }
+        },
+        "annotation4": {
+          "en": {
+            "title": "Coin changer",
+            "text": "Coin changer with 6 self-loading tubes",
+            "images":"ann4.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Gettoniera rendiresto",
+            "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+            "images":"ann4.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Monnayeur avec rendu de monnaie",
+            "text": "Monnayeur avec 6 tubes de recharge automatique",
+            "images":"ann4.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Monedero con cambio",
+            "text": "Monedero con cambio y 6 tubos de recarga automática",
+            "images":"ann4.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Wechselgeld-Münzautomat",
+            "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+            "images":"ann4.png",
+            "videos":{}
+          }
+        },
+        "annotation5": {
+          "en": {
+            "title": "Anti-jam courtesy printer",
+            "text": "Courtesy printer",
+            "images":"ann5.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Stampante di cortesia anti-inceppamento",
+            "text": "Stampante di cortesia",
+            "images":"ann5.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Imprimante de courtoisie anti-bourrage",
+            "text": "mprimante de courtoisie",
+            "images":"ann5.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Impresora de cortesía antiatasco",
+            "text": "Impresora de cortesía",
+            "images":"ann5.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Anti-Stau-Kundenfreundlicher Drucker",
+            "text": "Anti-Stau-Kundenfreundlicher Drucker",
+            "images":"ann5.png",
+            "videos":{}
+          }
+        },
+        "annotation6": {
+          "en": {
+            "title": "High-brightness LED lighting",
+            "text": "High-brightness LED lighting with energy-saving system",
+            "images":"ann6.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Illuminazione LED ad alta luminosità",
+            "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+            "images":"ann6.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Éclairage LED haute luminosité",
+            "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+            "images":"ann6.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Iluminación LED de alta luminosidad",
+            "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+            "images":"ann6.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Hochintensive LED-Beleuchtung",
+            "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+            "images":"ann6.png",
+            "videos":{}
+          }
+        },
+        "annotation7": {
+          "en": {
+            "title": "Refrigeration system",
+            "text": "Refrigeration system with energy-saving system",
+            "images":"ann7.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Sistema refrigerante",
+            "text": "Sistema refrigerante con Sistema di risparmio energetico",
+            "images":"ann7.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Système de réfrigération",
+            "text": "Système de réfrigération avec système d'économie d'énergie",
+            "images":"ann7.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Sistema de refrigeración",
+            "text": "Sistema de refrigeración con sistema de ahorro de energía",
+            "images":"ann7.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Kühlsystem",
+            "text": "Kühlsystem mit Energiesparsystem",
+            "images":"ann7.png",
+            "videos":{}
+          }
+        },
+        "annotation8": {
+          "en": {
+            "title": "Configurable drawer sizes",
+            "text": "Configurable drawer sizes",
+            "images":"ann8.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Dimensione cassetti configurabile",
+            "text": "Dimensione cassetti configurabile",
+            "images":"ann8.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Taille des tiroirs configurable",
+            "text": "Taille des tiroirs configurable",
+            "images":"ann8.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Tamaño de cajones configurable",
+            "text": "Tamaño de cajones configurable",
+            "images":"ann8.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Konfigurierbare Schubladengröße",
+            "text": "Konfigurierbare Schubladengröße",
+            "images":"ann8.png",
+            "videos":{}
+          }
+        },
+        "annotation9": {
+          "en": {
+            "title": "Available in Stand-alone version",
+            "text": "Available in Stand-alone version",
+            "images":"ann9.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Disponibile nella versione Stand alone",
+            "text": "Disponibile nella versione Stand alone",
+            "images":"ann9.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Disponible en version autonome",
+            "text": "Disponible en version autonome",
+            "images":"ann9.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Disponible en versión Stand-alone",
+            "text": "Disponible en versión Stand-alone",
+            "images":"ann9.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Erhältlich als Stand-alone-Version",
+            "text": "Erhältlich als Stand-alone-Version",
+            "images":"ann9.png",
+            "videos":{}
+          }
+        },
+        "annotation10": {
+          "en": {
+            "title": "Optional electronic payment system",
+            "text": "Optional electronic payment system",
+            "images":"ann10.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Sistema di pagamento elettronico opzionale",
+            "text": "Sistema di pagamento elettronico opzionale",
+            "images":"ann10.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Système de paiement électronique en option",
+            "text": "Système de paiement électronique en option",
+            "images":"ann10.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Sistema de pago electrónico opcional",
+            "text": "Sistema de pago electrónico opcional",
+            "images":"ann10.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Optionales elektronisches Zahlungssystem",
+            "text": "Optionales elektronisches Zahlungssystem",
+            "images":"ann10.png",
+            "videos":{}
+          }
+        },
+        "annotation11": {
+          "en": {
+            "title": "Refrigeration system",
+            "text": "Refrigeration system",
+            "images":"ann11.png",
+            "videos":{}
+          },
+          "it": {
+            "title": "Sistema refrigerante",
+            "text": "Sistema refrigerante",
+            "images":"ann11.png",
+            "videos":{}
+          },
+          "fr": {
+            "title": "Système de réfrigération",
+            "text": "Système de réfrigération",
+            "images":"ann11.png",
+            "videos":{}
+          },
+          "es": {
+            "title": "Sistema de refrigeración",
+            "text": "Sistema de refrigeración",
+            "images":"ann11.png",
+            "videos":{}
+          },
+          "de": {
+            "title": "Kühlsystem",
+            "text": "Kühlsystem",
+            "images":"ann11.png",
+            "videos":{}
           }
         }
-    },
+      }
+  },
     "A-C": {
         "sketchfabUrl": "57ec6e1f9e744c908870425c23d81123",
         "previewImage": "/A-C.png",
@@ -355,128 +805,326 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "A-": {
         "sketchfabUrl": "76aedd9c083e46febc171004521a74dd",
         "previewImage": "/A-.png",
@@ -507,98 +1155,230 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "B-A": {
         "sketchfabUrl": "bb9bc31e793a41e4bf42f83a3249594c",
         "previewImage": "/B-A.png",
@@ -629,138 +1409,358 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation11": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system",
+              "images":"ann11.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "text": "Sistema refrigerante",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem",
+              "images":"ann11.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "B-B": {
         "sketchfabUrl": "397bd777110e4a1c8e64fe53a0a035a5",
         "previewImage": "/B-B.png",
@@ -791,128 +1791,326 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "B-C": {
         "sketchfabUrl": "9ebb7380a026409ea60766931190b82c",
         "previewImage": "/B-C.png",
@@ -943,128 +2141,326 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "B-": {
         "sketchfabUrl": "6d9168242a644a9481756c039b26c9e0",
         "previewImage": "/B-.png",
@@ -1095,98 +2491,230 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "C-A": {
         "sketchfabUrl": "59265fa3e51f46c1a6bf3f61fa566806",
         "previewImage": "/C-A.png",
@@ -1217,138 +2745,358 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           },
           "annotation8": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation9": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           },
           "annotation10": {
             "en": {
-              "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema di pagamento elettronico opzionale",
-              "text": "Sistema di pagamento elettronico opzionale"
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation11": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system",
+              "images":"ann11.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "text": "Sistema refrigerante",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem",
+              "images":"ann11.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "C-B": {
         "sketchfabUrl": "f1e40003c0e441aaa9ad796f4ca48ae8",
         "previewImage": "/C-B.png",
@@ -1377,130 +3125,328 @@
           }
         },
         "annotations": {
-            "annotation1": {
-              "en": {
-                "title": "Struttura anti vandalica",
-                "text": "Struttura anti vandalica con allarme sonoro",
-                "images":{},
-                "videos":{}
-              },
-              "it": {
-                "title": "Struttura anti vandalica",
-                "text": "Struttura anti vandalica con allarme sonoro",
-                "images":{},
-                "videos":{}
-              },
-              "fr": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              },
-              "es": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              },
-              "de": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              }
+          "annotation1": {
+            "en": {
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation2": {
-              "en": {
-                "title": "Display LCD",
-                "text": "Display LCD grafico touch screen e multilingual"
-              },
-              "it": {
-                "title": "Display LCD",
-                "text": "Display LCD grafico touch screen e multilingual"
-              }
+            "it": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation3": {
-              "en": {
-                "title": "Lettore banconote",
-                "text": "Lettore banconote Multi valuta con sistema antifrode"
-              },
-              "it": {
-                "title": "Lettore banconote",
-                "text": "Lettore banconote Multi valuta con sistema antifrode"
-              }
+            "fr": {
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation4": {
-              "en": {
-                "title": "Gettoniera rendiresto",
-                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-              },
-              "it": {
-                "title": "Gettoniera rendiresto",
-                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-              }
+            "es": {
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation5": {
-              "en": {
-                "title": "Stampante di cortesia anti-inceppamento",
-                "text": "Stampante di cortesia"
-              },
-              "it": {
-                "title": "Stampante di cortesia anti-inceppamento",
-                "text": "Stampante di cortesia"
-              }
+            "de": {
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
+              "videos":{}
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation6": {
-              "en": {
-                "title": "Illuminazione LED ad alta luminosità",
-                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-              },
-              "it": {
-                "title": "Illuminazione LED ad alta luminosità",
-                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-              }
+            "it": {
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation7": {
-              "en": {
-                "title": "Sistema refrigerante",
-                "text": "Sistema refrigerante con Sistema di risparmio energetico"
-              },
-              "it": {
-                "title": "Sistema refrigerante",
-                "text": "Sistema refrigerante con Sistema di risparmio energetico"
-              }
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation8": {
-              "en": {
-                "title": "Dimensione cassetti configurabile",
-                "text": "Dimensione cassetti configurabile"
-              },
-              "it": {
-                "title": "Dimensione cassetti configurabile",
-                "text": "Dimensione cassetti configurabile"
-              }
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation9": {
-              "en": {
-                "title": "Disponibile nella versione Stand alone",
-                "text": "Disponibile nella versione Stand alone"
-              },
-              "it": {
-                "title": "Disponibile nella versione Stand alone",
-                "text": "Disponibile nella versione Stand alone"
-              }
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
-            "annotation10": {
-              "en": {
-                "title": "Sistema di pagamento elettronico opzionale",
-                "text": "Sistema di pagamento elettronico opzionale"
-              },
-              "it": {
-                "title": "Sistema di pagamento elettronico opzionale",
-                "text": "Sistema di pagamento elettronico opzionale"
-              }
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           }
-      },
+        }
+    },
     "C-C": {
         "sketchfabUrl": "d87f9e51de454230934401e1898c2839",
         "previewImage": "/C-C.png",
@@ -1529,130 +3475,328 @@
           }
         },
         "annotations": {
-            "annotation1": {
-              "en": {
-                "title": "Struttura anti vandalica",
-                "text": "Struttura anti vandalica con allarme sonoro",
-                "images":{},
-                "videos":{}
-              },
-              "it": {
-                "title": "Struttura anti vandalica",
-                "text": "Struttura anti vandalica con allarme sonoro",
-                "images":{},
-                "videos":{}
-              },
-              "fr": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              },
-              "es": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              },
-              "de": {
-                "title": "Annotation1",
-                "text": "Text1",
-                "images":{},
-                "videos":{}
-              }
+          "annotation1": {
+            "en": {
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation2": {
-              "en": {
-                "title": "Display LCD",
-                "text": "Display LCD grafico touch screen e multilingual"
-              },
-              "it": {
-                "title": "Display LCD",
-                "text": "Display LCD grafico touch screen e multilingual"
-              }
+            "it": {
+              "title": "Struttura anti vandalica",
+              "text": "Struttura anti vandalica con allarme sonoro",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation3": {
-              "en": {
-                "title": "Lettore banconote",
-                "text": "Lettore banconote Multi valuta con sistema antifrode"
-              },
-              "it": {
-                "title": "Lettore banconote",
-                "text": "Lettore banconote Multi valuta con sistema antifrode"
-              }
+            "fr": {
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation4": {
-              "en": {
-                "title": "Gettoniera rendiresto",
-                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-              },
-              "it": {
-                "title": "Gettoniera rendiresto",
-                "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
-              }
+            "es": {
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
+              "videos":{}
             },
-            "annotation5": {
-              "en": {
-                "title": "Stampante di cortesia anti-inceppamento",
-                "text": "Stampante di cortesia"
-              },
-              "it": {
-                "title": "Stampante di cortesia anti-inceppamento",
-                "text": "Stampante di cortesia"
-              }
+            "de": {
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
+              "videos":{}
+            }
+          },
+          "annotation2": {
+            "en": {
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation6": {
-              "en": {
-                "title": "Illuminazione LED ad alta luminosità",
-                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-              },
-              "it": {
-                "title": "Illuminazione LED ad alta luminosità",
-                "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
-              }
+            "it": {
+              "title": "Display LCD",
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation7": {
-              "en": {
-                "title": "Sistema refrigerante",
-                "text": "Sistema refrigerante con Sistema di risparmio energetico"
-              },
-              "it": {
-                "title": "Sistema refrigerante",
-                "text": "Sistema refrigerante con Sistema di risparmio energetico"
-              }
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation8": {
-              "en": {
-                "title": "Dimensione cassetti configurabile",
-                "text": "Dimensione cassetti configurabile"
-              },
-              "it": {
-                "title": "Dimensione cassetti configurabile",
-                "text": "Dimensione cassetti configurabile"
-              }
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
             },
-            "annotation9": {
-              "en": {
-                "title": "Disponibile nella versione Stand alone",
-                "text": "Disponibile nella versione Stand alone"
-              },
-              "it": {
-                "title": "Disponibile nella versione Stand alone",
-                "text": "Disponibile nella versione Stand alone"
-              }
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
-            "annotation10": {
-              "en": {
-                "title": "Sistema di pagamento elettronico opzionale",
-                "text": "Sistema di pagamento elettronico opzionale"
-              },
-              "it": {
-                "title": "Sistema di pagamento elettronico opzionale",
-                "text": "Sistema di pagamento elettronico opzionale"
-              }
+            "it": {
+              "title": "Lettore banconote",
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Gettoniera rendiresto",
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
+            }
+          },
+          "annotation5": {
+            "en": {
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Stampante di cortesia anti-inceppamento",
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
+            }
+          },
+          "annotation6": {
+            "en": {
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Illuminazione LED ad alta luminosità",
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
+            }
+          },
+          "annotation7": {
+            "en": {
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Sistema refrigerante",
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
+            }
+          },
+          "annotation8": {
+            "en": {
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
+            }
+          },
+          "annotation9": {
+            "en": {
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
+            }
+          },
+          "annotation10": {
+            "en": {
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           }
-      },
+        }
+    },
     "C-": {
         "sketchfabUrl": "540c32441f764be7a0595c88cffaa04d",
         "previewImage": "/C-.png",
@@ -1683,98 +3827,230 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Struttura anti vandalica",
-              "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "title": "Anti-vandal structure",
+              "text": "Anti-vandal structure with sound alarm",
+              "images":"ann1.png",
               "videos":{}
             },
             "it": {
               "title": "Struttura anti vandalica",
               "text": "Struttura anti vandalica con allarme sonoro",
-              "images":{},
+              "images":"ann1.png",
               "videos":{}
             },
             "fr": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Structure antivandale",
+              "text": "Structure antivandale avec alarme sonore",
+              "images":"ann1.png",
               "videos":{}
             },
             "es": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Estructura antivandálica",
+              "text": "Estructura antivandálica con alarma sonora",
+              "images":"ann1.png",
               "videos":{}
             },
             "de": {
-              "title": "Annotation1",
-              "text": "Text1",
-              "images":{},
+              "title": "Vandalensichere Struktur",
+              "text": "Vandalensichere Struktur mit akustischem Alarm",
+              "images":"ann1.png",
               "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "title": "LCD Display",
+              "text": "Graphic touch screen LCD display, multilingual",
+              "images":"ann2.png",
+              "videos":{}
             },
             "it": {
               "title": "Display LCD",
-              "text": "Display LCD grafico touch screen e multilingual"
+              "text": "Display LCD grafico touch screen e multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Écran LCD",
+              "text": "Écran LCD graphique, tactile et multilingue",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Pantalla LCD",
+              "text": "Pantalla LCD gráfica, táctil y multilingüe",
+              "images":"ann2.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "LCD-Display",
+              "text": "Grafisches LCD-Touchscreen-Display, mehrsprachig",
+              "images":"ann2.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "title": "Banknote reader",
+              "text": "Multi-currency banknote reader with anti-fraud system",
+              "images":"ann3.png",
+              "videos":{}
             },
             "it": {
               "title": "Lettore banconote",
-              "text": "Lettore banconote Multi valuta con sistema antifrode"
+              "text": "Lettore banconote Multi valuta con sistema antifrode",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Lecteur de billets",
+              "text": "Lecteur de billets multidevise avec système antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Lector de billetes",
+              "text": "Lector de billetes multimoneda con sistema antifraude",
+              "images":"ann3.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Banknotenleser",
+              "text": "Multivaluta-Banknotenleser mit Betrugsschutzsystem",
+              "images":"ann3.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "title": "Coin changer",
+              "text": "Coin changer with 6 self-loading tubes",
+              "images":"ann4.png",
+              "videos":{}
             },
             "it": {
               "title": "Gettoniera rendiresto",
-              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili"
+              "text": "Gettoniera rendiresto con 6 tubi autoricaricabili",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Monnayeur avec rendu de monnaie",
+              "text": "Monnayeur avec 6 tubes de recharge automatique",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Monedero con cambio",
+              "text": "Monedero con cambio y 6 tubos de recarga automática",
+              "images":"ann4.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Wechselgeld-Münzautomat",
+              "text": "Wechselgeld-Münzautomat mit 6 automatisch nachfüllbaren Röhren",
+              "images":"ann4.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "title": "Anti-jam courtesy printer",
+              "text": "Courtesy printer",
+              "images":"ann5.png",
+              "videos":{}
             },
             "it": {
               "title": "Stampante di cortesia anti-inceppamento",
-              "text": "Stampante di cortesia"
+              "text": "Stampante di cortesia",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Imprimante de courtoisie anti-bourrage",
+              "text": "mprimante de courtoisie",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Impresora de cortesía antiatasco",
+              "text": "Impresora de cortesía",
+              "images":"ann5.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Anti-Stau-Kundenfreundlicher Drucker",
+              "text": "Anti-Stau-Kundenfreundlicher Drucker",
+              "images":"ann5.png",
+              "videos":{}
             }
           },
           "annotation6": {
             "en": {
-              "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "title": "High-brightness LED lighting",
+              "text": "High-brightness LED lighting with energy-saving system",
+              "images":"ann6.png",
+              "videos":{}
             },
             "it": {
               "title": "Illuminazione LED ad alta luminosità",
-              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico"
+              "text": "Illuminazione LED ad alta luminosità con Sistema di risparmio energetico",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Éclairage LED haute luminosité",
+              "text": "Éclairage LED haute luminosité avec système d'économie d'énergie",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Iluminación LED de alta luminosidad",
+              "text": "Iluminación LED de alta luminosidad con sistema de ahorro de energía",
+              "images":"ann6.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Hochintensive LED-Beleuchtung",
+              "text": "Hochintensive LED-Beleuchtung mit Energiesparsystem",
+              "images":"ann6.png",
+              "videos":{}
             }
           },
           "annotation7": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system with energy-saving system",
+              "images":"ann7.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante con Sistema di risparmio energetico"
+              "text": "Sistema refrigerante con Sistema di risparmio energetico",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération avec système d'économie d'énergie",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración con sistema de ahorro de energía",
+              "images":"ann7.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem mit Energiesparsystem",
+              "images":"ann7.png",
+              "videos":{}
             }
           }
         }
-      },
+    },
     "-A": {
         "sketchfabUrl": "e818d12f5a4341519010cf7d1cb1b67b",
         "previewImage": "/-A.png",
@@ -1805,52 +4081,162 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "title": "Refrigeration system",
+              "text": "Refrigeration system",
+              "images":"ann11.png",
+              "videos":{}
             },
             "it": {
               "title": "Sistema refrigerante",
-              "text": "Sistema refrigerante"
+              "text": "Sistema refrigerante",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de réfrigération",
+              "text": "Système de réfrigération",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de refrigeración",
+              "text": "Sistema de refrigeración",
+              "images":"ann11.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Kühlsystem",
+              "text": "Kühlsystem",
+              "images":"ann11.png",
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "title": "Energy-saving system",
+              "text": "Energy-saving system",
+              "images": "ann10.png",
+              "videos": {}
             },
             "it": {
               "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "text": "Sistema di risparmio energetico",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "fr": {
+              "title": "Système d'économie d'énergie",
+              "text": "Système d'économie d'énergie",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "es": {
+              "title": "Sistema de ahorro de energía",
+              "text": "Sistema de ahorro de energía",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "de": {
+              "title": "Energiesparsystem",
+              "text": "Energiesparsystem",
+              "images": "ann10.png",
+              "videos": {}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation5": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           }
         }
@@ -1885,42 +4271,130 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "title": "Energy-saving system",
+              "text": "Energy-saving system",
+              "images": "ann10.png",
+              "videos": {}
             },
             "it": {
               "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "text": "Sistema di risparmio energetico",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "fr": {
+              "title": "Système d'économie d'énergie",
+              "text": "Système d'économie d'énergie",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "es": {
+              "title": "Sistema de ahorro de energía",
+              "text": "Sistema de ahorro de energía",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "de": {
+              "title": "Energiesparsystem",
+              "text": "Energiesparsystem",
+              "images": "ann10.png",
+              "videos": {}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           }
         }
@@ -1955,42 +4429,130 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
               "title": "Dimensione cassetti configurabile",
-              "text": "Dimensione cassetti configurabile"
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "title": "Energy-saving system",
+              "text": "Energy-saving system",
+              "images": "ann10.png",
+              "videos": {}
             },
             "it": {
               "title": "Sistema di risparmio energetico",
-              "text": "Sistema di risparmio energetico"
+              "text": "Sistema di risparmio energetico",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "fr": {
+              "title": "Système d'économie d'énergie",
+              "text": "Système d'économie d'énergie",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "es": {
+              "title": "Sistema de ahorro de energía",
+              "text": "Sistema de ahorro de energía",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "de": {
+              "title": "Energiesparsystem",
+              "text": "Energiesparsystem",
+              "images": "ann10.png",
+              "videos": {}
             }
           },
           "annotation3": {
             "en": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
             },
             "it": {
-              "title": "Sistema di pagamento elettronico",
-              "text": "Sistema di pagamento elettronico opzionale e gestione prenotazione da remoto."
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
             }
           },
           "annotation4": {
             "en": {
-              "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
             },
             "it": {
               "title": "Disponibile nella versione Stand alone",
-              "text": "Disponibile nella versione Stand alone"
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           }
         }
@@ -2025,22 +4587,130 @@
         "annotations": {
           "annotation1": {
             "en": {
-              "title": "Annotation1",
-              "text": "Text1"
+              "title": "Configurable drawer sizes",
+              "text": "Configurable drawer sizes",
+              "images":"ann8.png",
+              "videos":{}
             },
             "it": {
-              "title": "Annotazione1",
-              "text": "Testo1"
+              "title": "Dimensione cassetti configurabile",
+              "text": "Dimensione cassetti configurabile",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Taille des tiroirs configurable",
+              "text": "Taille des tiroirs configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Tamaño de cajones configurable",
+              "text": "Tamaño de cajones configurable",
+              "images":"ann8.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Konfigurierbare Schubladengröße",
+              "text": "Konfigurierbare Schubladengröße",
+              "images":"ann8.png",
+              "videos":{}
             }
           },
           "annotation2": {
             "en": {
-              "title": "Annotation2",
-              "text": "Text2"
+              "title": "Energy-saving system",
+              "text": "Energy-saving system",
+              "images": "ann10.png",
+              "videos": {}
             },
             "it": {
-              "title": "Annotazione2",
-              "text": "Testo2"
+              "title": "Sistema di risparmio energetico",
+              "text": "Sistema di risparmio energetico",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "fr": {
+              "title": "Système d'économie d'énergie",
+              "text": "Système d'économie d'énergie",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "es": {
+              "title": "Sistema de ahorro de energía",
+              "text": "Sistema de ahorro de energía",
+              "images": "ann10.png",
+              "videos": {}
+            },
+            "de": {
+              "title": "Energiesparsystem",
+              "text": "Energiesparsystem",
+              "images": "ann10.png",
+              "videos": {}
+            }
+          },
+          "annotation3": {
+            "en": {
+              "title": "Optional electronic payment system",
+              "text": "Optional electronic payment system",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Sistema di pagamento elettronico opzionale",
+              "text": "Sistema di pagamento elettronico opzionale",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Système de paiement électronique en option",
+              "text": "Système de paiement électronique en option",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Sistema de pago electrónico opcional",
+              "text": "Sistema de pago electrónico opcional",
+              "images":"ann10.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Optionales elektronisches Zahlungssystem",
+              "text": "Optionales elektronisches Zahlungssystem",
+              "images":"ann10.png",
+              "videos":{}
+            }
+          },
+          "annotation4": {
+            "en": {
+              "title": "Available in Stand-alone version",
+              "text": "Available in Stand-alone version",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "it": {
+              "title": "Disponibile nella versione Stand alone",
+              "text": "Disponibile nella versione Stand alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "fr": {
+              "title": "Disponible en version autonome",
+              "text": "Disponible en version autonome",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "es": {
+              "title": "Disponible en versión Stand-alone",
+              "text": "Disponible en versión Stand-alone",
+              "images":"ann9.png",
+              "videos":{}
+            },
+            "de": {
+              "title": "Erhältlich als Stand-alone-Version",
+              "text": "Erhältlich als Stand-alone-Version",
+              "images":"ann9.png",
+              "videos":{}
             }
           }
         }

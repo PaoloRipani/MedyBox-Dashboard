@@ -8,7 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
-  distDir: "build",
+  distDir: 'build',
   output: "export",
   env: {
     SKETCHFAB_API_KEY: process.env.SKETCHFAB_API_KEY,

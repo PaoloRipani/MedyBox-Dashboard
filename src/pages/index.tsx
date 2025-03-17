@@ -493,7 +493,7 @@ export default function Home() {
                     <div className='flex flex-row'>
                       <div className=' lato-regular text-sm text-medy-gray'>{translations?.depth}</div>
                       <div className=' grow dot-fill'></div>
-                      <div className='lato-regular text-medy-gray text-sm'><b>68</b> cm</div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>48</b> cm</div>
                     </div>
                     <div className='flex flex-row'>
                       <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
@@ -529,7 +529,7 @@ export default function Home() {
                     <div className='flex flex-row'>
                       <div className=' lato-regular text-sm text-medy-gray'>{translations?.height}</div>
                       <div className=' grow dot-fill'></div>
-                      <div className='lato-regular text-medy-gray text-sm'><b>202</b> cm</div>
+                      <div className='lato-regular text-medy-gray text-sm'><b>169</b> cm</div>
                     </div>
                     <div className='flex flex-row'>
                       <div className=' lato-regular text-sm text-medy-gray'>{translations?.capacity}</div>
